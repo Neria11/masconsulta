@@ -1,0 +1,121 @@
+.pop-up-fade
+	position fixed
+	left 0
+	right 0
+	bottom 0
+	top 0
+	background rgba(black,0.8)
+	display none
+	z-index 100
+	
+.pop-up 
+	background white
+	border-radius 3px
+	max-width 95%
+	margin 1rem auto
+	min-height 30%
+	overflow hidden
+	position absolute
+	left 0
+	right 0
+	height auto
+	z-index 150
+	padding 0
+	top 1rem
+	
+	.close-pop-up
+		font-size 2.2rem
+		font-weight bold 
+		position absolute 
+		top 0
+		right 0
+		padding 0 1rem
+		cursor pointer
+		z-index 16
+		height 50px
+		background #f1f1f1
+	
+	&-header
+		padding 0 0.5rem
+						
+		.modal-title
+			font-size 1rem
+			margin 0
+			padding 0.5rem 0
+			text-align left
+			height 50px
+		
+	&-body
+		border-bottom 1px solid gris
+		padding 0.5rem 
+		height auto
+		/*overflow-y scroll*/
+		
+		iframe
+			height 100%
+			
+
+	::-webkit-scrollbar
+		width 40px
+		min-height 30px
+		background gris
+	  
+	::-webkit-scrollbar-button
+		width 40px
+		height 40px
+		cursor pointer
+		background verde
+		background-image url("../img/bar-button.png") 
+		background-repeat no-repeat
+		background-position 100% 100%
+		background-size cover
+	  
+	::-webkit-scrollbar-track
+		background #e1e1e1
+	  
+	::-webkit-scrollbar-thumb
+		background-color verde-oscuro
+		/*background-image url("../img/squares.png")*/
+		background-repeat no-repeat
+		background-position 50% 50%
+		max-width 100%
+		padding 0
+		cursor pointer
+		/*border-radius 25px*/
+	  
+	&:hover
+	    background #4ca06d
+	    cursor pointer 
+	    
+	/* Pseudo-clase */
+	::-webkit-scrollbar-thumb:window-inactive}
+		background azul
+			
+	
+	&-footer
+		background gris
+		padding 0.5rem
+		
+
+
+
+
+@media screen and (min-width:768px)
+	.pop-up 
+					
+		&-header
+							
+			.title
+				font-size 1.5rem
+				
+		
+
+@media screen and (min-width:992px)
+	.pop-up 
+		max-width 50%
+		
+		&-header
+							
+			.title
+				font-size 2rem
+		

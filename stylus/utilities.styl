@@ -1,0 +1,105 @@
+div.scrollExtend-loading {
+    height: 32px; 
+    background-image:url('../img/bxslider/bx_loader.gif');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.responsive-image
+	overflow hidden
+	margin 1rem auto
+	width 100%
+	font-size 0
+	text-align center
+	
+	img 
+		max-width 100%
+
+.responsive-table
+	display block
+	width 100%
+	overflow scroll
+	overflow-y hidden
+	height auto
+
+.word-truncate
+	white-space nowrap
+	overflow hidden
+	text-overflow ellipsis
+	
+.max-link
+	position absolute
+	left 0
+	right 0
+	bottom 0
+	top 0
+	
+.bold
+	font-weight bold
+	
+.pull-right
+	float none !important
+	
+.pull-left 
+	float none !important
+
+.no-background
+	background none
+
+.paragraph
+	font-size 1rem
+	color color-texto
+	margin 0 auto
+	padding 0.5rem
+	font-weight 500
+
+.max-title
+	font-size 1.5rem
+	text-transform uppercase
+	font-weight 600
+	margin 0.5rem auto
+	text-align center
+	border-bottom 2px solid rgba(black,0.5)
+
+.uppercase
+	text-transform uppercase
+	
+.lowercase
+	text-transform lowercase
+	
+.no-border
+	border none
+
+.no-margin
+	margin 0
+	
+.no-margin-left
+	margin-left 0
+	
+.no-padding
+	padding 0
+	
+.full-width
+	max-width 100%
+	
+.cursor
+	cursor pointer
+
+@media screen and (min-width:768px)
+	.max-title
+		font-size 2rem
+		margin 1rem
+		text-align left
+		
+	.responsive-table
+		overflow-x hidden
+		
+		&:hover
+			overflow-x visible
+		
+
+	.pull-right
+		float right
+		
+	.pull-left 
+		float left

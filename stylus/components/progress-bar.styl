@@ -1,0 +1,52 @@
+.progress-bar
+	margin 1rem auto
+	width 100%
+	background gris-claro
+	border 1px solid #d3d3d3
+	overflow hidden
+	position relative
+	height 30px
+	z-index 4
+	border-radius radio
+	transition 1s ease all
+	
+	&-indicator
+		width 80%
+		height 100%
+		z-index 5
+		box-sizing border-box
+		padding 0.5rem
+		margin 0
+		display block
+		
+		
+	span[data-type="success"]
+		background-color verde
+	
+
+	span[data-type="info"]
+		background-color azul
+		
+
+	span[data-type="warning"]
+		background-color naranja
+		
+
+	span[data-type="danger"]
+		background-color rojo
+		
+
+	&-percentage
+		position absolute
+		left 0
+		right 0
+		color white
+		margin 0.4rem auto
+		font-size 0.9rem
+		z-index 6
+		text-align center
+
+	
+		
+
+		

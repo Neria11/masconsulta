@@ -1,0 +1,212 @@
+#labels Featured
+I am actually thinking in introducing new colors, new categories to the already existing ones. 
+[http://google-maps-icons.googlecode.com/files/all-colors.png]
+
+_italic icons_ means the icon is not done yet.
+
+<table cellspacing="0" cellpadding="3"><tr><td valign="top" align="left" >
+
+===<font color="#5781fc" >Administration & Offices</font>===  
+[http://google-maps-icons.googlecode.com/files/police.png]
+[http://google-maps-icons.googlecode.com/files/firemen.png]
+[http://google-maps-icons.googlecode.com/files/justice.png]
+[http://google-maps-icons.googlecode.com/files/postal.png]
+[http://google-maps-icons.googlecode.com/files/military.png]
+
+[http://google-maps-icons.googlecode.com/files/administration.png]
+[http://google-maps-icons.googlecode.com/files/bank.png]
+[http://google-maps-icons.googlecode.com/files/company.png]
+[http://google-maps-icons.googlecode.com/files/findajob.png]
+[http://google-maps-icons.googlecode.com/files/company.png]
+[http://google-maps-icons.googlecode.com/files/factory.png]
+ * Prison
+ * Senior site
+ * Community center
+
+</td><td valign="top" align="left">
+
+===<font color="#fc6355">Health & Sports</font> ===
+*Health*
+
+[http://google-maps-icons.googlecode.com/files/doctor.png]
+[http://google-maps-icons.googlecode.com/files/drugs.png]
+[http://google-maps-icons.googlecode.com/files/hospital.png]
+[http://google-maps-icons.googlecode.com/files/schrink.png]
+[http://google-maps-icons.googlecode.com/files/disability.png]
+ * Yoga
+*Sports*
+
+[http://google-maps-icons.googlecode.com/files/pool.png]
+[http://google-maps-icons.googlecode.com/files/golf.png]
+[http://google-maps-icons.googlecode.com/files/tennis.png]
+[http://google-maps-icons.googlecode.com/files/soccer.png]
+[http://google-maps-icons.googlecode.com/files/skiing.png]
+ * Gym
+ * Basketball
+
+</td><td valign="top" align="left">
+
+===<font color="#00e13c">Tourism & Nature</font> ===
+[http://google-maps-icons.googlecode.com/files/park.png]
+[http://google-maps-icons.googlecode.com/files/beautiful.png]
+[http://google-maps-icons.googlecode.com/files/camping.png]
+[http://google-maps-icons.googlecode.com/files/hiking.png]
+[http://google-maps-icons.googlecode.com/files/animals.png]
+
+[http://google-maps-icons.googlecode.com/files/beach.png]
+[http://google-maps-icons.googlecode.com/files/church.png]
+[http://google-maps-icons.googlecode.com/files/fishing.png]
+[http://google-maps-icons.googlecode.com/files/horseriding.png]
+[http://google-maps-icons.googlecode.com/files/farm.png]
+
+[http://google-maps-icons.googlecode.com/files/recycle.png]
+ * Picnic
+ * Castle
+ * Windmill
+ * Bridge
+ * Statue
+ * Fountain
+ * Graveyard
+ * Mosque
+ * Synagogue
+ * Zoo
+ * Canoe
+ * Field (agriculture)
+</td><td valign="top" align="left">
+
+===<font color="#55d7d7">Stores</font>===
+[http://google-maps-icons.googlecode.com/files/supermarket.png]
+[http://google-maps-icons.googlecode.com/files/music.png]
+[http://google-maps-icons.googlecode.com/files/videogames.png]
+[http://google-maps-icons.googlecode.com/files/computer.png]
+[http://google-maps-icons.googlecode.com/files/clothes.png]
+
+[http://google-maps-icons.googlecode.com/files/shoes.png]
+[http://google-maps-icons.googlecode.com/files/flowers.png]
+[http://google-maps-icons.googlecode.com/files/toys.png]
+[http://google-maps-icons.googlecode.com/files/gifts.png]
+[http://google-maps-icons.googlecode.com/files/tools.png]
+</td></tr><tr><td valign="top" align="left">
+
+===<font color="#fcf357">Friends & Family & Real Estate</font>===
+ * Friends  
+ * Home  
+ * Girl/Boy friend  
+ * Date  
+ * Real estate  
+ * Apartment
+
+</td><td valign="top" align="left">
+
+===<font color="#7e55fc">Restaurants & Hotels</font> ===
+*Restaurants*
+ * Restaurant 
+ * Pizza 
+ * Fast food 
+ * Chinese restaurant 
+ * Japanese restaurant
+*Other*
+ * Bar  
+ * Coffee 
+ * Hotel  
+ * Bread
+ * _Youth Hostel_
+
+</td><td valign="top" align="left">
+
+===<font color="#e14f9e">Culture & Entertainment</font>===
+ * Cinema 
+ * Club  
+ * Theater  
+ * Casino  
+ * Poker 
+ * Museum 
+ * Bowling
+ * _Party_
+ * _Theme park*
+
+</td><td valign="top" align="left">
+
+===<font color="#ef9e40">Education & Kids</font>===
+*Education*
+ * School  
+ * University 
+ * Library  
+ * _Private teacher_
+ * _Adult education_
+*Kids*
+ * Playground 
+ * _Day care_
+ * _Summer camp_
+
+</td></tr><tr><td valign="top" align="left">
+
+===<font color="#000" >Transportation</font>===
+*Road*
+ * Car
+ * Highway
+ * Parking
+ * Truck 
+ * Cycling  
+ * Gaz station  
+ * Stoplight 
+ * Car repair
+ * Accident
+ * Taxi
+ * Bus 
+ * _Rent a Car_
+*Other*
+ * Airport 
+ * Port 
+ * Train
+ * _Underground_
+
+</td><td valign="top" align="left">
+
+===<font color="#9e7151" >Miscalenous</font>===
+ * Toilets 
+ * Wifi 
+ * Info
+
+</td><td valign="top" align="left">
+
+===<font color="#999999" >Events & Weather</font>===
+*Weather*
+ * Sun
+ * Clouds
+ * Clouds & sun
+ * Thunder 
+ * Rain 
+ * _Tornado_
+ * _Wind_
+ * _Snow_
+
+*Days of Week*
+ * Monday 
+ * Tuesday 
+ * Wednesday 
+ * Thursday 
+ * Friday 
+ * Satursday 
+ * Sunday
+
+*Events*
+ * _Fire_
+ * _Shooting_
+ * _Flood_
+ * _General Crime_
+ * _Plane crash..._
+ * _Earthquake_
+ * _Air pollution_
+
+</td><td valign="top" align="left">
+
+===<font color="#0337D1" >Media</font>===
+ * _Video_
+ * _Audio_
+ * _Photo_
+ * _Text_
+
+</td></tr></table>
+
+Any suggestion is welcome on this subject, I haven't decided anything yet.

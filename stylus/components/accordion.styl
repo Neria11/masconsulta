@@ -1,0 +1,56 @@
+.accordion
+	max-width 100%
+	color white
+	position relative
+	margin 0.5rem auto
+	background white
+	
+		
+	&-header
+		max-width 100%
+		cursor pointer
+		min-height 50px
+		
+		.title
+			font-size 1.2rem
+			font-weight 500
+			padding 0.5rem
+			line-height 2
+			color white
+			margin 0
+
+			.toggle-icon
+				span 
+					color white
+					font-size 0.9rem
+					font-weight 300
+		
+	&-content
+		background white
+		padding 0.5rem
+		min-height 200px
+		overflow-y hidden
+		display none
+		border 1px solid #d3d3d3
+		
+		&:hover
+			overflow-y visible
+		
+		.data
+			margin 0 auto
+			text-align left
+			font-size 1rem
+			
+				
+		
+@media screen and (min-width:768px)
+	.accordion
+		margin 0.5rem
+		border-radius radio
+		
+		&-header
+			border-radius radio radio 0 0
+		
+		&-content
+			display block
+		

@@ -1,0 +1,31 @@
+.event
+	background white
+	position relative
+	/*border-bottom 1px solid #d3d3d3*/
+	margin 0 auto
+	
+	&-wallpaper
+		margin 0
+		height 100px
+		overflow hidden
+		
+		img
+			max-width 100%
+	
+	&-title
+		font-size 1rem
+		color azul
+		text-align left
+		@extends .word-truncate
+		
+		&:hover 
+			color azul
+			text-decoration underline
+		
+	&-description
+		font-size 0.8rem
+		word-wrap break-word
+		height 40px
+		overflow hidden
+		font-weight 400
+		margin 0.5rem auto

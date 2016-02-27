@@ -1,0 +1,70 @@
+.toggle-float-panel
+	background azul
+	cursor pointer
+	height 70px
+	position relative
+	width 70px
+	z-index 10
+	margin 0
+	display table
+	text-align center
+		
+	span
+		font-weight bold
+		font-size 2rem
+		display table-cell
+		vertical-align middle
+		color white
+		text-align center
+
+.float-panel
+	height 100%
+	width 240px
+	position fixed
+	left 0
+	background #545351
+	top 70px
+	bottom 70px
+	padding-bottom 1rem
+	border-right 1px solid gris-claro
+	overflow scroll
+	overflow-y hidden
+	overflow-x hidden
+	display none
+	z-index 11
+	
+	
+	&-menu
+		margin 0
+		padding 0
+		width 100%
+		overflow hidden
+		
+		li
+			display block
+			line-height 40px
+			
+			a 
+				padding 0.5rem 1rem
+				display block
+				font-size 1.1rem
+				font-weight 500
+				color white
+				text-decoration none
+				border-bottom 1px solid gris-oscuro
+
+				&:hover
+					background verde
+					color white
+					transition 0.5s ease all
+					
+@media screen and (min-width: 768px)
+	.toggle-float-panel
+		display none
+		
+	.float-panel
+		display block
+		
+		&-menu
+			li 
+				line-height 30px

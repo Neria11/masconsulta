@@ -1,0 +1,78 @@
+.mc-button
+	display inline-block
+	margin 0.5rem auto
+	padding 0.5rem 1rem
+	background gris-claro
+	border none
+	color gris-oscuro
+	cursor pointer
+	text-align center
+	
+	&-square
+		width 5%
+		font-size 1rem
+
+	&-xs
+		min-width 20%
+		font-size 1rem
+				
+	&-sm
+		min-width 40%
+		font-size 1.1rem
+		
+	&-md
+		min-width 70%
+		font-size 1.2rem
+		
+	&-lg
+		min-width 90%
+		font-size 1.3rem
+
+	&-block
+		display block
+		width 100%
+		padding 0.5rem
+		font-size 1.4rem
+		
+	&-success
+		background verde
+		color rgba(black,0.5)
+		
+	&-info
+		background azul
+		color rgba(black,0.5)
+		
+	&-danger
+		background rojo
+		color rgba(black,0.5)
+		
+	&-warning
+		background naranja
+		color rgba(black,0.5)
+		
+	&-phantom
+		background gris-claro
+		
+	&-link
+		background none
+		display inline-block
+		color azul
+		text-decoration underline
+		width initial
+		
+
+@media screen and (min-width:768px)
+	.mc-button
+		
+		&-xs
+			width 10%
+
+		&-sm
+			width 20%
+			
+		&-md
+			width 40%
+
+		&-lg
+			width 60%
+			

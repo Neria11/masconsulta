@@ -1,0 +1,68 @@
+.navigation
+	display block
+	position absolute
+	top 70px
+	z-index 150
+	right 0
+	right 0
+	width 200px
+	display none
+	background rgba(#363636,1)
+		
+	ul
+		margin 0
+		padding 0
+		z-index 100
+		
+		li 
+			display block
+			line-height 70px
+			z-index 100
+			
+			a
+				padding 0 0.5rem
+				text-decoration none
+				cursor pointer
+				display block
+				color white
+				text-transform uppercase
+				font-weight 600
+				text-align center
+				margin 0
+				
+				&:hover
+					background rojo
+					transition 0.5s ease all
+				
+			#selected
+				background rojo
+				color white
+
+@media screen and (min-width:768px)
+	.navigation
+		float right
+		position relative
+		top 0
+		background none
+		width initial
+		display inline-block
+		
+		ul 
+			display inline-block
+			
+			li 
+				display inline-block
+				list-style none
+				
+				a
+					min-width 100px
+					color #363636
+					
+					&:hover
+						background rojo
+						color white
+						
+					
+					
+					
+			

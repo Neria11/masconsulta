@@ -1,0 +1,216 @@
+.form
+	padding 0
+	margin 0.5rem auto
+	text-align center
+	
+	&-group
+		display block
+		padding 0.2rem 0
+		margin 0.5rem auto
+		
+		.tag
+			font-size 1rem
+			display block
+			margin 0.3rem auto
+			text-align center
+			
+
+		.control[type="file"]
+			border none
+			
+		textarea.control
+			resize none
+		
+		.control
+			padding 0.5rem
+			box-sizing border-box
+			border-width 1px 1px 2px 1px 
+			border-style solid 
+			border-color gris-oscuro
+			font-weight normal
+			border-radius radio
+			
+			&-xs
+				width 20%
+				font-size 1rem
+						
+			&-sm
+				width 40%
+				font-size 1.1rem
+				
+			&-md
+				width 70%
+				font-size 1.2rem
+				
+			&-lg
+				width 90%
+				font-size 1.3rem
+				
+			&-block
+				display block
+				width 100%
+				padding 0.5rem
+				font-size 1.3rem
+				
+			&:focus
+				outline none
+				border-color azul
+				box-shadow none
+				
+		input[type="radio"]
+		input[type="checkbox"]
+			display none
+			
+		input[type="radio"] + label
+		input[type="checkbox"] + label
+			font-size 1rem
+			display block 
+			margin 1rem auto
+			cursor pointer
+			
+		input[type="radio"] + label span
+		input[type="checkbox"] + label span
+			display inline-block
+			width 50px
+			height 50px
+			cursor pointer
+			margin 0.2rem
+			vertical-align middle
+			border-radius 50%
+			background gris-oscuro
+		
+		input[type="checkbox"] + label span
+			border-radius 0
+			background white
+			border 1px solid #d3d3d3
+
+		input[type="radio"]:checked + label span
+		input[type="checkbox"]:checked + label span
+			background-color azul
+
+		input[type="radio"] + label span,
+		input[type="radio"]:checked + label span
+			transition background-color 0.1s ease
+
+.search-container
+	background white
+	height  auto
+	margin 0 auto
+	overflow auto
+	border-bottom 1px solid #d3d3d3
+	line-height 30px
+	padding 0.5rem
+	text-align center
+	z-index 10
+	border-radius radio
+	
+	
+	.searcher
+		width 100%
+		overflow hidden
+		background white
+		height 50px
+		margin 0 auto
+		border-radius radio
+		
+		&-input
+			padding 0.5rem
+			border 0
+			width 100%
+			font-size 1.4rem
+			height 50px
+			outline none
+			background gris-claro
+			box-sizing border-box
+			border 1px solid #d3d3d3
+			
+		&-button
+			background azul
+			border none
+			cursor pointer
+			height 50px
+			outline none
+			padding 0.5rem
+			text-align center
+			width 100%
+			
+			span
+				color white
+				vertical-align middle
+				display block
+				
+.fixed-on-scroll
+	position fixed
+	left 0
+	right 0
+	top 70px
+				
+.autocompletado
+	background white
+	border-color gray
+	border-style solid
+	border-width 0 1px 1px 1px
+	box-sizing border-box
+	height 250px
+	margin 0 auto
+	overflow auto
+	padding 0
+	position absolute
+	width 100%
+	left 0
+	right 0
+	z-index 10
+	
+	.suggest-element
+		list-style none
+		/*margin 0.5rem*/
+		padding 0.5rem
+		cursor pointer
+		display block
+		border-bottom 1px solid gris
+		text-align left
+		font-size 0.9rem
+		@extends .word-truncate
+		
+		
+		&:hover
+			background verde
+			color white
+
+@media screen and (min-width:768px)
+	.form
+		text-align initial
+		padding 0.5rem 0
+		
+		&-group		
+		
+			.tag
+				font-size 1.1rem
+				text-align left
+				margin 0.4rem 0
+			
+			.control
+						
+				&-xs
+					width 10%
+					
+				&-sm
+					width 20%
+					
+				&-md
+					width 40%
+					
+				&-lg
+					width 60%
+					
+			input[type="radio"] + label span
+				width 40px
+				height 40px
+					
+	.search-container
+		padding 0.5rem 1rem
+		
+		.searcher
+			width 50%
+			text-align left
+			

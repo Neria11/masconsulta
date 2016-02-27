@@ -1,0 +1,54 @@
+.alert
+	display block
+	background gris
+	margin 1rem auto
+	padding 0.5rem
+	color rgba(black,0.5)
+	position relative
+	border-radius radio
+	max-width 100%
+	overflow hidden
+	/*height 50px
+	@extends .word-truncate*/
+	height auto
+	box-sizing border-box
+	
+	span[data-role="icon"]
+		font-size 1rem
+		vertical-align middle
+		
+	.description
+		margin 0
+		padding 0 3rem 0 0.5rem
+		font-size 1rem
+		line-height 1.5
+		font-weight 100
+		color white
+		letter-spacing 0.1px
+		
+	&-close
+		width 50px
+		height 50px
+		box-sizing border-box
+		background gris-claro
+		font-size 1.1rem
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		font-weight 800
+		cursor pointer
+		text-align center
+		padding 0.5rem
+
+	&-succes
+		background rgba(verde,0.9)
+		
+	&-info
+		background rgba(azul,0.9)
+		
+	&-danger
+		background rgba(rojo,0.9)
+		
+	&-warning
+		background rgba(naranja,0.9)

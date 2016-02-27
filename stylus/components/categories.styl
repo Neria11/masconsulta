@@ -1,0 +1,31 @@
+.categories
+	margin 0
+	padding 0.5rem
+	
+	li
+		height 40px
+		padding 0.5rem
+		list-style none
+		padding 0
+		margin 0.5rem auto
+		background gris-claro
+		border 1px solid #d3d3d3
+		overflow hidden
+		position relative
+		
+		span
+			vertical-align middle
+			padding 0.5rem
+		
+		a
+			padding 0.5rem
+			display block
+			/*color azul*/
+			font-size 0.9rem
+			line-height 1.7
+			text-decoration none
+			@extends .word-truncate
+			
+			&:hover
+				background rgba(gris-claro,0.7)
+			

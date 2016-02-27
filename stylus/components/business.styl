@@ -1,0 +1,55 @@
+.business
+	height 100px
+	background white
+	border 1px solid #c4c4c4
+	position relative
+	margin 0.5rem auto
+	max-width 90%
+	vertical-align top
+	border-radius radio
+	overflow hidden
+	
+	&-logo
+		margin 0
+		box-sizing border-box
+		float left
+		display inline-block
+		border-right 1px solid #d3d3d3
+		background white
+		width 100px
+		height 100px
+		text-align center
+		
+		img 
+			max-width 100%
+			
+	&-data
+		padding 0
+		overflow hidden
+		margin-left 110px
+		line-height 1.5
+		
+		.name
+			font-size 1.3rem
+			margin 0.2rem 0
+			@extends .word-truncate
+			
+		.nick
+			font-size 0.9rem
+			margin 0.6rem 0
+			font-weight 100
+			
+		.category
+			font-size 0.8rem
+			margin 0.5rem 0
+			font-style italic
+			text-decoration underline
+			
+
+	&:hover
+		background gris-claro
+	
+
+@media screen and (min-width:768px)
+	.business
+		max-width 90%
