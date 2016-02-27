@@ -72,6 +72,7 @@ unset($_SESSION["cantidadcargadas"]);
 
 
     /*Services in real time*/
+    loadBusiness();
     loadPublications();
     loadCategories();
     $.ajaxSetup({"cache":false});
@@ -228,7 +229,7 @@ unset($_SESSION["cantidadcargadas"]);
       </div>
       <!--NEGOCIOS EN PANTLLA PRINCIPAL-->
     </div> 
-    <div class="container">
+    <div class="container" >
       <div class="u-wrapper">
         <div id="resultPublications">
          <div class="row" id="itemsPublications">

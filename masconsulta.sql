@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-02-2016 a las 22:48:35
+-- Tiempo de generación: 26-02-2016 a las 22:36:04
 -- Versión del servidor: 5.6.16
 -- Versión de PHP: 5.5.11
 
@@ -32,7 +32,7 @@ DROP TABLE IF EXISTS `avatars_usuarios`;
 CREATE TABLE IF NOT EXISTS `avatars_usuarios` (
   `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
   `path_avatar` int(11) DEFAULT NULL,
-  `fecha_actualizado` varchar(100) DEFAULT NULL,
+  `fecha_actualizado` datetime DEFAULT NULL,
   `cantidad_actualizado` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`)
@@ -127,71 +127,29 @@ INSERT INTO `categorias_negocios` (`id_categoria`, `categoria`, `descripcion`, `
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `cuentas_usuarios`
+-- Estructura de tabla para la tabla `cuentas_acceso_usuarios`
 --
 
-DROP TABLE IF EXISTS `cuentas_usuarios`;
-CREATE TABLE IF NOT EXISTS `cuentas_usuarios` (
+DROP TABLE IF EXISTS `cuentas_acceso_usuarios`;
+CREATE TABLE IF NOT EXISTS `cuentas_acceso_usuarios` (
   `username` varchar(100) NOT NULL,
   `password` varchar(150) DEFAULT NULL,
   `nivel_acceso` int(11) DEFAULT NULL,
   `status_cuenta` int(11) DEFAULT NULL,
-  `fecha_registro` varchar(100) DEFAULT NULL,
+  `fecha_registro` datetime DEFAULT NULL,
   `cantidad_login` int(11) DEFAULT NULL,
-  `fecha_ultimo_login` varchar(100) DEFAULT NULL,
+  `fecha_ultimo_login` datetime DEFAULT NULL,
   `dirección_ultimo_login` varchar(64) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `cuentas_usuarios`
---
-
-INSERT INTO `cuentas_usuarios` (`username`, `password`, `nivel_acceso`, `status_cuenta`, `fecha_registro`, `cantidad_login`, `fecha_ultimo_login`, `dirección_ultimo_login`) VALUES
-('sneria', 'd312347f7dec3e0deb38064df80dc19b', 3, 1, '22/02/2016 12:27:54 pm', 0, NULL, NULL),
-('oso', '5caae99531c54bc794f2489f5f2e6f33', 1, 0, 'oso', NULL, NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `datos_usuarios`
+-- Estructura de tabla para la tabla `entidades_federativas`
 --
 
-DROP TABLE IF EXISTS `datos_usuarios`;
-CREATE TABLE IF NOT EXISTS `datos_usuarios` (
-  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(100) DEFAULT NULL,
-  `nombre` varchar(50) DEFAULT NULL,
-  `ape_pa` varchar(50) DEFAULT NULL,
-  `ape_ma` varchar(50) DEFAULT NULL,
-  `calle` varchar(50) DEFAULT NULL,
-  `num_ext` varchar(5) DEFAULT NULL,
-  `num_int` varchar(5) DEFAULT NULL,
-  `colonia` varchar(50) DEFAULT NULL,
-  `id_municipio` int(11) DEFAULT NULL,
-  `sexo` varchar(50) DEFAULT NULL,
-  `fecha_nacimiento` varchar(64) DEFAULT NULL,
-  `telefono` varchar(50) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `eslogan` text,
-  PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
-
---
--- Volcado de datos para la tabla `datos_usuarios`
---
-
-INSERT INTO `datos_usuarios` (`id_usuario`, `username`, `nombre`, `ape_pa`, `ape_ma`, `calle`, `num_ext`, `num_int`, `colonia`, `id_municipio`, `sexo`, `fecha_nacimiento`, `telefono`, `email`, `eslogan`) VALUES
-(1, 'sneria', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'n_eria_11@hotmail.com', NULL),
-(2, 'oso', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'n_eria_11@hotmail.com', NULL);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `estados`
---
-
-DROP TABLE IF EXISTS `estados`;
-CREATE TABLE IF NOT EXISTS `estados` (
+DROP TABLE IF EXISTS `entidades_federativas`;
+CREATE TABLE IF NOT EXISTS `entidades_federativas` (
   `id_estado` int(11) NOT NULL AUTO_INCREMENT,
   `estado` varchar(100) DEFAULT NULL,
   `abbr_estado` varchar(10) DEFAULT NULL,
@@ -201,10 +159,10 @@ CREATE TABLE IF NOT EXISTS `estados` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
 
 --
--- Volcado de datos para la tabla `estados`
+-- Volcado de datos para la tabla `entidades_federativas`
 --
 
-INSERT INTO `estados` (`id_estado`, `estado`, `abbr_estado`, `id_pais`, `status`) VALUES
+INSERT INTO `entidades_federativas` (`id_estado`, `estado`, `abbr_estado`, `id_pais`, `status`) VALUES
 (1, 'Aguascalientes', 'Ags.', 155, 1),
 (2, 'Baja California', 'BC', 155, 1),
 (3, 'Baja California Sur', 'BCS', 155, 1),
@@ -241,24 +199,42 @@ INSERT INTO `estados` (`id_estado`, `estado`, `abbr_estado`, `id_pais`, `status`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `eventos`
+-- Estructura de tabla para la tabla `eventos_negocios`
 --
 
-DROP TABLE IF EXISTS `eventos`;
-CREATE TABLE IF NOT EXISTS `eventos` (
+DROP TABLE IF EXISTS `eventos_negocios`;
+CREATE TABLE IF NOT EXISTS `eventos_negocios` (
   `id_evento` int(11) NOT NULL AUTO_INCREMENT,
   `id_negocio` int(11) DEFAULT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
   `tipo_evento` varchar(100) DEFAULT NULL,
   `nombre` varchar(100) DEFAULT NULL,
-  `fecha_inicia` varchar(100) DEFAULT NULL,
-  `fecha_termina` varchar(100) DEFAULT NULL,
+  `fecha_inicia` datetime DEFAULT NULL,
+  `fecha_termina` datetime DEFAULT NULL,
   `horario` varchar(100) DEFAULT NULL,
   `descripcion` text,
   `imagen` text,
   `video` text,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_evento`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `galeria_negocios`
+--
+
+DROP TABLE IF EXISTS `galeria_negocios`;
+CREATE TABLE IF NOT EXISTS `galeria_negocios` (
+  `id_foto` int(11) NOT NULL AUTO_INCREMENT,
+  `path_imagen` text,
+  `descripcion` text,
+  `visualizaciones` int(11) DEFAULT NULL,
+  `fecha_publicacion` datetime DEFAULT NULL,
+  `id_negocio` int(11) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_foto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -273,7 +249,7 @@ CREATE TABLE IF NOT EXISTS `historial_busquedas` (
   `busqueda` text,
   `path_busquedas` text,
   `cantidad_buscado` int(11) DEFAULT NULL,
-  `fecha_busqueda` varchar(100) DEFAULT NULL,
+  `fecha_busqueda` datetime DEFAULT NULL,
   `direccion_ip_usuario` varchar(100) DEFAULT NULL,
   `navegador_utilizado` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_busqueda`)
@@ -290,8 +266,8 @@ CREATE TABLE IF NOT EXISTS `horarios_negocios` (
   `id_negocio` int(11) DEFAULT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
   `dia_semana` varchar(50) DEFAULT NULL,
-  `hora_inicia` varchar(50) DEFAULT NULL,
-  `hora_cierra` varchar(50) DEFAULT NULL,
+  `hora_inicia` time DEFAULT NULL,
+  `hora_cierra` time DEFAULT NULL,
   `datos_adicionales` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -300,21 +276,43 @@ CREATE TABLE IF NOT EXISTS `horarios_negocios` (
 --
 
 INSERT INTO `horarios_negocios` (`id_negocio`, `id_sucursal`, `dia_semana`, `hora_inicia`, `hora_cierra`, `datos_adicionales`) VALUES
-(1, 1, 'Lunes', '08:30 am', '17:30 pm', NULL);
+(1, 1, 'Lunes', '08:30:00', '17:30:00', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `imagenes_publicaciones`
+-- Estructura de tabla para la tabla `informacion_usuarios`
 --
 
-DROP TABLE IF EXISTS `imagenes_publicaciones`;
-CREATE TABLE IF NOT EXISTS `imagenes_publicaciones` (
-  `id_publicacion` int(11) DEFAULT NULL,
-  `token_publicacion` varchar(50) DEFAULT NULL,
-  `path_imagen` text,
-  `status` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `informacion_usuarios`;
+CREATE TABLE IF NOT EXISTS `informacion_usuarios` (
+  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) DEFAULT NULL,
+  `nombre` varchar(50) DEFAULT NULL,
+  `ape_pa` varchar(50) DEFAULT NULL,
+  `ape_ma` varchar(50) DEFAULT NULL,
+  `calle` varchar(50) DEFAULT NULL,
+  `num_ext` varchar(5) DEFAULT NULL,
+  `num_int` varchar(5) DEFAULT NULL,
+  `colonia` varchar(50) DEFAULT NULL,
+  `id_municipio` int(11) DEFAULT NULL,
+  `sexo` varchar(50) DEFAULT NULL,
+  `fecha_nacimiento` varchar(64) DEFAULT NULL,
+  `telefono` varchar(50) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `eslogan` text,
+  PRIMARY KEY (`id_usuario`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Volcado de datos para la tabla `informacion_usuarios`
+--
+
+INSERT INTO `informacion_usuarios` (`id_usuario`, `username`, `nombre`, `ape_pa`, `ape_ma`, `calle`, `num_ext`, `num_int`, `colonia`, `id_municipio`, `sexo`, `fecha_nacimiento`, `telefono`, `email`, `eslogan`) VALUES
+(1, 'sneria', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'n_eria_11@hotmail.com', NULL),
+(2, 'oso', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'n_eria_11@hotmail.com', NULL),
+(3, 'ana', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'andari@hotmail.com', NULL),
+(4, 'sony', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'sony@sony.com', NULL);
 
 -- --------------------------------------------------------
 
@@ -327,19 +325,20 @@ CREATE TABLE IF NOT EXISTS `logotipos_negocios` (
   `id_logotipo` int(11) NOT NULL AUTO_INCREMENT,
   `id_negocio` int(11) NOT NULL,
   `path_logotipo` text,
-  `fecha_actualizado` varchar(100) DEFAULT NULL,
+  `fecha_actualizado` datetime DEFAULT NULL,
   `cantidad_actualizado` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_logotipo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `logotipos_negocios`
 --
 
 INSERT INTO `logotipos_negocios` (`id_logotipo`, `id_negocio`, `path_logotipo`, `fecha_actualizado`, `cantidad_actualizado`, `status`) VALUES
-(1, 1, 'negocios/logos/masconsulta/logo.png', '25/02/2016', 1, 1),
-(2, 2, 'negocios/logos/bonfriends/logo.jpg', '25/02/2016', 1, 1);
+(1, 1, 'negocios/logos/masconsulta/logo.png', '0000-00-00 00:00:00', 1, 1),
+(2, 2, 'negocios/logos/bonfriends/logo.jpg', '0000-00-00 00:00:00', 1, 1),
+(3, 3, 'negocios/logos/tolantongomx/logo.png', '0000-00-00 00:00:00', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -350,17 +349,22 @@ INSERT INTO `logotipos_negocios` (`id_logotipo`, `id_negocio`, `path_logotipo`, 
 DROP TABLE IF EXISTS `mensajes`;
 CREATE TABLE IF NOT EXISTS `mensajes` (
   `id_mensaje` int(11) NOT NULL AUTO_INCREMENT,
+  `id_negocio` int(11) DEFAULT NULL,
+  `id_usuario` int(11) DEFAULT NULL,
+  `id_pregunta` int(11) DEFAULT NULL,
+  `id_respuesta` int(11) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_mensaje`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `metodos_pago`
+-- Estructura de tabla para la tabla `metodos_pago_disponibles`
 --
 
-DROP TABLE IF EXISTS `metodos_pago`;
-CREATE TABLE IF NOT EXISTS `metodos_pago` (
+DROP TABLE IF EXISTS `metodos_pago_disponibles`;
+CREATE TABLE IF NOT EXISTS `metodos_pago_disponibles` (
   `id_metodo_pago` int(11) NOT NULL AUTO_INCREMENT,
   `metodo_pago` text,
   `descripcion` text,
@@ -368,10 +372,10 @@ CREATE TABLE IF NOT EXISTS `metodos_pago` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
--- Volcado de datos para la tabla `metodos_pago`
+-- Volcado de datos para la tabla `metodos_pago_disponibles`
 --
 
-INSERT INTO `metodos_pago` (`id_metodo_pago`, `metodo_pago`, `descripcion`) VALUES
+INSERT INTO `metodos_pago_disponibles` (`id_metodo_pago`, `metodo_pago`, `descripcion`) VALUES
 (1, 'Efectivo', 'Dinero en efectivo'),
 (2, 'Cheque', 'Cheque'),
 (3, 'Tarjeta de débito', 'Tarjeta de débito'),
@@ -379,6 +383,19 @@ INSERT INTO `metodos_pago` (`id_metodo_pago`, `metodo_pago`, `descripcion`) VALU
 (5, 'Vales de despensa', 'Vales de despensa'),
 (6, 'Pagaré', 'Pagaré'),
 (7, 'Tranferencia electrónica', 'Tranferencia electrónica');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `metodo_pago_usado`
+--
+
+DROP TABLE IF EXISTS `metodo_pago_usado`;
+CREATE TABLE IF NOT EXISTS `metodo_pago_usado` (
+  `id_negocio` int(11) DEFAULT NULL,
+  `id_sucursal` int(11) DEFAULT NULL,
+  `id_metodo_pago` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -2863,11 +2880,11 @@ INSERT INTO `municipios` (`id_municipio`, `cve_municipio`, `municipio`, `id_esta
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `negocios`
+-- Estructura de tabla para la tabla `negocios_registrados`
 --
 
-DROP TABLE IF EXISTS `negocios`;
-CREATE TABLE IF NOT EXISTS `negocios` (
+DROP TABLE IF EXISTS `negocios_registrados`;
+CREATE TABLE IF NOT EXISTS `negocios_registrados` (
   `id_negocio` int(11) NOT NULL AUTO_INCREMENT,
   `pseudonimo` varchar(100) DEFAULT NULL,
   `nombre` varchar(150) DEFAULT NULL,
@@ -2894,22 +2911,23 @@ CREATE TABLE IF NOT EXISTS `negocios` (
   `vision` text,
   `valores` text,
   `fecha_nacimiento_negocio` varchar(100) DEFAULT NULL,
-  `fecha_registro` varchar(100) DEFAULT NULL,
-  `ultima_actualizacion` varchar(100) DEFAULT NULL,
+  `fecha_registro` datetime DEFAULT NULL,
+  `ultima_actualizacion` datetime DEFAULT NULL,
   `datos_adicionales` text,
   `id_rango_precios` int(11) NOT NULL,
   `id_paquete` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_negocio`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Volcado de datos para la tabla `negocios`
+-- Volcado de datos para la tabla `negocios_registrados`
 --
 
-INSERT INTO `negocios` (`id_negocio`, `pseudonimo`, `nombre`, `id_categoria`, `descripcion`, `eslogan`, `servicios`, `calle`, `num_ext`, `num_int`, `colonia`, `id_municipio`, `cp`, `email`, `sitio_web`, `facebook`, `twitter`, `gplus`, `youtube`, `instagram`, `pinterest`, `linkedin`, `mision`, `vision`, `valores`, `fecha_nacimiento_negocio`, `fecha_registro`, `ultima_actualizacion`, `datos_adicionales`, `id_rango_precios`, `id_paquete`, `status`) VALUES
+INSERT INTO `negocios_registrados` (`id_negocio`, `pseudonimo`, `nombre`, `id_categoria`, `descripcion`, `eslogan`, `servicios`, `calle`, `num_ext`, `num_int`, `colonia`, `id_municipio`, `cp`, `email`, `sitio_web`, `facebook`, `twitter`, `gplus`, `youtube`, `instagram`, `pinterest`, `linkedin`, `mision`, `vision`, `valores`, `fecha_nacimiento_negocio`, `fecha_registro`, `ultima_actualizacion`, `datos_adicionales`, `id_rango_precios`, `id_paquete`, `status`) VALUES
 (1, 'masconsulta', 'Masconsulta', 23, 'Empresa de publicidad dedicada al marketing de negocios', 'No somos los únicos, pero si los mejores', 'Marketing digital\r\nMarketing tangible', 'Cecilio Ramírez', '18', '3', 'San Antonio', 56, '42300', 'masconsulta@gmail.com', 'http://www.masconsulta.com', 'http://www.masconsulta.com/masconsulta', NULL, NULL, NULL, NULL, NULL, NULL, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', NULL, '25/05/2012', NULL, NULL, NULL, 2, 1, 1),
-(2, 'bonfriends', 'Bon Friends', 32, 'Lorem', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, 1, 1);
+(2, 'bonfriends', 'Bon Friends', 32, 'Lorem', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, 1, 1),
+(3, 'tolantongomx', 'Grutas Tolantongo', 32, 'Lugar de atracciones naturales y turísticas', 'Un oasis a su alcance', 'Hospedaje\r\nVigilancia\r\nMédicos\r\nAtractivos\r\nRestaurante', 'San Cristóbal', '1', '1', 'Tolantongo', 3, '42370', 'grutastolantongo@grutastolantongo.com', '//tolantongo.mx', '//facebook.com/tolantongomx', '//facebook.com/tolantongomx', '//facebook.com/tolantongomx', '//facebook.com/tolantongomx', '//facebook.com/tolantongomx', '//facebook.com/tolantongomx', '//facebook.com/tolantongomx', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', '14/08/1976', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 2, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -3179,17 +3197,40 @@ INSERT INTO `paises` (`id_pais`, `cve_pais`, `pais`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `paquetes`
+-- Estructura de tabla para la tabla `paquetes_contratados`
 --
 
-DROP TABLE IF EXISTS `paquetes`;
-CREATE TABLE IF NOT EXISTS `paquetes` (
+DROP TABLE IF EXISTS `paquetes_contratados`;
+CREATE TABLE IF NOT EXISTS `paquetes_contratados` (
+  `id_negocio` int(11) DEFAULT NULL,
+  `id_sucursal` int(11) DEFAULT NULL,
+  `id_paquete` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `paquetes_disponibles`
+--
+
+DROP TABLE IF EXISTS `paquetes_disponibles`;
+CREATE TABLE IF NOT EXISTS `paquetes_disponibles` (
   `id_paquete` int(11) NOT NULL AUTO_INCREMENT,
   `paquete` varchar(50) DEFAULT NULL,
   `descripcion` text,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_paquete`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Volcado de datos para la tabla `paquetes_disponibles`
+--
+
+INSERT INTO `paquetes_disponibles` (`id_paquete`, `paquete`, `descripcion`, `status`) VALUES
+(1, 'Prueba', ' En este paquete se incluye la información completa del servicio o negocio a dar a conocer al público. Prácticamente tiene todas las ventajas de un paquete Premium. La única desventaja es que dichos datos sólo se mostrarán de manera gratuita durante un periodo de 30 días. Posteriormente deberá contratar un paquete para continuar con su publicidad. Entre la información mostrada se encuentra:\n\n    Imagen general del negocio (Banner).\n    Logotipo\n    Nombre del negocio.\n    Eslogan (en caso de tenerlo)\n    Descripción(Servicios)\n    Dirección\n    Teléfonos\n    Correo\n    Vinculo a redes sociales\n    Horarios de servicio\n    Galería de imágenes\n    Ubicación en el mapa\n    Publicaciones con tiempo limitado. ', 1),
+(2, 'Individual', ' Éste paquete es ideal para particulares, es decir, personas que se dedican a laborar de manera independiente. (Ejemplo: Plomero, Electricista, etc.). El paquete incluye:\n\n    Imagen alusiva al negocio\n    Descripción (Servicios)\n    Dirección\n    Medios de contacto (Teléfono, email). ', 1),
+(3, 'Basico', ' Este paquete es especial para negocios que ya están posicionados en algún nivel del mercado al que pertenecen pero que necesitan un pequeño impulso para ir mas allá y consolidar que sus clientes se fidelicen completamente hacia sus servicios. El paquete incluye:\n\n    Imagen general(Banner)\n    Logotipo\n    Descripción (Servicios)\n    Medios de contacto (Teléfono, correos, redes sociales)\n    Horarios de servicio\n    Constantes publicaciones en nuestro sitios oficiales ', 1),
+(4, 'Premium', ' Este paquete es recomendado para pequeños negocios que están comenzando y que necesitan de un constante marketing que haga mostrarlos ante el público esperado. El paquete es similar al de prueba, la diferencia es que éste incluye un costo, dicho paquete incluye:\n\n    Imagen general del negocio.\n    Logotipo\n    Nombre del negocio.\n    Eslogan (en caso de tenerlo)\n    Descripción(Servicios)\n    Dirección\n    Teléfonos\n    Correo\n    Vinculo a redes sociales\n    Horarios de servicio\n    Galería de imágenes\n    Publicaciones ilimitadas (videos, imagenes, textos, etc.)\n    Ubicación en el mapa\n    Asesoramiento en el manejo de sus diseños.\n    Creación o renovación de imagen comercial (Logotipo) (En caso de ser necesario)\n    Publicaciones continuas en nuestras redes sociales. ', 1);
 
 -- --------------------------------------------------------
 
@@ -3199,8 +3240,10 @@ CREATE TABLE IF NOT EXISTS `paquetes` (
 
 DROP TABLE IF EXISTS `preguntas`;
 CREATE TABLE IF NOT EXISTS `preguntas` (
-  `id_preguntas` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id_preguntas`)
+  `id_pregunta` int(11) NOT NULL AUTO_INCREMENT,
+  `pregunta` text,
+  `fecha_realizada` datetime DEFAULT NULL,
+  PRIMARY KEY (`id_pregunta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -3237,16 +3280,32 @@ CREATE TABLE IF NOT EXISTS `publicaciones_negocios` (
   `id_negocio` int(11) DEFAULT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
   `tipo_publicacion` varchar(100) DEFAULT NULL,
-  `descripcion` text,
+  `contenido` text,
   `id_usuario` int(11) DEFAULT NULL,
   `direccion_ip_usuario` varchar(64) DEFAULT NULL,
-  `fecha_publicada` varchar(100) DEFAULT NULL,
-  `fecha_vencimiento` int(100) DEFAULT NULL,
+  `fecha_publicada` datetime DEFAULT NULL,
+  `fecha_vencimiento` datetime DEFAULT NULL,
   `token_publicacion` varchar(128) DEFAULT NULL,
   `likes` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_publicacion`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Volcado de datos para la tabla `publicaciones_negocios`
+--
+
+INSERT INTO `publicaciones_negocios` (`id_publicacion`, `id_negocio`, `id_sucursal`, `tipo_publicacion`, `contenido`, `id_usuario`, `direccion_ip_usuario`, `fecha_publicada`, `fecha_vencimiento`, `token_publicacion`, `likes`, `status`) VALUES
+(1, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpj', 123, 1),
+(2, 2, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1),
+(3, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '1899-11-21 11:26:26', '0000-00-00 00:00:00', 'kasdqwf', 123, 1),
+(4, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '11eaddf', 123, 1),
+(5, 1, 1, 'IMAGEN', 'img/pe.jpg', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszqf1pj', 123, 1),
+(6, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjasd', 123, 1),
+(7, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjqwfq', 123, 1),
+(8, 1, 1, 'IMAGEN', 'img/bills.gif', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfwf', 123, 1),
+(9, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjqwr1', 123, 1),
+(11, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1);
 
 -- --------------------------------------------------------
 
@@ -3289,7 +3348,7 @@ CREATE TABLE IF NOT EXISTS `resenias_negocios` (
   `id_usuario` int(11) DEFAULT NULL,
   `descripcion` text,
   `direccion_ip_usuario` varchar(64) DEFAULT NULL,
-  `fecha_publicacion` varchar(100) DEFAULT NULL,
+  `fecha_publicacion` datetime DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_resenia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
@@ -3303,24 +3362,26 @@ CREATE TABLE IF NOT EXISTS `resenias_negocios` (
 DROP TABLE IF EXISTS `respuestas`;
 CREATE TABLE IF NOT EXISTS `respuestas` (
   `id_respuesta` int(11) NOT NULL AUTO_INCREMENT,
+  `respuesta` text,
+  `fecha_realizada` datetime DEFAULT NULL,
   PRIMARY KEY (`id_respuesta`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `solicitudes`
+-- Estructura de tabla para la tabla `solicitudes_usuarios`
 --
 
-DROP TABLE IF EXISTS `solicitudes`;
-CREATE TABLE IF NOT EXISTS `solicitudes` (
+DROP TABLE IF EXISTS `solicitudes_usuarios`;
+CREATE TABLE IF NOT EXISTS `solicitudes_usuarios` (
   `id_solicitud` int(11) NOT NULL AUTO_INCREMENT,
   `tipo_solicitud` varchar(100) DEFAULT NULL,
   `descripcion` text,
   `email_remitente` varchar(150) DEFAULT NULL,
   `direccion_ip_remitente` varchar(50) DEFAULT NULL,
-  `fecha_realizada` varchar(100) DEFAULT NULL,
-  `fecha_atendida` varchar(100) DEFAULT NULL,
+  `fecha_realizada` datetime DEFAULT NULL,
+  `fecha_atendida` datetime DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_solicitud`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
@@ -3336,6 +3397,7 @@ CREATE TABLE IF NOT EXISTS `sucursales_negocios` (
   `id_negocio` int(11) DEFAULT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
   `descripcion` text,
+  `fecha_registro` datetime DEFAULT NULL,
   `status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -3356,25 +3418,11 @@ CREATE TABLE IF NOT EXISTS `telefonos_negocios` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `textos_publicaciones`
+-- Estructura de tabla para la tabla `ubicaciones_mapa`
 --
 
-DROP TABLE IF EXISTS `textos_publicaciones`;
-CREATE TABLE IF NOT EXISTS `textos_publicaciones` (
-  `id_publicacion` int(11) DEFAULT NULL,
-  `token_publicacion` varchar(50) DEFAULT NULL,
-  `descripcion` text,
-  `status` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `ubicaciones_negocios_sucursales`
---
-
-DROP TABLE IF EXISTS `ubicaciones_negocios_sucursales`;
-CREATE TABLE IF NOT EXISTS `ubicaciones_negocios_sucursales` (
+DROP TABLE IF EXISTS `ubicaciones_mapa`;
+CREATE TABLE IF NOT EXISTS `ubicaciones_mapa` (
   `id_negocio` int(11) DEFAULT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
   `latitud` varchar(100) DEFAULT NULL,
@@ -3408,28 +3456,14 @@ CREATE TABLE IF NOT EXISTS `usuarios_en_linea` (
   `duracion_sesion` varchar(100) DEFAULT NULL,
   `direccion_ip_visitante` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_sesion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- Volcado de datos para la tabla `usuarios_en_linea`
 --
 
 INSERT INTO `usuarios_en_linea` (`id_sesion`, `duracion_sesion`, `direccion_ip_visitante`) VALUES
-(6, '1456176917', '::1');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `videos_publicaciones`
---
-
-DROP TABLE IF EXISTS `videos_publicaciones`;
-CREATE TABLE IF NOT EXISTS `videos_publicaciones` (
-  `id_publicacion` int(11) DEFAULT NULL,
-  `token_publicacion` varchar(50) DEFAULT NULL,
-  `url_video` text,
-  `status` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+(30, '1456522565', '::1');
 
 -- --------------------------------------------------------
 
@@ -3442,7 +3476,7 @@ CREATE TABLE IF NOT EXISTS `visitas_generales` (
   `id_visita` int(11) NOT NULL AUTO_INCREMENT,
   `direcccion_ip_visitante` varchar(64) DEFAULT NULL,
   `cantidad_visitas` int(11) DEFAULT NULL,
-  `fecha_visitado` varchar(100) DEFAULT NULL,
+  `fecha_visitado` datetime DEFAULT NULL,
   `navegador_usado` varchar(100) DEFAULT NULL,
   `duracion_sesion` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_visita`)
@@ -3453,28 +3487,11 @@ CREATE TABLE IF NOT EXISTS `visitas_generales` (
 --
 
 INSERT INTO `visitas_generales` (`id_visita`, `direcccion_ip_visitante`, `cantidad_visitas`, `fecha_visitado`, `navegador_usado`, `duracion_sesion`) VALUES
-(1, '::1', 4, '2016-02-22 15:30:53', NULL, '00:04:24'),
-(2, '192.168.1.67', 5, '2016-02-21 21:08:02', NULL, '02:47:54'),
-(3, '192.168.1.64', 1, '2016-02-21 21:39:02', NULL, '00:05:28'),
-(4, '192.168.1.70', 1, '2016-02-21 21:44:58', NULL, '00:00:46'),
-(5, '10.100.108.172', 1, '2016-02-22 09:29:04', NULL, '00:03:19');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `visitas_publicaciones`
---
-
-DROP TABLE IF EXISTS `visitas_publicaciones`;
-CREATE TABLE IF NOT EXISTS `visitas_publicaciones` (
-  `id_visita` int(11) NOT NULL AUTO_INCREMENT,
-  `id_publicacion` int(11) DEFAULT NULL,
-  `direccion_ip_visitante` varchar(100) DEFAULT NULL,
-  `cantidad_visitas` int(11) DEFAULT NULL,
-  `fecha_ultima_visita` varchar(100) DEFAULT NULL,
-  `navegador_utilizado` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id_visita`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+(1, '::1', 5, '2016-02-26 13:58:21', NULL, '01:37:44'),
+(2, '10.100.108.172', 1, '2016-02-24 10:57:22', NULL, '00:02:19'),
+(3, '127.0.0.1', 1, '2016-02-25 12:59:51', NULL, NULL),
+(4, '127.0.0.1', 1, '2016-02-25 12:59:51', NULL, NULL),
+(5, '127.0.0.1', 1, '2016-02-25 12:59:53', NULL, NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

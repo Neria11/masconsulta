@@ -79,73 +79,98 @@
 
   <!---PERFIL DE USAURIO-->
   <div class="row with-float-panel">
-
-    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-      <div class="container">
-        <div class="u-wrapper">
-          <h2 class="title">Datos de usuario <span class="badge green">@sneria</span></h2>
-          <form action="" class="form" enctype="multipart/form-data">
-           <div class="form-group">
-            <label for="" class="tag">Username:</label>
-            <input type="text" required="" class="control control-lg">
+   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+     <div class="row">
+       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+         <div class="container">
+          <div class="u-wrapper">
+            <h2 class="title">Foto de perfil</h2>
+            <div class="responsive-image" style="width:220px;">
+              <img src="img/noavatar.png" alt="avatar">
+              <span role-action="lauch-modal" data-target="uno" class="mc-button mc-button-sm mc-button-success"> Actualizar</span>
+            </div>
+            <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
+            <div class="pop-up-fade" id="" data-rol="modal-uno">
+             <div class="pop-up">
+              <span class="close-pop-up"> x </span>
+              <div class="pop-up-header">
+               <h2 class="modal-title">Título aquí</h2>
+             </div>
+             <div class="pop-up-body"> 
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.
+              </p>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="" class="tag">Nombre:</label>
-            <input type="text" required="" class="control control-lg">
-          </div>
-          <div class="form-group">
-            <label for="" class="tag">Apellido Paterno:</label>
-            <input type="text" required="" class="control control-lg">
-          </div>
-          <div class="form-group">
-            <label for="" class="tag">Apellido Materno:</label>
-            <input type="text" required="" class="control control-lg">
-          </div>
-          <div class="form-group">
-            <label for="" class="tag">Calle:</label>
-            <input type="text" required="" class="control control-lg">
-          </div>
-          <div class="form-group">
-            <label for="" class="tag">Número Exterior:</label>
-            <input type="number" required="" min="1" class="control control-xs">
-          </div>
-          <div class="form-group">
-            <label for="" class="tag">Número Interior:</label>
-            <input type="number" required="" min="1" class="control control-xs">
-          </div>
-          <div class="form-group">
-            <input type="submit" class="mc-button mc-button-sm mc-button-info" value="Guardar cambios">
-          </div>
-        </form>
+        </div>
+        <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
       </div>  
     </div>
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-    <div class="container">
-      <div class="u-wrapper">
-        <h2 class="title">Foto de perfil</h2>
-        <div class="responsive-image">
-          <img src="img/noavatar.png" alt="avatar">
-          <span role-action="lauch-modal" data-target="uno" class="mc-button mc-button-sm mc-button-success"> Actualizar</span>
-        </div>
-        <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
-        <div class="pop-up-fade" id="" data-rol="modal-uno">
-         <div class="pop-up">
-          <span class="close-pop-up"> x </span>
-          <div class="pop-up-header">
-           <h2 class="modal-title">Título aquí</h2>
-         </div>
-         <div class="pop-up-body"> 
-          <p class="paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.
-          </p>
-        </div>
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+   <div class="container">
+    <div class="u-wrapper">
+      <h2 class="title">Contraseña: </h2>
+      <form action="" class="form" enctype="multipart/form-data">
+       <div class="form-group">
+        <label for="" class="tag">Actual:</label>
+        <input type="password" required="" class="control control-lg" value="**********">
       </div>
-    </div>
-    <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
+      <div class="form-group">
+        <label for="" class="tag">Nueva:</label>
+        <input type="password" required="" class="control control-lg" value="**********">
+      </div>
+      <div class="form-group">
+        <input type="submit" class="mc-button mc-button-sm mc-button-info" value="Actualizar">
+      </div>
+    </form>
   </div>  
 </div>
 </div>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="container">
+    <div class="u-wrapper">
+      <h2 class="title">Datos de usuario <span class="badge green">@sneria</span></h2>
+      <form action="" class="form" enctype="multipart/form-data">
+       <div class="form-group">
+        <label for="" class="tag">Username:</label>
+        <input type="text" required="" class="control control-lg">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Nombre:</label>
+        <input type="text" required="" class="control control-lg">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Apellido Paterno:</label>
+        <input type="text" required="" class="control control-lg">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Apellido Materno:</label>
+        <input type="text" required="" class="control control-lg">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Calle:</label>
+        <input type="text" required="" class="control control-lg">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Número Exterior:</label>
+        <input type="number" required="" min="1" class="control control-xs">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Número Interior:</label>
+        <input type="number" required="" min="1" class="control control-xs">
+      </div>
+      <div class="form-group">
+        <input type="submit" class="mc-button mc-button-sm mc-button-info" value="Guardar cambios">
+      </div>
+    </form>
+  </div>  
+</div>
+</div>
+
 </div>
 <!---PERFIL DE USAURIO-->
 

@@ -82,6 +82,18 @@ $(function(){
 
 
 /*=========================================================================*/
+/*Carga los 9 negocios aleatorios al iniciar*/
+/*=========================================================================*/
+var loadBusiness = function(){
+	$.ajax({
+		type: "POST",
+		url: "models/load-business.php"
+	}).done(function(info){
+		$("#listaNegocios").html(info);
+	})
+}
+
+/*=========================================================================*/
 /*Carga las publicaciones*/
 /*=========================================================================*/
 var loadPublications = function(){

@@ -1,14 +1,14 @@
 <?php  
 include("connection.php");
 
-$sql = mysql_query("SELECT neg.nombre, neg.pseudonimo, log.path_logotipo, cat.categoria
+$sql = mysql_query("SELECT *
 					FROM negocios_registrados neg
 					INNER JOIN categorias_negocios cat 
 					ON neg.id_categoria = cat.id_categoria 
 					INNER JOIN logotipos_negocios log 
 					ON neg.id_negocio = log.id_negocio
 					WHERE neg.status = 1 
-					order by rand() desc limit 9");
+					order by rand() desc limit 0,9");
 
 
 while($row = mysql_fetch_array($sql)){

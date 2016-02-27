@@ -50,8 +50,8 @@ $(function(){
 $(function(){
 	$(window).scroll(function(){
 		if($(this).scrollTop() > 0 ){
-			$('.header').css({'position': 'fixed', 'top': '0px'});
-			$("div[data-rol='search-container']").css({'box-shadow': '0 1px 1px gris-oscuro', 'position': 'fixed', 'left': '0', 'right': '0', 'top': '70px'});  
+			$('.header').css({'position': 'fixed', 'top': '0px','z-index': '10'});
+			$("div[data-rol='search-container']").css({'z-index': '10','box-shadow': '0 1px 1px gris-oscuro', 'position': 'fixed', 'left': '0', 'right': '0', 'top': '70px'});  
 		}else{
 			$('.header').css({'position': 'relative', 'top': 'auto'});
 			$("div[data-rol='search-container']").css({'position': 'relative', 'top': 'auto'});
