@@ -3280,7 +3280,7 @@ CREATE TABLE IF NOT EXISTS `publicaciones_negocios` (
   `id_negocio` int(11) DEFAULT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
   `tipo_publicacion` varchar(100) DEFAULT NULL,
-  `contenido` text,
+  `contenido_publicacion` text,
   `id_usuario` int(11) DEFAULT NULL,
   `direccion_ip_usuario` varchar(64) DEFAULT NULL,
   `fecha_publicada` datetime DEFAULT NULL,
@@ -3299,11 +3299,16 @@ INSERT INTO `publicaciones_negocios` (`id_publicacion`, `id_negocio`, `id_sucurs
 (1, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpj', 123, 1),
 (2, 2, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1),
 (3, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '1899-11-21 11:26:26', '0000-00-00 00:00:00', 'kasdqwf', 123, 1),
-(4, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '11eaddf', 123, 1),
+(4, 1, 1, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '11eaddf', 123, 1),
 (5, 1, 1, 'IMAGEN', 'img/pe.jpg', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszqf1pj', 123, 1),
-(6, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjasd', 123, 1),
+(6, 1, 1, 'TEXTO', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjasd', 123, 1),
 (7, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjqwfq', 123, 1),
-(8, 1, 1, 'IMAGEN', 'img/bills.gif', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfwf', 123, 1),
+(8, 1, 1, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfwf', 123, 1),
 (9, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjqwr1', 123, 1),
 (11, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1);
 

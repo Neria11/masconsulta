@@ -57,8 +57,8 @@ while ($row = mysql_fetch_array($result)){
 				<span class='date' title='$row[fecha_publicada]'>$hace</span>
 				<div class='actions'>
 					$row[likes]
-					<p class='like'>
-						<span class='counter'> $row[id_publicacion] </span>
+					<p class='like pull-right'>
+						<span class='counter '> $row[id_publicacion] </span>
 					</p>
 				</div>
 			</div>

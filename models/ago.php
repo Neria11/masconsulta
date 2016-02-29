@@ -59,7 +59,7 @@ function haceCuanto($time_ago){
     if($years==1){
       return "hace un año";
     }else{
-      return "ha $years años";
+      return "hace $years años";
     }
   }
 }
