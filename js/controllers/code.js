@@ -13,6 +13,7 @@ $(function(){
 				$("div.loading").fadeOut();
 			}else{
 				$("p[data-att='infinite_scroll']").fadeOut();
+				
 			} 
 		});
 	});
