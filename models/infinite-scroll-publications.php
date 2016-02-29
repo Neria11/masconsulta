@@ -55,10 +55,10 @@ while ($row = mysql_fetch_array($result)){
 			echo "</div>
 			<div class='publication-footer'>
 				<span class='date' title='$row[fecha_publicada]'>$hace</span>
-				<div class='actions'>
-					$row[likes]
+				<div class='actions' id='action_publication'>
+					<span id='puntos_acumulados' data-count='$row[puntos_acumulados]'>$row[puntos_acumulados]</span>
 					<p class='like pull-right'>
-						<span class='counter '> $row[id_publicacion] </span>
+						<span class='counter '> +1 </span>
 					</p>
 				</div>
 			</div>

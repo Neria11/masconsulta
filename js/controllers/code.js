@@ -25,6 +25,26 @@ $(function(){
 
 
 /*=========================================================================*/
+/*Actualiza los puntos de la publicacion*/
+/*=========================================================================*/
+$(function(){
+	$("#action_publication").on("click", ".puntos_acumulados", function(){
+		var puntos_actuales = $(this).attr("data-count");
+		var token_publicacion = $(this).attr("token_publicacion");
+
+		$.ajax({
+			type: "POST",
+			url: "models/update-likes-count.php",
+			data: "punt="+ tipo_busqueda + "&busqueda=" + busqueda + "&ruta_busqueda=" + ruta_busqueda
+		}).done(function(info){
+			console.log("Búsqueda almacenada");
+			/*alert("RETORNO= " + info)*/
+		})
+	});
+});
+
+
+/*=========================================================================*/
 /*Actualiza contador de visitas constantemente*/
 /*=========================================================================*/
 var updateVisitCounter = function(){

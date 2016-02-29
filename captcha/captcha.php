@@ -1,7 +1,7 @@
 <?
 session_start();
 $string = substr(md5(microtime() * mktime()),0,4);
-$captcha = imagecreatefrompng("fcaptcha.png");
+$captcha = imagecreatefrompng("captcha.png");
 $clinea = imagecolorallocate($captcha,63,63,63);
 $ccolor = imagecolorallocate($captcha, 0, 0, 63);
 imageline($captcha,55,0,4,40,$clinea);
