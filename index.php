@@ -17,58 +17,20 @@ unset($_SESSION["cantidadcargadas"]);
   <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/controllers/code.js"></script>
   <script type="text/javascript" src="js/scroll.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   <script src="js/bxslider.js"></script>
   <script type="text/javascript" src="js/fancybox.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <link href="css/jquery-ui.css" type="text/css" rel="stylesheet"/> 
 
   <script type="text/javascript">
   $(function(){
-    var availableTags = [
-    "ActionScript",
-    "AppleScript",
-    "Asp",
-    "BASIC",
-    "C",
-    "C++",
-    "Clojure",
-    "COBOL",
-    "ColdFusion",
-    "Erlang",
-    "Fortran",
-    "Groovy",
-    "Haskell",
-    "Java",
-    "JavaScript",
-    "Lisp",
-    "Perl",
-    "PHP",
-    "Python",
-    "Ruby",
-    "Scala",
-    "Scheme"
-    ];
-    
-  });
-  $(document).ready(function() {
-    $(function(){
 
-     $("#buscador").keyup(function(){
-      $.ajax({
-        type: "POST",
-        url: "models/autocomplete.php"
-      }).done(function(datos){
-        if(datos.length!=0){
-          $( "#buscador" ).autocomplete({
-            source: datos
-          });
-          console.log(datos);
-        }
-      })
+    $("#buscador").focus();
+
+    $("#buscador").autocomplete({
+      source: "models/autocomplete.php",
+      minLength: 1
     });
-
-   });
-
-
 
 
     /*Services in real time*/
@@ -113,7 +75,7 @@ unset($_SESSION["cantidadcargadas"]);
     });
 
   });
-</script>
+  </script>
 
 </head>
 <body>

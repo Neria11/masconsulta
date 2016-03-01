@@ -1,17 +1,17 @@
-<?php 
-header('Content-type: application/json');
+<?php
 include("connection.php");
 
-$query = "SELECT categoria FROM categorias_negocios";
+$nombre = $_GET['term']; 
+ 
+$consulta = "SELECT nombre FROM negocios_registrados WHERE nombre LIKE '%$nombre%'";
+ 
+$result = mysql_query($consulta);
+ 
+if(mysql_num_rows($result) > 0){
+    while($row = mysql_fetch_array($result)){
+        $negocios[] = $row['nombre'];
+    }
 
-$result = mysql_query($query);
-
-$rawdata = array(); 
-$i=0;
-while($row = mysql_fetch_array($result)){
-	$rawdata[$i] = $row;
-	$i++;
+echo json_encode($negocios);
 }
-
-echo json_encode($rawdata);
 ?>
