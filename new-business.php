@@ -318,7 +318,7 @@
           </div>
           <div class="form-group">
             <label for="" class="tag">Descripción adicional del negocio:</label>
-            <input type="text" required="" class="control control-block">
+            <textarea name="" id="" class="control control-block"></textarea>
           </div>
 
           <div class="form-group">
