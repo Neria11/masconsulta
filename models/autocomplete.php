@@ -3,7 +3,7 @@ include("connection.php");
 
 $nombre = $_GET['term']; 
  
-$consulta = "SELECT nombre FROM negocios_registrados WHERE nombre LIKE '%$nombre%'";
+$consulta = "SELECT nombre FROM negocios_registrados WHERE nombre LIKE '%$nombre%' group by id_negocio";
  
 $result = mysql_query($consulta);
  
