@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-02-2016 a las 22:36:04
+-- Tiempo de generación: 02-03-2016 a las 23:08:03
 -- Versión del servidor: 5.6.16
 -- Versión de PHP: 5.5.11
 
@@ -141,6 +141,13 @@ CREATE TABLE IF NOT EXISTS `cuentas_acceso_usuarios` (
   `fecha_ultimo_login` datetime DEFAULT NULL,
   `dirección_ultimo_login` varchar(64) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `cuentas_acceso_usuarios`
+--
+
+INSERT INTO `cuentas_acceso_usuarios` (`username`, `password`, `nivel_acceso`, `status_cuenta`, `fecha_registro`, `cantidad_login`, `fecha_ultimo_login`, `dirección_ultimo_login`) VALUES
+('sneria', 'incorrecta', 1, 1, '2016-03-09 00:00:00', 0, '2016-03-02 00:00:00', '10.100.96.36');
 
 -- --------------------------------------------------------
 
@@ -337,7 +344,7 @@ CREATE TABLE IF NOT EXISTS `logotipos_negocios` (
 
 INSERT INTO `logotipos_negocios` (`id_logotipo`, `id_negocio`, `path_logotipo`, `fecha_actualizado`, `cantidad_actualizado`, `status`) VALUES
 (1, 1, 'negocios/logos/masconsulta/logo.png', '0000-00-00 00:00:00', 1, 1),
-(2, 2, 'negocios/logos/bonfriends/logo.jpg', '0000-00-00 00:00:00', 1, 1),
+(2, 2, '', '0000-00-00 00:00:00', 1, 1),
 (3, 3, 'negocios/logos/tolantongomx/logo.png', '0000-00-00 00:00:00', 3, 1);
 
 -- --------------------------------------------------------
@@ -3286,31 +3293,30 @@ CREATE TABLE IF NOT EXISTS `publicaciones_negocios` (
   `fecha_publicada` datetime DEFAULT NULL,
   `fecha_vencimiento` datetime DEFAULT NULL,
   `token_publicacion` varchar(128) DEFAULT NULL,
-  `likes` int(11) DEFAULT NULL,
+  `puntos_acumulados` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_publicacion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Volcado de datos para la tabla `publicaciones_negocios`
 --
 
-INSERT INTO `publicaciones_negocios` (`id_publicacion`, `id_negocio`, `id_sucursal`, `tipo_publicacion`, `contenido`, `id_usuario`, `direccion_ip_usuario`, `fecha_publicada`, `fecha_vencimiento`, `token_publicacion`, `likes`, `status`) VALUES
-(1, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpj', 123, 1),
-(2, 2, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1),
+INSERT INTO `publicaciones_negocios` (`id_publicacion`, `id_negocio`, `id_sucursal`, `tipo_publicacion`, `contenido_publicacion`, `id_usuario`, `direccion_ip_usuario`, `fecha_publicada`, `fecha_vencimiento`, `token_publicacion`, `puntos_acumulados`, `status`) VALUES
+(1, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-02-20 09:23:20', '0000-00-00 00:00:00', 'kjkszpj', 123, 1),
+(2, 2, 1, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1),
 (3, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '1899-11-21 11:26:26', '0000-00-00 00:00:00', 'kasdqwf', 123, 1),
-(4, 1, 1, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '11eaddf', 123, 1),
+(4, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '11eaddf', 123, 1),
 (5, 1, 1, 'IMAGEN', 'img/pe.jpg', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszqf1pj', 123, 1),
-(6, 1, 1, 'TEXTO', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjasd', 123, 1),
+(6, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjasd', 123, 1),
 (7, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjqwfq', 123, 1),
-(8, 1, 1, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfwf', 123, 1),
+(8, 1, 1, 'IMAGEN', 'img/bills.gif', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfwf', 123, 1),
 (9, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjqwr1', 123, 1),
-(11, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1);
+(10, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(11, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(12, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(13, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(14, 2, 1, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1);
 
 -- --------------------------------------------------------
 
@@ -3461,14 +3467,14 @@ CREATE TABLE IF NOT EXISTS `usuarios_en_linea` (
   `duracion_sesion` varchar(100) DEFAULT NULL,
   `direccion_ip_visitante` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_sesion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=45 ;
 
 --
 -- Volcado de datos para la tabla `usuarios_en_linea`
 --
 
 INSERT INTO `usuarios_en_linea` (`id_sesion`, `duracion_sesion`, `direccion_ip_visitante`) VALUES
-(30, '1456522565', '::1');
+(44, '1456954757', '::1');
 
 -- --------------------------------------------------------
 
@@ -3492,11 +3498,11 @@ CREATE TABLE IF NOT EXISTS `visitas_generales` (
 --
 
 INSERT INTO `visitas_generales` (`id_visita`, `direcccion_ip_visitante`, `cantidad_visitas`, `fecha_visitado`, `navegador_usado`, `duracion_sesion`) VALUES
-(1, '::1', 5, '2016-02-26 13:58:21', NULL, '01:37:44'),
+(1, '::1', 11, '2016-03-02 15:03:25', NULL, '00:35:52'),
 (2, '10.100.108.172', 1, '2016-02-24 10:57:22', NULL, '00:02:19'),
-(3, '127.0.0.1', 1, '2016-02-25 12:59:51', NULL, NULL),
-(4, '127.0.0.1', 1, '2016-02-25 12:59:51', NULL, NULL),
-(5, '127.0.0.1', 1, '2016-02-25 12:59:53', NULL, NULL);
+(3, '127.0.0.1', 2, '2016-03-01 11:08:57', NULL, '00:00:00'),
+(4, '127.0.0.1', 2, '2016-03-01 11:08:57', NULL, '00:00:00'),
+(5, '127.0.0.1', 2, '2016-03-01 11:08:57', NULL, '00:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

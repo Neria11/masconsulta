@@ -64,10 +64,7 @@
         <a href="profile.php">Mi perfil</a>
       </li>
       <li>
-        <a href="">Mi cuenta</a>
-      </li>
-      <li>
-        <a href="">Mis negocios</a>
+        <a href="business.php">Mis negocios</a>
       </li>
       <li>
         <a href="">Cerrar sesión</a>
