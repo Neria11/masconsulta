@@ -25,6 +25,44 @@ $(function(){
 
 
 /*=========================================================================*/
+/*Cehca si el usuario ya existe al moemnto de registrarse*/
+/*=========================================================================*/
+$(function(){
+	$("input[data-action='if_user_exists']").on("focusout", function() {
+		var is_empty = $("input[data-action='if_user_exists']").val();
+
+		if(is_empty != ""){
+			$.ajax({
+				type: "POST",
+				url: "models/check-user-exists.php",
+				data: "username="+ is_empty
+			}).done(function(info){
+				if(info == 1){
+					$(".alert").empty();
+					$(".alert").show(300);
+					$(".alert").append(info);
+					$(this).empty();
+					$(this).focus();
+					setTimeout(function() {
+						$(".alert").slideUp(200);
+					},3000);
+				}else{
+					$(".alert").empty();
+					$(".alert").show(300);
+					$(".alert").append(info);
+					setTimeout(function() {
+						$(".alert").slideUp(200);
+					},3000);
+				}
+			})
+		}else{
+			/*Si no*/
+		}
+	});
+});
+
+
+/*=========================================================================*/
 /*Actualiza los puntos de la publicacion*/
 /*=========================================================================*/
 $(function(){

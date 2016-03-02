@@ -4,22 +4,22 @@ FUNCIÓN PARA Comprobar la seguridad de una contraseña
 =================================================
 */
 $("#pass").keyup(function(e) {
-     var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W).*$", "g");
-     var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
-     var enoughRegex = new RegExp("(?=.{6,}).*", "g");
-     if (false == enoughRegex.test($(this).val())) {
-             $("#passstrength").html("More Characters");
-     } else if (strongRegex.test($(this).val())) {
-             $("#passstrength").className = "ok";
-             $("#passstrength").html("Strong!");
-     } else if (mediumRegex.test($(this).val())) {
-             $("#passstrength").className = "alert";
-             $("#passstrength").html("Medium!");
-     } else {
-             $("#passstrength").className = "error";
-             $("#passstrength").html("Weak!");
-     }
-     return true;
+	var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W).*$", "g");
+	var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+	var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+	if (false == enoughRegex.test($(this).val())) {
+		$("#passstrength").html("More Characters");
+	} else if (strongRegex.test($(this).val())) {
+		$("#passstrength").className = "ok";
+		$("#passstrength").html("Strong!");
+	} else if (mediumRegex.test($(this).val())) {
+		$("#passstrength").className = "alert";
+		$("#passstrength").html("Medium!");
+	} else {
+		$("#passstrength").className = "error";
+		$("#passstrength").html("Weak!");
+	}
+	return true;
 });
 
 
@@ -88,12 +88,12 @@ $(function(){
 /*Función para detectar si se está haciendo scroll y mostrar el gif loading*/
 /*=========================================================================*/
 $(window).scroll(function() {
-   $("#gif-loading").show(200);
-    clearTimeout( $.data( this, "TestScroll" ) );
-    $.data( this, "TestScroll", setTimeout(function() {
-        /*$("#gif-loading").hide(200);*/
-        $("#gif-loading").append("<span class='badge green blockmc-button mc-button-block yellow center'>No hay más publicaciones por ahora.</span>");
-    }, 250) );
+	$("#gif-loading").show(200);
+	clearTimeout( $.data( this, "TestScroll" ) );
+	$.data( this, "TestScroll", setTimeout(function() {
+		/*$("#gif-loading").hide(200);*/
+		$("#gif-loading").append("<span class='badge green blockmc-button mc-button-block yellow center'>No hay más publicaciones por ahora.</span>");
+	}, 250) );
 });
 
 /*=========================================================================*/
@@ -158,34 +158,36 @@ $(function(){
 
 
 /*=========================================================================*/
-/*Función para devolver el tiempo transcurrido desde una fecha en una sola unidad de tiempo.*/
+/*Función para devolver el tiempo transcurrido desde una fecha en una sola unidad de tiempo. DEPRECATED*/
 /*=========================================================================*/
 
 function timeSince(date) {
 
-    var seconds = Math.floor((new Date() - date) / 1000);
+	var seconds = Math.floor((new Date() - date) / 1000);
 
-    var interval = Math.floor(seconds / 31536000);
+	var interval = Math.floor(seconds / 31536000);
 
-    if (interval > 1) {
-        return interval + " years";
-    }
-    interval = Math.floor(seconds / 2592000);
-    if (interval > 1) {
-        return interval + " months";
-    }
-    interval = Math.floor(seconds / 86400);
-    if (interval > 1) {
-        return interval + " days";
-    }
-    interval = Math.floor(seconds / 3600);
-    if (interval > 1) {
-        return interval + " hours";
-    }
-    interval = Math.floor(seconds / 60);
-    if (interval > 1) {
-        return interval + " minutes";
-    }
-    return Math.floor(seconds) + " seconds";
+	if (interval > 1) {
+		return interval + " years";
+	}
+	interval = Math.floor(seconds / 2592000);
+	if (interval > 1) {
+		return interval + " months";
+	}
+	interval = Math.floor(seconds / 86400);
+	if (interval > 1) {
+		return interval + " days";
+	}
+	interval = Math.floor(seconds / 3600);
+	if (interval > 1) {
+		return interval + " hours";
+	}
+	interval = Math.floor(seconds / 60);
+	if (interval > 1) {
+		return interval + " minutes";
+	}
+	return Math.floor(seconds) + " seconds";
 }
+
+
 

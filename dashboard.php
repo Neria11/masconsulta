@@ -14,7 +14,6 @@
 </head>
 <body>
 
-
   <!--Start Header Navigation -->
   <header class="header" data-rol="header">
     <div class="toggle-float-panel pull-left" id="toggle-float-panel" >

@@ -11,6 +11,7 @@
 	<!--Importando scripts-->
 	<script type="text/javascript" src="js/jQuery-min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/controllers/code.js"></script>
 </head>
 <body>
 
@@ -50,16 +51,14 @@
 		<form action="models/user/new-user.php" method="POST" class="form" id="form-registry">
 			<div class="login-body">
 				<div class="form-group">
-					<?php if($message!="") { echo $message; } ?>
-				</div>
-				<div class="form-group">
 					<label for="username" class="tag">Usuario:</label>
-					<input type="text" autocomplete="off" name="username" id="username" class="control control-block" value="<?php if(count($_GET) > 0){echo $_GET['username'];} ?>" required="">
+					<input type="text" autocomplete="off" name="username" id="username" class="control control-block" value="" data-action="if_user_exists" required="">
+					<div class="alert alert-warning" data-role="alert" style="display:none;"></div>
 				</div>
-				<div class="form-group">
+				<!--<div class="form-group">
 					<label for="password" class="tag">Contraseña:</label>
 					<input type="password" autocomplete="off" name="password" id="password" class="control control-block" required="">
-				</div>
+				</div>-->
 				<div class="form-group">
 					<label for="email" class="tag">Correo electrónico:</label>
 					<input type="email" name="email" id="email" class="control control-block" required="">
