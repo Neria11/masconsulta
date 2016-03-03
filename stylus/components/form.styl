@@ -20,6 +20,7 @@
 			
 		textarea.control
 			resize none
+			min-height 120px
 		
 		.control
 			padding 0.5rem
@@ -30,21 +31,26 @@
 			font-weight normal
 			border-radius radio
 			background #f1f1f1
+			display block
+			width 100%
+			
+			&-inline
+				display inline-block
 			
 			&-xs
-				width 20%
+				/*width 20%*/
 				font-size 1rem
 						
 			&-sm
-				width 40%
+				/*width 40%*/
 				font-size 1.1rem
 				
 			&-md
-				width 70%
+				/*width 70%*/
 				font-size 1.2rem
 				
 			&-lg
-				width 90%
+				/*width 90%*/
 				font-size 1.3rem
 				
 			&-block
@@ -60,6 +66,9 @@
 				border-color azul
 				box-shadow none
 				background #FAFFBD
+				
+			&:disabled:hover
+				cursor not-allowed
 				
 				
 		input[type="radio"]
@@ -177,7 +186,6 @@
 		font-size 0.9rem
 		@extends .word-truncate
 		
-		
 		&:hover
 			background verde
 			color white
@@ -206,7 +214,7 @@
 					width 40%
 					
 				&-lg
-					width 60%
+					width 80%
 					
 			input[type="radio"] + label span
 				width 40px

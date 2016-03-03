@@ -165,23 +165,23 @@
       <form action="" class="form" id="formProfile" >
        <div class="form-group">
         <label for="" class="tag">Username:</label>
-        <input type="text" required="" class="control control-lg">
+        <input type="text" required="" class="control control-md">
       </div>
       <div class="form-group">
         <label for="" class="tag">Nombre:</label>
-        <input type="text" required="" class="control control-lg">
+        <input type="text" required="" class="control control-md">
       </div>
       <div class="form-group">
         <label for="" class="tag">Apellido Paterno:</label>
-        <input type="text" required="" class="control control-lg">
+        <input type="text" required="" class="control control-md">
       </div>
       <div class="form-group">
         <label for="" class="tag">Apellido Materno:</label>
-        <input type="text" required="" class="control control-lg">
+        <input type="text" required="" class="control control-md">
       </div>
       <div class="form-group">
         <label for="" class="tag">Calle:</label>
-        <input type="text" required="" class="control control-lg">
+        <input type="text" required="" class="control control-md">
       </div>
       <div class="form-group">
         <label for="" class="tag">Número Exterior:</label>
@@ -190,6 +190,70 @@
       <div class="form-group">
         <label for="" class="tag">Número Interior:</label>
         <input type="number" required="" min="1" class="control control-xs">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Sexo:</label>
+        <select name="" id=""  class="control control-md">
+          <option value="">Selecciona un sexo</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">País:</label>
+        <select name="" id=""  class="control control-md">
+          <option value="">Selecciona una categoría</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Estado:</label>
+        <select name="" id=""  class="control control-md">
+          <option value="">Selecciona una categoría</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Municipio:</label>
+        <select name="" id=""  class="control control-md">
+          <option value="">Selecciona una categoría</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+          <option value="">Albañil</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Colonia:</label>
+        <input type="tel" required="" class="control control-md">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Teléfono:</label>
+        <input type="tel" required="" class="control control-md">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Correo electrónico:</label>
+        <input type="tel" required="" disabled="" class="control control-md" value="n_eria_11@hotmail.com">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Fecha de nacimiento:</label>
+        <input type="date" required="" class="control control-md">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Eslogan:</label>
+        <textarea name="" id="" class="control control-md"></textarea>
       </div>
       <div class="form-group">
         <input type="submit" class="mc-button mc-button-sm mc-button-info" value="Guardar cambios">

@@ -335,38 +335,38 @@
         <form action="" class="form" enctype="multipart/form-data">
          <div class="form-group">
           <label for="" class="tag">Lunes:</label>
-          <input type="time" required="" class="control control-md">
-          <input type="time" required="" class="control control-md">
+          <input type="time" required="" class="control control-md control-inline">
+          <input type="time" required="" class="control control-md control-inline">
         </div>
         <div class="form-group">
           <label for="" class="tag">Martes:</label>
-          <input type="time" required="" class="control control-md">
-          <input type="time" required="" class="control control-md">
+          <input type="time" required="" class="control control-md control-inline">
+          <input type="time" required="" class="control control-md control-inline">
         </div>
         <div class="form-group">
           <label for="" class="tag">Miércoles:</label>
-          <input type="time" required="" class="control control-md">
-          <input type="time" required="" class="control control-md">
+          <input type="time" required="" class="control control-md control-inline">
+          <input type="time" required="" class="control control-md control-inline">
         </div>
         <div class="form-group">
           <label for="" class="tag">Jueves:</label>
-          <input type="time" required="" class="control control-md">
-          <input type="time" required="" class="control control-md">
+          <input type="time" required="" class="control control-md control-inline">
+          <input type="time" required="" class="control control-md control-inline">
         </div>
         <div class="form-group">
           <label for="" class="tag">Viernes:</label>
-          <input type="time" required="" class="control control-md">
-          <input type="time" required="" class="control control-md">
+          <input type="time" required="" class="control control-md control-inline">
+          <input type="time" required="" class="control control-md control-inline">
         </div>
         <div class="form-group">
           <label for="" class="tag">Sábado:</label>
-          <input type="time" required="" class="control control-md">
-          <input type="time" required="" class="control control-md">
+          <input type="time" required="" class="control control-md control-inline">
+          <input type="time" required="" class="control control-md control-inline">
         </div>
         <div class="form-group">
           <label for="" class="tag">Domingo:</label>
-          <input type="time" required="" class="control control-md">
-          <input type="time" required="" class="control control-md">
+          <input type="time" required="" class="control control-md control-inline">
+          <input type="time" required="" class="control control-md control-inline">
         </div>
         <div class="form-group">
           <input type="submit" class="mc-button mc-button-sm mc-button-info" value="Guardar cambios">
