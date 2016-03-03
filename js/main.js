@@ -1,26 +1,4 @@
-/*
-=================================================
-FUNCIÓN PARA Comprobar la seguridad de una contraseña
-=================================================
-*/
-$("#pass").keyup(function(e) {
-	var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W).*$", "g");
-	var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
-	var enoughRegex = new RegExp("(?=.{6,}).*", "g");
-	if (false == enoughRegex.test($(this).val())) {
-		$("#passstrength").html("More Characters");
-	} else if (strongRegex.test($(this).val())) {
-		$("#passstrength").className = "ok";
-		$("#passstrength").html("Strong!");
-	} else if (mediumRegex.test($(this).val())) {
-		$("#passstrength").className = "alert";
-		$("#passstrength").html("Medium!");
-	} else {
-		$("#passstrength").className = "error";
-		$("#passstrength").html("Weak!");
-	}
-	return true;
-});
+
 
 
 /*
@@ -30,15 +8,13 @@ FUNCIÓN PARA CONTROLAR EL POP UP DE LOS HORARIOS DE LOS LABORATOROS DE CADA EFI
 */
 $(function(){
 	$(".close-pop-up").click(function(){
-		$(".pop-up").slideUp(700);
 		$(".pop-up-fade").hide(300);
 	});
 
 	$("span[role-action='lauch-modal']").click(function(){
 		//Obtenemos el atributo del elemento pulsado
-		var id = $(this).attr("data-target");
-		$("div[data-rol='modal-" + id +"']").show(200);
-		$(".pop-up").slideDown(500);
+		var target = $(this).attr("data-target");
+		$("div[data-rol='modal-" + target +"']").show(200);
 	});
 });
 
@@ -76,7 +52,7 @@ $(function(){
 	$(window).scroll(function(){
 		if($(this).scrollTop() > 0 ){
 			$('.header').css({'position': 'fixed', 'top': '0px','z-index': '10'});
-			$("div[data-rol='search-container']").css({'z-index': '10','box-shadow': '0 1px 1px gris-oscuro', 'position': 'fixed', 'left': '0', 'right': '0', 'top': '70px'});  
+			$("div[data-rol='search-container']").css({'z-index': '10','box-shadow': '0 1px 1px gris-oscuro', 'position': 'fixed', 'left': '0', 'right': '0', 'top': '60px'});  
 		}else{
 			$('.header').css({'position': 'relative', 'top': 'auto'});
 			$("div[data-rol='search-container']").css({'position': 'relative', 'top': 'auto'});
@@ -142,7 +118,7 @@ $(function(){
 
 
 	if ((screen.width >= 768)) {
-		$("#presentation").css("height", altoVentana - 70);
+		$("#presentation").css("height", altoVentana - 60);
 		$("#float-panel").css("height", altoVentana - altoHeader);
 	}
 });
@@ -160,7 +136,6 @@ $(function(){
 /*=========================================================================*/
 /*Función para devolver el tiempo transcurrido desde una fecha en una sola unidad de tiempo. DEPRECATED*/
 /*=========================================================================*/
-
 function timeSince(date) {
 
 	var seconds = Math.floor((new Date() - date) / 1000);
@@ -190,4 +165,47 @@ function timeSince(date) {
 }
 
 
+/*=========================================================================*/
+/*Función para comprobar si dos contraseñas son iguales al cambiar*/
+/*=========================================================================*/
+$(function() {
 
+	$("#clave_dos").keyup(function(){
+		var clave_uno = $("#clave_uno").val();
+		var clave_dos = $("#clave_dos").val();
+
+		if(clave_uno != clave_dos){
+			$(".alert").empty();
+			$(".alert").show(300);
+			$(".alert").html("<p class='description'>Las claves no coinciden.</p>");
+		}
+	});
+
+});
+
+
+/*
+=================================================
+FUNCIÓN PARA Comprobar la seguridad de una contraseña
+=================================================
+*/
+$(function(){
+	$("#clave_uno").keyup(function(e) {
+		var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W).*$", "g");
+		var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+		var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+		if (false == enoughRegex.test($(this).val())) {
+			$(".alert").html("<p class='description'>Las claves son iguales. Continua.</p>");
+		} else if (strongRegex.test($(this).val())) {
+			$(".alert").className = "ok";
+			$(".alert").html("<p class='description'>Las claves son iguales. Continua.</p>!");
+		} else if (mediumRegex.test($(this).val())) {
+			$(".alert").className = "alert";
+			$(".alert").html("<p class='description'>Las claves son iguales. Continua.</p>!");
+		} else {
+			$(".alert").className = "error";
+			$(".alert").html("<p class='description'>Las claves son iguales. Continua.</p>!");
+		}
+		return true;
+	});
+});

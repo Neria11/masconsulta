@@ -83,7 +83,8 @@ unset($_SESSION["cantidadcargadas"]);
  <!--Start Header Navigation -->
  <header class="header" data-rol="header">
   <figure class="header-logo">
-    <a href="#" class="max-link"></a>
+    <a href="index.php" class="max-link"></a>
+    <img src="img/logo-desktop.jpg" alt="">
   </figure>
   <div class="toogle-menu">
     <span>+</span>
@@ -108,11 +109,10 @@ unset($_SESSION["cantidadcargadas"]);
       <div class="row">
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
          <input type="text" class="searcher-input" id="buscador" placeholder="Buscar...">
-         <ul class="autocompletado" id="autocompletado">as</ul> 
        </div>
        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
          <button type="button" class="searcher-button" value="Consultar"> 
-          <span class="icon-search">*</span> 
+          <span class="icon-search">+</span> 
         </button>
       </div>
     </div>

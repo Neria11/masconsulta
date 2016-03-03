@@ -17,8 +17,9 @@
 
  <!--Start Header Navigation -->
  <header class="header">
-   <figure class="header-logo">
-    <a href="#" class="max-link"></a>
+  <figure class="header-logo">
+    <a href="index.php" class="max-link"></a>
+    <img src="img/logo-desktop.jpg" alt="">
   </figure>
   <div class="toogle-menu">
     <span>*</span>
@@ -177,94 +178,35 @@
          <div class="row">
           
           <!--Start Publication-->
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
-          <div class="publication">
-            <div class="publication-header">
-              <figure class="logo">
-                <img src="img/noavatar.png" alt="">
-              </figure>
-              <h3 class="p-title"> 
-               Lonchería Bon Friends
-             </h3>
-             <span class="p-nick">@masconsulta</span>
-           </div>
-           <div class="publication-body">
-            <div class="image">
-              <a target="" href="img/back.jpg" data-fancybox-group="gallery" class="fancybox">
-                <img src="img/back.jpg" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="publication-footer">
-            <span class="date">25/01/2016 20:52 pm</span>
-            <div class="actions">
-              <p class="like">
-                <span class="counter"> +1 </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--End Publication-->
-
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <!--Start Publication-->
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
             <div class="publication">
               <div class="publication-header">
                 <figure class="logo">
                   <img src="img/noavatar.png" alt="">
                 </figure>
-                <h3 class="title">
-                  Lorem ipsum dolot sit Lorem ipsum  
-                </h3> 
-              </div>
-              <div class="publication-body">
-                <div class="text">
-                  <p>
-                    Lorem ipsum dolor delectus corrupti amet, facere dolor sunt molestiae voluptate aliquid consectetur cumque reprehenderit quia.
-                    <a href="//google.com" target="_blank">www.google.com</a>
-                  </p>
-                </div>
-              </div>
-              <div class="publication-footer">
-                <span class="date">25/01/2016 20:52 pm</span>
-                <div class="actions">
-                 <p class="like">
-                  <span class="counter"> 40 </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <!--Start Publication-->
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <!--Start Publication-->
-          <div class="publication">
-            <div class="publication-header">
-              <figure class="logo">
-                <img src="img/noavatar.png" alt="">
-              </figure>
-              <h3 class="title"> 
-                Lorem ipsum dolot sit 
-              </h3>
-            </div>
-            <div class="publication-body">
+                <h3 class="p-title"> 
+                 Lonchería Bon Friends
+               </h3>
+               <span class="p-nick">@masconsulta</span>
+             </div>
+             <div class="publication-body">
               <div class="image">
-                <img src="img/back.jpg" alt="">
+                <a target="" href="img/back.jpg" data-fancybox-group="gallery" class="fancybox">
+                  <img src="img/back.jpg" alt="">
+                </a>
               </div>
             </div>
             <div class="publication-footer">
               <span class="date">25/01/2016 20:52 pm</span>
               <div class="actions">
                 <p class="like">
-                  <span class="counter"> 40 </span>
+                  <span class="counter"> +1 </span>
                 </p>
               </div>
             </div>
           </div>
-          <!--Start Publication-->
         </div>
+        <!--End Publication-->
 
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <!--Start Publication-->
@@ -280,7 +222,7 @@
             <div class="publication-body">
               <div class="text">
                 <p>
-                  Lorem ipsum dolor sunt molestiae voluptate aliquid consectetur cumque reprehenderit quia.
+                  Lorem ipsum dolor delectus corrupti amet, facere dolor sunt molestiae voluptate aliquid consectetur cumque reprehenderit quia.
                   <a href="//google.com" target="_blank">www.google.com</a>
                 </p>
               </div>
@@ -289,6 +231,34 @@
               <span class="date">25/01/2016 20:52 pm</span>
               <div class="actions">
                <p class="like">
+                <span class="counter"> 40 </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--Start Publication-->
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <!--Start Publication-->
+        <div class="publication">
+          <div class="publication-header">
+            <figure class="logo">
+              <img src="img/noavatar.png" alt="">
+            </figure>
+            <h3 class="title"> 
+              Lorem ipsum dolot sit 
+            </h3>
+          </div>
+          <div class="publication-body">
+            <div class="image">
+              <img src="img/back.jpg" alt="">
+            </div>
+          </div>
+          <div class="publication-footer">
+            <span class="date">25/01/2016 20:52 pm</span>
+            <div class="actions">
+              <p class="like">
                 <span class="counter"> 40 </span>
               </p>
             </div>
@@ -350,47 +320,78 @@
         <div class="publication-footer">
           <span class="date">25/01/2016 20:52 pm</span>
           <div class="actions">
-            <p class="like">
-              <span class="counter"> 40 </span>
-            </p>
-          </div>
+           <p class="like">
+            <span class="counter"> 40 </span>
+          </p>
         </div>
       </div>
-      <!--Start Publication-->
     </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <!--Start Publication-->
-      <div class="publication">
-        <div class="publication-header">
-          <figure class="logo">
-            <img src="img/noavatar.png" alt="">
-          </figure>
-          <h3 class="title">
-            Lorem ipsum dolot sit Lorem ipsum  
-          </h3> 
-        </div>
-        <div class="publication-body">
-          <div class="text">
-            <p>
-              Lorem ipsum dolor sunt molestiae voluptate aliquid consectetur cumque reprehenderit quia.
-              <a href="//google.com" target="_blank">www.google.com</a>
-            </p>
-          </div>
-        </div>
-        <div class="publication-footer">
-          <span class="date">25/01/2016 20:52 pm</span>
-          <div class="actions">
-            <p class="like">
-              <span class="counter"> 40 </span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <!--Start Publication-->
-    </div>
+    <!--Start Publication-->
   </div>
-  <!--PUBLICACIONES-->
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <!--Start Publication-->
+    <div class="publication">
+      <div class="publication-header">
+        <figure class="logo">
+          <img src="img/noavatar.png" alt="">
+        </figure>
+        <h3 class="title">
+          Lorem ipsum dolot sit Lorem ipsum  
+        </h3> 
+      </div>
+      <div class="publication-body">
+        <div class="text">
+          <p>
+            Lorem ipsum dolor sunt molestiae voluptate aliquid consectetur cumque reprehenderit quia.
+            <a href="//google.com" target="_blank">www.google.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="publication-footer">
+        <span class="date">25/01/2016 20:52 pm</span>
+        <div class="actions">
+          <p class="like">
+            <span class="counter"> 40 </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Start Publication-->
+  </div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <!--Start Publication-->
+    <div class="publication">
+      <div class="publication-header">
+        <figure class="logo">
+          <img src="img/noavatar.png" alt="">
+        </figure>
+        <h3 class="title">
+          Lorem ipsum dolot sit Lorem ipsum  
+        </h3> 
+      </div>
+      <div class="publication-body">
+        <div class="text">
+          <p>
+            Lorem ipsum dolor sunt molestiae voluptate aliquid consectetur cumque reprehenderit quia.
+            <a href="//google.com" target="_blank">www.google.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="publication-footer">
+        <span class="date">25/01/2016 20:52 pm</span>
+        <div class="actions">
+          <p class="like">
+            <span class="counter"> 40 </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Start Publication-->
+  </div>
+</div>
+<!--PUBLICACIONES-->
 </div>
 
 </div>

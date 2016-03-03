@@ -7,14 +7,12 @@ $(function(){
 			type: "POST",
 			url: "models/infinite-scroll-publications.php",
 		}).done(function(publications) {
-			if (publications!="") 
-			{
+			if (publications!=""){
 				$("#resultPublications").append(publications);
 				$("div.loading").fadeOut();
 			}else{
-				$("p[data-att='infinite_scroll']").fadeOut();
-				
-			} 
+				$("p[data-att='infinite_scroll']").fadeOut();	
+			}
 		});
 	});
 	/*$("#resultPublications").scrollExtend({
@@ -40,16 +38,16 @@ $(function(){
 				if(info == 1){
 					$(".alert").empty();
 					$(".alert").show(300);
-					$(".alert").append(info);
-					$(this).empty();
-					$(this).focus();
+					$(".alert").html("<p class='description'>El usuario " + is_empty + " ya está en uso.</p>");
+					$("input[data-action='if_user_exists']").focus();
+					$("input[data-action='if_user_exists']").val("");
 					setTimeout(function() {
 						$(".alert").slideUp(200);
 					},3000);
 				}else{
 					$(".alert").empty();
 					$(".alert").show(300);
-					$(".alert").append(info);
+					$(".alert").html("<p class='description'> El usuario si está disponible. </p>");
 					setTimeout(function() {
 						$(".alert").slideUp(200);
 					},3000);

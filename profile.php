@@ -21,7 +21,8 @@
       <span>*</span>
     </div>
     <figure class="header-logo">
-      <a href="#" class="max-link"></a>
+      <a href="index.php" class="max-link"></a>
+      <img src="img/logo-desktop.jpg" alt="">
     </figure>
 
     <div class="toogle-menu">
@@ -90,41 +91,68 @@
               <span role-action="lauch-modal" data-target="uno" class="mc-button mc-button-sm mc-button-success"> Actualizar</span>
             </div>
             <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
-            <div class="pop-up-fade" id="" data-rol="modal-uno">
-             <div class="pop-up">
+            <div class="pop-up-fade" data-rol="modal-uno">
+             <div class="pop-up pop-up-small">
               <span class="close-pop-up"> x </span>
               <div class="pop-up-header">
-               <h2 class="modal-title">Título aquí</h2>
+               <h2 class="modal-title">Selecciona una imagen</h2>
              </div>
-             <div class="pop-up-body"> 
-              <p class="paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.
-              </p>
-            </div>
-          </div>
+             <div class="pop-up-body">
+               <form action="" method="post" enctype="multipart/form-data">
+                 <div class="form-group">
+                   <input type="file" class="form-control">
+                 </div> 
+                 <div class="form-group">
+                   <input type="submit" class="mc-button mc-button-sm mc-button-info" value="Actualizar">
+                 </div>
+               </form> 
+             </div>
+           </div>
+         </div>
+         <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
+       </div>  
+     </div>
+   </div>
+   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+     <div class="container">
+      <div class="u-wrapper">
+        <h2 class="title">Contraseña: </h2>
+        <form action="" class="form" enctype="multipart/form-data">
+         <div class="form-group">
+          <label for="" class="tag">Nueva contraseña:</label>
+          <input type="password" required="" id="clave_uno" class="control control-lg" value="">
         </div>
-        <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
-      </div>  
-    </div>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-   <div class="container">
-    <div class="u-wrapper">
-      <h2 class="title">Contraseña: </h2>
-      <form action="" class="form" enctype="multipart/form-data">
-       <div class="form-group">
-        <label for="" class="tag">Actual:</label>
-        <input type="password" required="" class="control control-lg" value="**********">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Nueva:</label>
-        <input type="password" required="" class="control control-lg" value="**********">
-      </div>
-      <div class="form-group">
-        <input type="submit" class="mc-button mc-button-sm mc-button-info" value="Actualizar">
-      </div>
-    </form>
-  </div>  
+        <div class="form-group">
+          <label for="" class="tag">Repite nueva contraseña:</label>
+          <input type="password" required="" id="clave_dos" class="control control-lg" value="">
+          <div class="alert alert-warning" data-role="alert" style="display:none;"></div>
+        </div>
+        <div class="form-group">
+          <span class="mc-button mc-button-sm mc-button-info" data-target="dos" role-action="lauch-modal" > Cambiar </span>
+        </div>
+      </form>
+      <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
+      <div class="pop-up-fade" id="" data-rol="modal-dos">
+       <div class="pop-up pop-up-small">
+        <span class="close-pop-up"> x </span>
+        <div class="pop-up-header">
+         <h2 class="modal-title">Cambio de contraseña</h2>
+       </div>
+       <div class="pop-up-body">
+         <form action="" method="post">
+           <div class="form-group">
+            <label for="" class="tag">Confirma contraseña actual:</label>
+            <input type="password" class="form-control control-block">
+          </div> 
+          <div class="form-group">
+           <input type="submit" class="mc-button mc-button-sm mc-button-info" data-target="uno" value="Actualizar">
+         </div>
+       </form> 
+     </div>
+   </div>
+ </div>
+ <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
+</div>  
 </div>
 </div>
 </div>
@@ -133,8 +161,8 @@
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
   <div class="container">
     <div class="u-wrapper">
-      <h2 class="title">Datos de usuario <span class="badge green">@sneria</span></h2>
-      <form action="" class="form" enctype="multipart/form-data">
+      <h2 class="title">Datos de usuario <span class="badge blue">@sneria</span></h2>
+      <form action="" class="form" id="formProfile" >
        <div class="form-group">
         <label for="" class="tag">Username:</label>
         <input type="text" required="" class="control control-lg">

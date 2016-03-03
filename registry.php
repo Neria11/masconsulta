@@ -19,7 +19,8 @@
 	<!--Start Header Navigation -->
 	<header class="header">
 		<figure class="header-logo">
-			<a href="#" class="max-link"></a>
+			<a href="index.php" class="max-link"></a>
+			<img src="img/logo-desktop.jpg" alt="">
 		</figure>
 		<div class="toogle-menu">
 			<span>*</span>

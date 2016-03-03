@@ -20,7 +20,8 @@
       <span>*</span>
     </div>
     <figure class="header-logo">
-      <a href="#" class="max-link"></a>
+      <a href="index.php" class="max-link"></a>
+      <img src="img/logo-desktop.jpg" alt="">
     </figure>
 
     <div class="toogle-menu">
@@ -78,7 +79,7 @@
     <div class="u-wrapper">
       <h2 class="title">Perfil de usuario</h2>
       
-     <p class="paragraph">
+      <p class="paragraph">
        Actualiza tu perfil de usuario.
      </p>
 

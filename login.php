@@ -18,7 +18,8 @@
 	<!--Start Header Navigation -->
 	<header class="header">
 		<figure class="header-logo">
-			<a href="#" class="max-link"></a>
+			<a href="index.php" class="max-link"></a>
+			<img src="img/logo-desktop.jpg" alt="">
 		</figure>
 		<div class="toogle-menu">
 			<span>*</span>
@@ -49,9 +50,6 @@
 		</div>
 		<form action="models/security/session.php" method="POST" class="form">
 			<div class="login-body">
-			<div class="form-group">
-				<?php if($message!="") { echo $message; } ?>
-			</div>
 				<div class="form-group">
 					<label for="username" class="tag">Usuario:</label>
 					<input type="text" name="username" id="username" required="" class="control control-block" required="">

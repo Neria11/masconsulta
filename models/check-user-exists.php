@@ -9,9 +9,9 @@ if(count($_POST) > 0){
 	$result = mysql_fetch_array(mysql_query($sql));
 
 	if($result[0] == 0){
-		echo "<p class='description'>El usuario ".$username." está disponible. </p>";
+		echo 0;
 	}else{
-		echo "<p class='description'>El usuario ".$username." ya existe. Elige otro. </p>";
+		echo 1;
 	}
 
 }

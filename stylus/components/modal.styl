@@ -23,6 +23,15 @@
 	padding 0
 	top 1rem
 	
+	&-small
+		max-width 95%
+		
+	&-medium
+		max-width 95%
+		
+	&-large 
+		max-width 95%
+
 	.close-pop-up
 		font-size 2.2rem
 		font-weight bold 
@@ -37,9 +46,10 @@
 	
 	&-header
 		padding 0 0.5rem
+		border-bottom 1px solid color-border
 						
 		.modal-title
-			font-size 1rem
+			font-size 1.5rem
 			margin 0
 			padding 0.5rem 0
 			text-align left
@@ -47,7 +57,7 @@
 		
 	&-body
 		border-bottom 1px solid gris
-		padding 0.5rem 
+		padding 1rem 
 		height auto
 		/*overflow-y scroll*/
 		
@@ -96,26 +106,31 @@
 		background gris
 		padding 0.5rem
 		
-
-
-
-
 @media screen and (min-width:768px)
 	.pop-up 
 					
 		&-header
 							
-			.title
+			.modal-title
 				font-size 1.5rem
-				
-		
+					
 
 @media screen and (min-width:992px)
 	.pop-up 
 		max-width 50%
+		top 3rem
+		
+		&-small
+			max-width 30%
+		
+		&-medium
+			max-width 50%
+			
+		&-large 
+			max-width 1000px
 		
 		&-header
 							
-			.title
-				font-size 2rem
+			.modal-title
+				font-size 1.8rem
 		
