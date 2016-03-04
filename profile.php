@@ -10,6 +10,10 @@
   <!--Importando hojas de estilo en cascada-->
   <link rel="stylesheet" href="css/estilo.css">
 
+  <!--Importando scripts-->
+  <script type="text/javascript" src="js/jQuery-min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/controllers/code.js"></script>
 
 </head>
 <body>
@@ -98,60 +102,62 @@
                <h2 class="modal-title">Selecciona una imagen</h2>
              </div>
              <div class="pop-up-body">
-               <form action="" method="post" enctype="multipart/form-data">
-                 <div class="form-group">
-                   <input type="file" class="form-control">
-                 </div> 
-                 <div class="form-group">
-                   <input type="submit" class="mc-button mc-button-sm mc-button-info" value="Actualizar">
-                 </div>
-               </form> 
-             </div>
+               <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+                <figure class="responsive-image" id="image_preview"><img id="previewing" src="img/noavatar.png" /></figure>
+                <label>Select Your Image</label><br/>
+                <div class="form-group">
+                 <input type="file" name="file" id="avatar_usuario" required class="form-control">
+               </div>
+               <div class="form-group">
+                 <input type="submit" class="mc-button mc-button-sm mc-button-info" id="actualiza_avatar" value="Actualizar">
+               </div>
+             </form>
            </div>
          </div>
-         <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
-       </div>  
-     </div>
-   </div>
-   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-     <div class="container">
-      <div class="u-wrapper">
-        <h2 class="title">Contraseña: </h2>
-        <form action="" class="form" enctype="multipart/form-data">
-         <div class="form-group">
-          <label for="" class="tag">Nueva contraseña:</label>
-          <input type="password" required="" id="clave_uno" class="control control-lg" value="">
-        </div>
-        <div class="form-group">
-          <label for="" class="tag">Repite nueva contraseña:</label>
-          <input type="password" required="" id="clave_dos" class="control control-lg" value="">
-          <div class="alert alert-warning" data-role="alert" style="display:none;"></div>
-        </div>
-        <div class="form-group">
-          <span class="mc-button mc-button-sm mc-button-info" data-target="dos" role-action="lauch-modal" > Cambiar </span>
-        </div>
-      </form>
-      <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
-      <div class="pop-up-fade" id="" data-rol="modal-dos">
-       <div class="pop-up pop-up-small">
-        <span class="close-pop-up"> x </span>
-        <div class="pop-up-header">
-         <h2 class="modal-title">Cambio de contraseña</h2>
        </div>
-       <div class="pop-up-body">
-         <form action="" method="post">
-           <div class="form-group">
-            <label for="" class="tag">Confirma contraseña actual:</label>
-            <input type="password" class="form-control control-block">
-          </div> 
-          <div class="form-group">
-           <input type="submit" class="mc-button mc-button-sm mc-button-info" data-target="uno" value="Actualizar">
-         </div>
-       </form> 
-     </div>
+       <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
+     </div>  
    </div>
  </div>
- <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
+ <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+   <div class="container">
+    <div class="u-wrapper">
+      <h2 class="title">Contraseña: </h2>
+      <form action="" class="form" enctype="multipart/form-data">
+       <div class="form-group">
+        <label for="" class="tag">Nueva contraseña:</label>
+        <input type="password" required="" id="clave_uno" class="control control-lg" value="">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">Repite nueva contraseña:</label>
+        <input type="password" required="" id="clave_dos" class="control control-lg" value="">
+        <div class="alert alert-warning" data-role="alert" style="display:none;"></div>
+      </div>
+      <div class="form-group">
+        <span class="mc-button mc-button-sm mc-button-info" data-target="dos" role-action="lauch-modal" > Cambiar </span>
+      </div>
+    </form>
+    <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
+    <div class="pop-up-fade" id="" data-rol="modal-dos">
+     <div class="pop-up pop-up-small">
+      <span class="close-pop-up"> x </span>
+      <div class="pop-up-header">
+       <h2 class="modal-title">Cambio de contraseña</h2>
+     </div>
+     <div class="pop-up-body">
+       <form action="" method="post">
+         <div class="form-group">
+          <label for="" class="tag">Confirma contraseña actual:</label>
+          <input type="password" class="form-control control-block">
+        </div> 
+        <div class="form-group">
+         <input type="submit" class="mc-button mc-button-sm mc-button-info" data-target="uno" value="Actualizar">
+       </div>
+     </form> 
+   </div>
+ </div>
+</div>
+<!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
 </div>  
 </div>
 </div>

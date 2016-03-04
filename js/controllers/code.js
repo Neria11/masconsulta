@@ -1,4 +1,55 @@
 /*=========================================================================*/
+/*Uploader imagenes al momento*/
+/*=========================================================================*/
+$(function(){
+	$("#uploadimage").on('submit',(function(e) {
+		$("#message").empty();
+		$('#loading').show();
+		$.ajax({
+			url: "models/update-user-avatar.php", 
+			type: "POST",             
+			data: new FormData(this), 
+			contentType: false,       
+			cache: false,             
+			processData:false,        
+			success: function(data){
+				$('#loading').hide();
+				$("#message").html(data);
+				alert("Se cargó");
+			}
+		});
+	}));
+
+// Function to preview image after validation
+$(function() {
+	$("#avatar_usuario").change(function() {
+		$("#message").empty(); 
+		var file = this.files[0];
+		var imagefile = file.type;
+		var match= ["image/jpeg","image/png","image/jpg"];
+		if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]))){
+			$('#previewing').attr('src','img/noavatar.png');
+			$("#message").html("<p id='error'>Please Select A valid Image File</p>"+"<h4>Note</h4>"+"<span id='error_message'>Only jpeg, jpg and png Images type allowed</span>");
+			return false;
+		}else{	
+			var reader = new FileReader();
+			reader.onload = imageIsLoaded;
+			reader.readAsDataURL(this.files[0]);
+		}
+	});
+});
+
+function imageIsLoaded(e) {
+	$("#avatar_usuario").css("color","green");
+	$('#image_preview').css("display", "block");
+	$('#previewing').attr('src', e.target.result);
+	$('#previewing').attr('width', '100%');
+	$('#previewing').attr('height', '100%');
+};
+});
+
+
+/*=========================================================================*/
 /*CArga mas publicaciones al botonazo*/
 /*=========================================================================*/
 $(function(){
