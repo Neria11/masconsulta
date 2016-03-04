@@ -1,3 +1,4 @@
+              
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -90,8 +91,10 @@
          <div class="container">
           <div class="u-wrapper">
             <h2 class="title">Foto de perfil</h2>
-            <div class="responsive-image" style="width:220px;">
+            <div class="responsive-image rounded" style="width:220px;height:220px;">
               <img src="img/noavatar.png" alt="avatar">
+            </div>
+            <div class="g-row">
               <span role-action="lauch-modal" data-target="uno" class="mc-button mc-button-sm mc-button-success"> Actualizar</span>
             </div>
             <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
@@ -104,7 +107,6 @@
              <div class="pop-up-body">
                <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
                 <figure class="responsive-image" id="image_preview"><img id="previewing" src="img/noavatar.png" /></figure>
-                <label>Select Your Image</label><br/>
                 <div class="form-group">
                  <input type="file" name="file" id="avatar_usuario" required class="form-control">
                </div>

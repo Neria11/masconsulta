@@ -5,17 +5,19 @@ $(function(){
 	$("#uploadimage").on('submit',(function(e) {
 		$("#message").empty();
 		$('#loading').show();
+		
+		var data_image = $("#avatar_usuario").val();
+
 		$.ajax({
 			url: "models/update-user-avatar.php", 
 			type: "POST",             
-			data: new FormData(this), 
+			data: data_image, 
 			contentType: false,       
 			cache: false,             
 			processData:false,        
 			success: function(data){
 				$('#loading').hide();
 				$("#message").html(data);
-				alert("Se cargó");
 			}
 		});
 	}));
@@ -43,8 +45,8 @@ function imageIsLoaded(e) {
 	$("#avatar_usuario").css("color","green");
 	$('#image_preview').css("display", "block");
 	$('#previewing').attr('src', e.target.result);
-	$('#previewing').attr('width', '100%');
-	$('#previewing').attr('height', '100%');
+	$('#previewing').attr('width', '220px');
+	$('#previewing').attr('height', '220px');
 };
 });
 

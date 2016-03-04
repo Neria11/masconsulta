@@ -170,15 +170,33 @@ function timeSince(date) {
 /*=========================================================================*/
 $(function() {
 
-	$("#clave_dos").keyup(function(){
+	$("input[type='password']").keyup(function(){
 		var clave_uno = $("#clave_uno").val();
 		var clave_dos = $("#clave_dos").val();
 
-		if(clave_uno != clave_dos){
+		var espacios = false;
+		var cont = 0;
+
+		while (!espacios && (cont < clave_uno.length)) {
+			if (clave_uno.charAt(cont) == " ")
+				espacios = true;
+			cont++;
+		}
+
+		if (espacios) {
 			$(".alert").empty();
 			$(".alert").show(300);
-			$(".alert").html("<p class='description'>Las claves no coinciden.</p>");
+			$(".alert").html("<p class='description'>Las claves no pueden tener espacios.</p>");
+			$("#clave_uno").focus();
+			return false;
+		}else{
+			if(clave_uno != clave_dos){
+				$(".alert").empty();
+				$(".alert").show(300);
+				$(".alert").html("<p class='description'>Las claves no coinciden.</p>");
+			}
 		}
+
 	});
 
 });
@@ -195,16 +213,16 @@ $(function(){
 		var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
 		var enoughRegex = new RegExp("(?=.{6,}).*", "g");
 		if (false == enoughRegex.test($(this).val())) {
-			$(".alert").html("<p class='description'>Las claves son iguales. Continua.</p>");
+			$(".alert").html("<p class='description'>Muy pequeña</p>");
 		} else if (strongRegex.test($(this).val())) {
 			$(".alert").className = "ok";
-			$(".alert").html("<p class='description'>Las claves son iguales. Continua.</p>!");
+			$(".alert").html("<p class='description'>media.</p>!");
 		} else if (mediumRegex.test($(this).val())) {
 			$(".alert").className = "alert";
-			$(".alert").html("<p class='description'>Las claves son iguales. Continua.</p>!");
+			$(".alert").html("<p class='description'>normal.</p>!");
 		} else {
 			$(".alert").className = "error";
-			$(".alert").html("<p class='description'>Las claves son iguales. Continua.</p>!");
+			$(".alert").html("<p class='description'>Bien.</p>!");
 		}
 		return true;
 	});
