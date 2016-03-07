@@ -214,15 +214,18 @@ $(function(){
 		var enoughRegex = new RegExp("(?=.{6,}).*", "g");
 		if (false == enoughRegex.test($(this).val())) {
 			$(".alert").html("<p class='description'>Muy pequeña</p>");
+			$(".alert").attr("alert-type").val("danger");
 		} else if (strongRegex.test($(this).val())) {
 			$(".alert").className = "ok";
-			$(".alert").html("<p class='description'>media.</p>!");
+			$(".alert").html("<p class='description'>media.</p>");
+			$(".alert").attr("info");
 		} else if (mediumRegex.test($(this).val())) {
 			$(".alert").className = "alert";
-			$(".alert").html("<p class='description'>normal.</p>!");
+			$(".alert").html("<p class='description'>normal.</p>");
+			$(".alert").attr("success");
 		} else {
 			$(".alert").className = "error";
-			$(".alert").html("<p class='description'>Bien.</p>!");
+			$(".alert").html("<p class='description'>Bien.</p>");
 		}
 		return true;
 	});

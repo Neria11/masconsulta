@@ -133,7 +133,7 @@
       <div class="form-group">
         <label for="" class="tag">Repite nueva contraseña:</label>
         <input type="password" required="" id="clave_dos" class="control control-lg" value="">
-        <div class="alert alert-warning" alert-type="warning" data-role="alert" style="display:none;"></div>
+        <div class="alert" alert-type="" data-role="alert" style="display:none;"></div>
       </div>
       <div class="form-group">
         <span class="mc-button mc-button-sm mc-button-info" data-target="dos" role-action="lauch-modal" > Cambiar </span>

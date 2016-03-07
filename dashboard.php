@@ -92,7 +92,7 @@
 <!--Progress bar-->
 <div class="progress-bar">
   <span class="progress-bar-percentage">40%</span>
-  <span class="progress-bar-indicator" data-type="success" data-role="progress-indicator" data-value="40"></span>
+  <span class="progress-bar-indicator" data-type="success" data-role="progress-indicator" data-value="60"></span>
 </div>
 <div class="progress-bar">
   <span class="progress-bar-percentage">40%</span>
@@ -115,7 +115,9 @@
 $( document ).ready(function() {
   $(".fancybox").fancybox();
 
-  alert("Hola valor:   span[data-role='progress-indicator']");
+   var valor = $("span[data-role='progress-indicator'").attr("data-value");
+
+   alert("Valor: " + valor);
 });
 </script>
 </body>

@@ -138,56 +138,80 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-   <div class="container">
-    <div class="u-wrapper">
-      <h2 class="title">Dirección</h2>
-      <form action="" class="form" enctype="multipart/form-data">
-       <div class="form-group">
-        <label for="" class="tag">Calle:</label>
-        <input type="text" required="" class="control control-block">
+    <div class="container">
+      <div class="u-wrapper">
+        <h2 class="title">Logotipo</h2>
+        <div class="responsive-image" style="width:220px;">
+          <img src="img/nologo.png" alt="avatar">
+          <span role-action="lauch-modal" data-target="uno" class="mc-button mc-button-sm mc-button-success"> Actualizar</span>
+        </div>
+        <div class="pop-up-fade" id="" data-rol="modal-uno">
+         <div class="pop-up">
+          <span class="close-pop-up"> x </span>
+          <div class="pop-up-header">
+           <h2 class="modal-title">Título aquí</h2>
+         </div>
+         <div class="pop-up-body"> 
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.
+          </p>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="" class="tag">Número exterior:</label>
-        <input type="number" required="" min="1" class="control control-md">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Número interior:</label>
-        <input type="number" required="" min="1" class="control control-md">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Colonia:</label>
-        <input type="text" required="" class="control control-block">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">País:</label>
-        <select name="" id=""  class="control control-block">
-          <option value="">Selecciona un país</option>
-          <option value="">México</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Estado:</label>
-        <select name="" id=""  class="control control-block">
-          <option value="">Selecciona un estado</option>
-          <option value="">Hidalgo</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Municipio:</label>
-        <select name="" id=""  class="control control-block">
-          <option value="">Selecciona un estado</option>
-          <option value="">Hidalgo</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Código postal:</label>
-        <input type="tel" required="" class="control control-block">
-      </div>
-      <div class="form-group">
-        <input type="submit" class="mc-button mc-button-sm mc-button-info" value="Guardar cambios">
-      </div>
-    </form>
+    </div>
   </div>  
+</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+ <div class="container">
+  <div class="u-wrapper">
+    <h2 class="title">Dirección</h2>
+    <form action="" class="form" enctype="multipart/form-data">
+     <div class="form-group">
+      <label for="" class="tag">Calle:</label>
+      <input type="text" required="" class="control control-block">
+    </div>
+    <div class="form-group">
+      <label for="" class="tag">Número exterior:</label>
+      <input type="number" required="" min="1" class="control control-md">
+    </div>
+    <div class="form-group">
+      <label for="" class="tag">Número interior:</label>
+      <input type="number" required="" min="1" class="control control-md">
+    </div>
+    <div class="form-group">
+      <label for="" class="tag">Colonia:</label>
+      <input type="text" required="" class="control control-block">
+    </div>
+    <div class="form-group">
+      <label for="" class="tag">País:</label>
+      <select name="" id=""  class="control control-block">
+        <option value="">Selecciona un país</option>
+        <option value="">México</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="" class="tag">Estado:</label>
+      <select name="" id=""  class="control control-block">
+        <option value="">Selecciona un estado</option>
+        <option value="">Hidalgo</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="" class="tag">Municipio:</label>
+      <select name="" id=""  class="control control-block">
+        <option value="">Selecciona un estado</option>
+        <option value="">Hidalgo</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="" class="tag">Código postal:</label>
+      <input type="tel" required="" class="control control-block">
+    </div>
+    <div class="form-group">
+      <input type="submit" class="mc-button mc-button-sm mc-button-info" value="Guardar cambios">
+    </div>
+  </form>
+</div>  
 </div>
 </div>
 </div>
@@ -220,33 +244,8 @@
         </div>  
       </div>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-      <div class="container">
-        <div class="u-wrapper">
-          <h2 class="title">Logotipo</h2>
-          <div class="responsive-image" style="width:220px;">
-            <img src="img/noavatar.png" alt="avatar">
-            <span role-action="lauch-modal" data-target="uno" class="mc-button mc-button-sm mc-button-success"> Actualizar</span>
-          </div>
-          <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
-          <div class="pop-up-fade" id="" data-rol="modal-uno">
-           <div class="pop-up">
-            <span class="close-pop-up"> x </span>
-            <div class="pop-up-header">
-             <h2 class="modal-title">Título aquí</h2>
-           </div>
-           <div class="pop-up-body"> 
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.
-            </p>
-          </div>
-        </div>
-      </div>
-      <!--Modal pop-up / ACTUALIZA FOTO DE PERFIL-->
-    </div>  
+
   </div>
-</div>
-</div>
 
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -293,7 +292,11 @@
     <div class="container">
       <div class="u-wrapper">
         <h2 class="title">Mapa</h2>
-        
+        <!--MAPA-->
+        <div class="map-container">
+          <div id="map"></div>
+        </div>
+        <!--MAPA-->
       </div>  
     </div>
   </div>
@@ -391,6 +394,9 @@
 <!--===========================================================-->
 <script type="text/javascript" src="js/jQuery-min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/maps.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5TBI-mv40ZDcDwBjoZjjjKNMx7XJz8EM&signed_in=true&callback=initMap"
+async defer></script>
 <script type="text/javascript" src="js/fancybox.js"></script>
 <script type="text/javascript">
 $( document ).ready(function() {

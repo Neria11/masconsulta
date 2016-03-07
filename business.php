@@ -128,7 +128,7 @@
                   <a class="mc-button mc-button-md mc-button-danger" href="#">Eliminar</a>
                 </td>
                 <td>
-                  <a class="mc-button mc-button-md mc-button-success" href="#">Editar</a>
+                  <a class="mc-button mc-button-md mc-button-success" href="new-business.php">Editar</a>
                 </td>
               </tr>
             </table>
