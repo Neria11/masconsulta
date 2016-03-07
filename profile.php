@@ -133,7 +133,7 @@
       <div class="form-group">
         <label for="" class="tag">Repite nueva contraseña:</label>
         <input type="password" required="" id="clave_dos" class="control control-lg" value="">
-        <div class="alert alert-warning" data-role="alert" style="display:none;"></div>
+        <div class="alert alert-warning" alert-type="warning" data-role="alert" style="display:none;"></div>
       </div>
       <div class="form-group">
         <span class="mc-button mc-button-sm mc-button-info" data-target="dos" role-action="lauch-modal" > Cambiar </span>
@@ -167,110 +167,129 @@
 </div>
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-  <div class="container">
-    <div class="u-wrapper">
-      <h2 class="title">Datos de usuario <span class="badge blue">@sneria</span></h2>
-      <form action="" class="form" id="formProfile" >
-       <div class="form-group">
-        <label for="" class="tag">Username:</label>
-        <input type="text" required="" class="control control-md">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
+      <div class="container">
+        <div class="u-wrapper">
+          <h2 class="title">Datos de usuario <span class="badge blue">@sneria</span></h2>
+          <form action="" class="form" id="formProfile" >
+           <div class="form-group">
+            <label for="" class="tag">Username:</label>
+            <input type="text" required="" class="control control-lg">
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Nombre:</label>
+            <input type="text" required="" class="control control-lg">
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Apellido Paterno:</label>
+            <input type="text" required="" class="control control-lg">
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Apellido Materno:</label>
+            <input type="text" required="" class="control control-lg">
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Calle:</label>
+            <input type="text" required="" class="control control-lg">
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Número Exterior:</label>
+            <input type="number" required="" min="1" class="control control-sm">
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Número Interior:</label>
+            <input type="number" required="" min="1" class="control control-sm">
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Sexo:</label>
+            <select name="" id=""  class="control control-lg">
+              <option value="">Selecciona un sexo</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">País:</label>
+            <select name="" id=""  class="control control-lg">
+              <option value="">Selecciona una categoría</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Estado:</label>
+            <select name="" id=""  class="control control-lg">
+              <option value="">Selecciona una categoría</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Municipio:</label>
+            <select name="" id=""  class="control control-lg">
+              <option value="">Selecciona una categoría</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+              <option value="">Albañil</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Colonia:</label>
+            <input type="tel" required="" class="control control-lg">
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Teléfono:</label>
+            <input type="tel" required="" class="control control-lg">
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Correo electrónico:</label>
+            <input type="tel" required="" disabled="" class="control control-md" value="n_eria_11@hotmail.com">
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Fecha de nacimiento:</label>
+            <input type="date" required="" class="control control-lg">
+          </div>
+          <div class="form-group">
+            <label for="" class="tag">Eslogan:</label>
+            <textarea name="" id="" class="control control-lg"></textarea>
+          </div>
+          <div class="form-group">
+            <input type="submit" class="mc-button mc-button-sm mc-button-info" value="Guardar cambios">
+          </div>
+        </form>
+      </div>  
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+    <div class="container">
+      <div class="u-wrapper">
+        <h2 class="title">Tips para el usuario</h2>
+        <p class="paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse maxime, nulla explicabo optio quia! Cumque odit possimus obcaecati, eveniet fuga officiis asperiores veniam nobis, odio nostrum consequuntur at laborum quia!
+        </p>
+        <p class="paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse maxime, nulla explicabo optio quia! Cumque odit possimus obcaecati, eveniet fuga officiis asperiores veniam nobis, odio nostrum consequuntur at laborum quia!
+        </p>
+        <p class="paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse maxime, nulla explicabo optio quia! Cumque odit possimus obcaecati, eveniet fuga officiis asperiores veniam nobis, odio nostrum consequuntur at laborum quia!
+        </p>
       </div>
-      <div class="form-group">
-        <label for="" class="tag">Nombre:</label>
-        <input type="text" required="" class="control control-md">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Apellido Paterno:</label>
-        <input type="text" required="" class="control control-md">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Apellido Materno:</label>
-        <input type="text" required="" class="control control-md">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Calle:</label>
-        <input type="text" required="" class="control control-md">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Número Exterior:</label>
-        <input type="number" required="" min="1" class="control control-xs">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Número Interior:</label>
-        <input type="number" required="" min="1" class="control control-xs">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Sexo:</label>
-        <select name="" id=""  class="control control-md">
-          <option value="">Selecciona un sexo</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">País:</label>
-        <select name="" id=""  class="control control-md">
-          <option value="">Selecciona una categoría</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-          <option value=""></option>
-          <option value=""></option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Estado:</label>
-        <select name="" id=""  class="control control-md">
-          <option value="">Selecciona una categoría</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Municipio:</label>
-        <select name="" id=""  class="control control-md">
-          <option value="">Selecciona una categoría</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-          <option value="">Albañil</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Colonia:</label>
-        <input type="tel" required="" class="control control-md">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Teléfono:</label>
-        <input type="tel" required="" class="control control-md">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Correo electrónico:</label>
-        <input type="tel" required="" disabled="" class="control control-md" value="n_eria_11@hotmail.com">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Fecha de nacimiento:</label>
-        <input type="date" required="" class="control control-md">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Eslogan:</label>
-        <textarea name="" id="" class="control control-md"></textarea>
-      </div>
-      <div class="form-group">
-        <input type="submit" class="mc-button mc-button-sm mc-button-info" value="Guardar cambios">
-      </div>
-    </form>
-  </div>  
+    </div>
+  </div>
 </div>
 </div>
-
 </div>
 <!---PERFIL DE USAURIO-->
 

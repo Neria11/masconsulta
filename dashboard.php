@@ -83,177 +83,20 @@
        Actualiza tu perfil de usuario.
      </p>
 
-     <form action="" class="form" enctype="multipart/form-data">
-       <div class="form-group">
-        <label for="" class="tag">Pseudónimo:</label>
-        <input type="text" required="" class="control control-lg">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Form Control md:</label>
-        <input type="text" required="" class="control control-lg">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Form Control md:</label>
-        <input type="text" required="" class="control control-lg">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Form Control md:</label>
-        <select name="" id="" class="control control-lg" required="">
-          <option value="">Option Number</option>
-          <option value="">Option Number</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Form Control md:</label>
-        <input type="text" required="" class="control control-sm">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Form Control md:</label>
-        <input type="number" min="1" max="10" required="" class="control control-xs">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Form Control md:</label>
-        <input type="text" required="" class="control control-md">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Form Control md:</label>
-        <textarea name="" id="" required="" rows="5" class="control control-lg"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Form Control md:</label>
-        <input type="file" required="" class="control control-lg">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Form Control md:</label>
-        <input type="text" required="" class="control control-sm">
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Form Control md:</label>
-        <input type="radio" id="radio01" name="radio" />
-        <label for="radio01"><span></span>Radio Button 1</label>
-        <input type="radio" id="radio02" name="radio" />
-        <label for="radio02"><span></span>Radio Button 2</label>
-        <input type="radio" id="radio03" name="radio" />
-        <label for="radio03"><span></span>Radio Button 3</label>
-      </div>
-      <div class="form-group">
-        <label for="" class="tag">Checkboxes:</label>
-        <input type="checkbox" name="option1" value="Milk" id="check01"> 
-        <label for="check01"><span></span>Check button</label>
-        <input type="checkbox" name="option2" value="Butter" id="check02" checked="" > 
-        <label for="check02"><span></span>Check button</label>
-        <input type="checkbox" name="option3" value="Cheese" id="check03"> 
-        <label for="check03"><span></span>Check button</label>
-      </div>
-      <div class="form-group">
-        <input type="submit" class="mc-button mc-button-block mc-button-success" value="Guardar cambios">
-        <input type="submit" class="mc-button mc-button-xs mc-button-info" value="Guardar cambios">
-        <input type="submit" class="mc-button mc-button-sm mc-button-danger" value="Guardar cambios">
-        <input type="submit" class="mc-button mc-button-md mc-button-warning" value="Guardar cambios">
-        <input type="submit" class="mc-button mc-button-lg mc-button-success" value="Guardar cambios">
-      </div>
-    </form>
+  
 
-    <div class="responsive-table">
-      <table class="table table-bordered">
-        <tr class="info">
-          <th>Tipo</th>
-          <th>Costo</th>
-          <th>Tipo</th>
-          <th>Costo</th>
-          <th>Tipo</th>
-          <th>Costo</th>
-        </tr>
-        <tr>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-        </tr>
-        <tr>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-        </tr>
-        <tr>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-        </tr>
-      </table>
-    </div>
 
-    <div class="responsive-table">
-      <table class="table table-hover table-responsive">
-        <tr class="success">
-          <th>Tipo</th>
-          <th>Costo</th>
-          <th>Tipo</th>
-          <th>Costo</th>
-          <th>Tipo</th>
-          <th>Costo</th>
-        </tr>
-        <tr>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-        </tr>
-        <tr>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-        </tr>
-        <tr>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-          <td class=""><span class="icon-target"></span> Mensual</td>
-          <td><span class="icon-power"></span> $250.00 MXN</td>
-        </tr>
-      </table>
-    </div>
 
-    <span role-action="lauch-modal" data-target="uno" class="mc-button mc-button-xs mc-button-info"> Open modal</span>
 
-    <!--Modal pop-up-->
-    <div class="pop-up-fade" id="" data-rol="modal-uno">
-     <div class="pop-up">
-      <span class="close-pop-up"> x </span>
-      <div class="pop-up-header">
-       <h2 class="modal-title">Título aquí</h2>
-     </div>
-     <div class="pop-up-body"> 
-      <p class="paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.
-      </p>
-    </div>
-  </div>
-</div>
-<!--Modal pop-up-->
 
 <!--Progress bar-->
 <div class="progress-bar">
   <span class="progress-bar-percentage">40%</span>
-  <span class="progress-bar-indicator" data-type="success" data-value="40"></span>
+  <span class="progress-bar-indicator" data-type="success" data-role="progress-indicator" data-value="40"></span>
 </div>
 <div class="progress-bar">
   <span class="progress-bar-percentage">40%</span>
-  <span class="progress-bar-indicator" data-type="success" data-value="90"></span>
+  <span class="progress-bar-indicator" data-type="success" data-role="progress-indicator" data-value="90"></span>
 </div>
 <!--Progress bar-->
 
@@ -271,6 +114,8 @@
 <script type="text/javascript">
 $( document ).ready(function() {
   $(".fancybox").fancybox();
+
+  alert("Hola valor:   span[data-role='progress-indicator']");
 });
 </script>
 </body>

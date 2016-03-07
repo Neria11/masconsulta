@@ -156,11 +156,11 @@ unset($_SESSION["cantidadcargadas"]);
         </div>-->
         <!--CAROUSEL BXSLIDER-->
         <ul class="bxslider" id="bxslider-2">
-          <li><img src="img/sas.png"></li>
-          <li><img src="img/sas.png"></li>
-          <li><img src="img/sas.png"></li>
-          <li><img src="img/sas.png"></li>
-          <li><img src="img/sas.png"></li>
+          <li><img src="http://placehold.it/640x200"></li>
+          <li><img src="http://placehold.it/640x200"></li>
+          <li><img src="http://placehold.it/640x200"></li>
+          <li><img src="http://placehold.it/640x200"></li>
+          <li><img src="http://placehold.it/640x200"></li>
         </ul>
         <!--CAROUSEL BXSLIDER-->
       </div>
@@ -215,7 +215,7 @@ unset($_SESSION["cantidadcargadas"]);
          <div class="event">
           <a href="#" class="max-link"></a>
           <figure class="event-wallpaper">
-            <img src="img/tol.jpg" alt="Imagen evento">
+            <img src="http://placehold.it/480x230" alt="Imagen evento">
           </figure>
           <span href="" class="event-title">Presentación de candidates en Ixmiyork</span>
           <p class="event-description">
@@ -227,7 +227,7 @@ unset($_SESSION["cantidadcargadas"]);
         <div class="event">
           <a href="#" class="max-link"></a>
           <figure class="event-wallpaper">
-            <img src="img/tol.jpg" alt="Imagen evento">
+            <img src="http://placehold.it/480x230" alt="Imagen evento">
           </figure>
           <span href="" class="event-title">Presentación de candidates en Ixmiyork</span>
           <p class="event-description">
@@ -251,7 +251,7 @@ unset($_SESSION["cantidadcargadas"]);
        <div class="event">
         <a href="#" class="max-link"></a>
         <figure class="event-wallpaper">
-          <img src="img/tol.jpg" alt="Imagen evento">
+          <img src="http://placehold.it/480x230" alt="Imagen evento">
         </figure>
         <span href="" class="event-title">Presentación de candidates en Ixmiyork</span>
         <p class="event-description">
@@ -263,7 +263,7 @@ unset($_SESSION["cantidadcargadas"]);
       <div class="event">
         <a href="#" class="max-link"></a>
         <figure class="event-wallpaper">
-          <img src="img/tol.jpg" alt="Imagen evento">
+          <img src="http://placehold.it/480x230" alt="Imagen evento">
         </figure>
         <span href="" class="event-title">Presentación de candidates en Ixmiyork</span>
         <p class="event-description">
