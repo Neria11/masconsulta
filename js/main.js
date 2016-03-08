@@ -68,7 +68,7 @@ $(window).scroll(function() {
 	clearTimeout( $.data( this, "TestScroll" ) );
 	$.data( this, "TestScroll", setTimeout(function() {
 		/*$("#gif-loading").hide(200);*/
-		$("#gif-loading").append("<span class='badge green blockmc-button mc-button-block yellow center'>No hay más publicaciones por ahora.</span>");
+		$("#gif-loading").append("<span class='badge green block mc-button mc-button-block yellow center'>No hay más publicaciones por ahora.</span>");
 	}, 250) );
 });
 
