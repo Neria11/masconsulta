@@ -27,7 +27,7 @@ while ($row = mysql_fetch_array($result)) {
 					<img src='$row[path_logotipo]' alt=''>
 				</figure>
 				<h3 class='p-title'> 
-					<a href='#'>$row[nombre]</a>
+					<a href='negocio.php'>$row[nombre]</a>
 				</h3>
 				<span class='p-nick'>@$row[pseudonimo]</span>
 			</div>

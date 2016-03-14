@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-03-2016 a las 23:08:03
+-- Tiempo de generación: 14-03-2016 a las 23:11:01
 -- Versión del servidor: 5.6.16
 -- Versión de PHP: 5.5.11
 
@@ -2907,13 +2907,6 @@ CREATE TABLE IF NOT EXISTS `negocios_registrados` (
   `cp` varchar(10) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `sitio_web` varchar(100) DEFAULT NULL,
-  `facebook` text,
-  `twitter` text,
-  `gplus` text,
-  `youtube` text,
-  `instagram` text,
-  `pinterest` text,
-  `linkedin` text,
   `mision` text,
   `vision` text,
   `valores` text,
@@ -2931,10 +2924,10 @@ CREATE TABLE IF NOT EXISTS `negocios_registrados` (
 -- Volcado de datos para la tabla `negocios_registrados`
 --
 
-INSERT INTO `negocios_registrados` (`id_negocio`, `pseudonimo`, `nombre`, `id_categoria`, `descripcion`, `eslogan`, `servicios`, `calle`, `num_ext`, `num_int`, `colonia`, `id_municipio`, `cp`, `email`, `sitio_web`, `facebook`, `twitter`, `gplus`, `youtube`, `instagram`, `pinterest`, `linkedin`, `mision`, `vision`, `valores`, `fecha_nacimiento_negocio`, `fecha_registro`, `ultima_actualizacion`, `datos_adicionales`, `id_rango_precios`, `id_paquete`, `status`) VALUES
-(1, 'masconsulta', 'Masconsulta', 23, 'Empresa de publicidad dedicada al marketing de negocios', 'No somos los únicos, pero si los mejores', 'Marketing digital\r\nMarketing tangible', 'Cecilio Ramírez', '18', '3', 'San Antonio', 56, '42300', 'masconsulta@gmail.com', 'http://www.masconsulta.com', 'http://www.masconsulta.com/masconsulta', NULL, NULL, NULL, NULL, NULL, NULL, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', NULL, '25/05/2012', NULL, NULL, NULL, 2, 1, 1),
-(2, 'bonfriends', 'Bon Friends', 32, 'Lorem', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, 1, 1),
-(3, 'tolantongomx', 'Grutas Tolantongo', 32, 'Lugar de atracciones naturales y turísticas', 'Un oasis a su alcance', 'Hospedaje\r\nVigilancia\r\nMédicos\r\nAtractivos\r\nRestaurante', 'San Cristóbal', '1', '1', 'Tolantongo', 3, '42370', 'grutastolantongo@grutastolantongo.com', '//tolantongo.mx', '//facebook.com/tolantongomx', '//facebook.com/tolantongomx', '//facebook.com/tolantongomx', '//facebook.com/tolantongomx', '//facebook.com/tolantongomx', '//facebook.com/tolantongomx', '//facebook.com/tolantongomx', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', '14/08/1976', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 2, 1, 1);
+INSERT INTO `negocios_registrados` (`id_negocio`, `pseudonimo`, `nombre`, `id_categoria`, `descripcion`, `eslogan`, `servicios`, `calle`, `num_ext`, `num_int`, `colonia`, `id_municipio`, `cp`, `email`, `sitio_web`, `mision`, `vision`, `valores`, `fecha_nacimiento_negocio`, `fecha_registro`, `ultima_actualizacion`, `datos_adicionales`, `id_rango_precios`, `id_paquete`, `status`) VALUES
+(1, 'masconsulta', 'Masconsulta', 23, 'Empresa de publicidad dedicada al marketing de negocios', 'No somos los únicos, pero si los mejores', 'Marketing digital\r\nMarketing tangible', 'Cecilio Ramírez', '18', '3', 'San Antonio', 56, '42300', 'masconsulta@gmail.com', 'http://www.masconsulta.com', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', NULL, '25/05/2012', NULL, NULL, NULL, 2, 1, 1),
+(2, 'bonfriends', 'Bon Friends', 32, 'Lorem', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, 1, 1),
+(3, 'tolantongomx', 'Grutas Tolantongo', 32, 'Lugar de atracciones naturales y turísticas', 'Un oasis a su alcance', 'Hospedaje\r\nVigilancia\r\nMédicos\r\nAtractivos\r\nRestaurante', 'San Cristóbal', '1', '1', 'Tolantongo', 3, '42370', 'grutastolantongo@grutastolantongo.com', '//tolantongo.mx', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', '14/08/1976', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 2, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -3273,7 +3266,14 @@ CREATE TABLE IF NOT EXISTS `promociones_negocios` (
   `ranking` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_promocion`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `promociones_negocios`
+--
+
+INSERT INTO `promociones_negocios` (`id_promocion`, `id_negocio`, `id_sucursal`, `tipo_promocion`, `descripcion`, `fecha_inicio`, `fecha_vencimiento`, `cantidad_visitas`, `likes`, `ranking`, `status`) VALUES
+(1, 1, 1, 'DESCUENTO', 'Lorem', '20/10/2016 05:18:54', '20/10/2017 05:18:54', 12, 13, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -3303,20 +3303,20 @@ CREATE TABLE IF NOT EXISTS `publicaciones_negocios` (
 --
 
 INSERT INTO `publicaciones_negocios` (`id_publicacion`, `id_negocio`, `id_sucursal`, `tipo_publicacion`, `contenido_publicacion`, `id_usuario`, `direccion_ip_usuario`, `fecha_publicada`, `fecha_vencimiento`, `token_publicacion`, `puntos_acumulados`, `status`) VALUES
-(1, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-02-20 09:23:20', '0000-00-00 00:00:00', 'kjkszpj', 123, 1),
-(2, 2, 1, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1),
-(3, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '1899-11-21 11:26:26', '0000-00-00 00:00:00', 'kasdqwf', 123, 1),
-(4, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '11eaddf', 123, 1),
-(5, 1, 1, 'IMAGEN', 'img/pe.jpg', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszqf1pj', 123, 1),
-(6, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjasd', 123, 1),
-(7, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjqwfq', 123, 1),
-(8, 1, 1, 'IMAGEN', 'img/bills.gif', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfwf', 123, 1),
-(9, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjqwr1', 123, 1),
-(10, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
-(11, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
-(12, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
-(13, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
-(14, 2, 1, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1);
+(1, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpj', 123, 1),
+(2, 2, 1, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1),
+(3, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kasdqwf', 123, 1),
+(4, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', '11eaddf', 123, 1),
+(5, 1, 1, 'IMAGEN', 'img/pe.jpg', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszqf1pj', 123, 1),
+(6, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjasd', 123, 1),
+(7, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjqwfq', 123, 1),
+(8, 1, 1, 'IMAGEN', 'img/bills.gif', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfwf', 123, 1),
+(9, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjqwr1', 123, 1),
+(10, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(11, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(12, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(13, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(14, 2, 1, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1);
 
 -- --------------------------------------------------------
 
@@ -3343,6 +3343,27 @@ INSERT INTO `rango_precios` (`id_rango_precios`, `rango_precios`, `descripcion`)
 (4, '$$$$', 'Precios que van desde 1000 a 9999 pesos'),
 (5, '$$$$$', 'Precios que van desde 10000 a 99000 pesos'),
 (6, 'Sin especificar', 'Rango de precios desconocido');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `redes_sociales_negocios`
+--
+
+DROP TABLE IF EXISTS `redes_sociales_negocios`;
+CREATE TABLE IF NOT EXISTS `redes_sociales_negocios` (
+  `id_red_social` int(11) NOT NULL AUTO_INCREMENT,
+  `id_negocio` int(11) DEFAULT NULL,
+  `faceboook` varchar(256) DEFAULT NULL,
+  `twitter` varchar(256) NOT NULL,
+  `gplus` varchar(256) NOT NULL,
+  `youtube` varchar(256) DEFAULT NULL,
+  `instagram` varchar(256) DEFAULT NULL,
+  `pinterest` varchar(256) DEFAULT NULL,
+  `linkedin` varchar(256) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_red_social`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -3467,14 +3488,14 @@ CREATE TABLE IF NOT EXISTS `usuarios_en_linea` (
   `duracion_sesion` varchar(100) DEFAULT NULL,
   `direccion_ip_visitante` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_sesion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=45 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Volcado de datos para la tabla `usuarios_en_linea`
 --
 
 INSERT INTO `usuarios_en_linea` (`id_sesion`, `duracion_sesion`, `direccion_ip_visitante`) VALUES
-(44, '1456954757', '::1');
+(7, '1457993385', '::1');
 
 -- --------------------------------------------------------
 
@@ -3491,18 +3512,14 @@ CREATE TABLE IF NOT EXISTS `visitas_generales` (
   `navegador_usado` varchar(100) DEFAULT NULL,
   `duracion_sesion` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_visita`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `visitas_generales`
 --
 
 INSERT INTO `visitas_generales` (`id_visita`, `direcccion_ip_visitante`, `cantidad_visitas`, `fecha_visitado`, `navegador_usado`, `duracion_sesion`) VALUES
-(1, '::1', 11, '2016-03-02 15:03:25', NULL, '00:35:52'),
-(2, '10.100.108.172', 1, '2016-02-24 10:57:22', NULL, '00:02:19'),
-(3, '127.0.0.1', 2, '2016-03-01 11:08:57', NULL, '00:00:00'),
-(4, '127.0.0.1', 2, '2016-03-01 11:08:57', NULL, '00:00:00'),
-(5, '127.0.0.1', 2, '2016-03-01 11:08:57', NULL, '00:00:00');
+(1, '::1', 1, '2016-03-14 16:06:33', NULL, '00:03:12');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
