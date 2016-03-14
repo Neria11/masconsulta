@@ -19,6 +19,7 @@ unset($_SESSION["cantidadcargadas"]);
   <script type="text/javascript" src="js/scroll.js"></script>
   <script src="js/bxslider.js"></script>
   <script type="text/javascript" src="js/fancybox.js"></script>
+  <script type="text/javascript" src="js/react.js"></script>
   <script type="text/javascript" src="js/jquery-ui.js"></script>
   <link href="css/jquery-ui.css" type="text/css" rel="stylesheet"/> 
 
