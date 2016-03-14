@@ -10,7 +10,6 @@
   <!--Importando hojas de estilo en cascada-->
   <link rel="stylesheet" href="css/estilo.css">
 
-
 </head>
 <body>
 

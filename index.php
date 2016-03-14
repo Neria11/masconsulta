@@ -15,11 +15,10 @@ unset($_SESSION["cantidadcargadas"]);
 	<!--Importando scripts-->
   <script type="text/javascript" src="js/jQuery-min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript" src="js/controllers/code.js"></script>
-  <script type="text/javascript" src="js/scroll.js"></script>
-  <script src="js/bxslider.js"></script>
-  <script type="text/javascript" src="js/fancybox.js"></script>
   <script type="text/javascript" src="js/react.js"></script>
+  <script type="text/javascript" src="js/scroll.js"></script>
+  <script type="text/javascript" src="js/bxslider.js"></script>
+  <script type="text/javascript" src="js/fancybox.js"></script>
   <script type="text/javascript" src="js/jquery-ui.js"></script>
   <link href="css/jquery-ui.css" type="text/css" rel="stylesheet"/> 
 

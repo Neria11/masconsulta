@@ -11,7 +11,7 @@
 	<!--Importando scripts-->
 	<script type="text/javascript" src="js/jQuery-min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/controllers/code.js"></script>
+	<script type="text/javascript" src="js/react.js"></script>
 </head>
 <body>
 
