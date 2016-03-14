@@ -11,7 +11,7 @@
 	<!--Importando scripts-->
   <script type="text/javascript" src="js/jQuery-min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript" src="js/controllers/code.js"></script>
+  <script type="text/javascript" src="js/react.js"></script>
   <script type="text/javascript" src="js/scroll.js"></script>
   <script src="js/bxslider.js"></script>
   <script type="text/javascript" src="js/fancybox.js"></script>
@@ -28,8 +28,6 @@
 
 
     $.ajaxSetup({"cache":false});
-    setInterval("updateVisitCounter()", 500);
-    setInterval("usersOnline()", 500);
 
     $("#infinite_scroll").scrollExtend({
       "target": "#lista_noticias",
@@ -72,57 +70,55 @@
 </header>
 <!--End Header Navigation -->
 
+<!--ABRE ETIQUETA MAIN-->
+<main>
 
-
-<!--Contenedor de datos-->
-<div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
-    <div class="container" >
-      <div class="u-wrapper">
-        <h2 class="title">
-          Categorías
-          <span class="mc-button mc-button-square mc-button-success pull-right" id="randomCategories">R</span>
-        </h2>
-        <ul class="categories">
-          <li>
-            <a href="#" title="Médicos"> <span class="icon-*">*</span> Médicos</a>
-          </li>
-          <li>
-           <a href="#" title="Gimnasio"><span class="icon-*">*</span> Gimnasio</a>
-         </li>
-         <li>
-           <a href="#" title="Zapaterías"><span class="icon-*">*</span> Zapaterías</a>
-         </li>
-       </ul>
+  <!--Contenedor de datos-->
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+      <div class="container" >
+        <div class="u-wrapper">
+          <h2 class="title">
+            Categorías
+            <span class="mc-button mc-button-square mc-button-success pull-right" id="randomCategories">R</span>
+          </h2>
+          <ul class="categories">
+            <li>
+              <a href="#" title="Médicos"> <span class="icon-*">*</span> Médicos</a>
+            </li>
+            <li>
+             <a href="#" title="Gimnasio"><span class="icon-*">*</span> Gimnasio</a>
+           </li>
+           <li>
+             <a href="#" title="Zapaterías"><span class="icon-*">*</span> Zapaterías</a>
+           </li>
+         </ul>
+       </div>
      </div>
    </div>
- </div>
- <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
-  <div class="container">
-    <div class="u-wrapper no-background">
-      <h2 class="title">
-        Negocios por categoría 
-        <span class="mc-button mc-button-square mc-button-success pull-right" id="randomBusiness">R</span>
-      </h2>
+   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
+    <div class="container">
+      <div class="u-wrapper no-background">
+        <h2 class="title">
+          Negocios por categoría 
+          <span class="mc-button mc-button-square mc-button-success pull-right" id="randomBusiness">R</span>
+        </h2>
+      </div>
+
+      <!--NEGOCIOS EN PANTLLA PRINCIPAL-->
+      <div class="row" id="filterCategories"></div>
+      <!--NEGOCIOS EN PANTLLA PRINCIPAL-->
+
     </div>
-
-    <!--NEGOCIOS EN PANTLLA PRINCIPAL-->
-    <div class="row" id="filterCategories">
-     
-
-    </div>
-    <!--NEGOCIOS EN PANTLLA PRINCIPAL-->
-
   </div>
-
-
 </div>
 
-</div>
+</main>
+<!--CIERRA ETIQUETA MAIN-->
 
 <!--Pié de página-->
 <footer data-rol="footer">
-  <p class="paragraph">Lorem ipsum dolor sit amet, m est, repudiandae ut doloribus odit?</p>
+  <p class="paragraph">sLorem ipsum dolor sit amet, m est, repudiandae ut doloribus odit?</p>
 </footer>
 <!--Pié de página-->
 

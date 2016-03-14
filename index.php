@@ -32,7 +32,6 @@ unset($_SESSION["cantidadcargadas"]);
       minLength: 1
     });
 
-
     /*Services in real time*/
     loadBusiness();
     loadPublications();
