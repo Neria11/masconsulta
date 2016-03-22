@@ -77,7 +77,7 @@ unset($_SESSION["cantidadcargadas"]);
   </script>
 
 </head>
-<body>
+<body> 
 
  <!--Start Header Navigation -->
  <header class="header" data-rol="header">
