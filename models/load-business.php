@@ -15,7 +15,7 @@ while($row = mysql_fetch_array($sql)){
 	echo "
 			<div class='col-xs-12 col-sm-6 col-md-12 col-lg-6'>
 	          <div class='business'>
-	            <a href='negocio.php' title='".$row['categoria']."".$row['nombre']."' class='max-link'></a>
+	            <a href='business.php' title='".$row['categoria']."".$row['nombre']."' class='max-link'></a>
 	            <figure class='business-logo'>";
 	            	if($row['path_logotipo'] != ""){
 	            		echo "<img src='".$row['path_logotipo']."' alt='Logo ".$row['nombre']."'>";

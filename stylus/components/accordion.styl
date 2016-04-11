@@ -4,8 +4,7 @@
 	position relative
 	margin 0.5rem auto
 	background white
-	
-		
+			
 	&-header
 		max-width 100%
 		cursor pointer
@@ -32,6 +31,7 @@
 		overflow-y hidden
 		display none
 		border 1px solid color-border
+		z-index 2
 		
 		&:hover
 			overflow-y visible
@@ -52,5 +52,6 @@
 			border-radius radio radio 0 0
 		
 		&-content
-			display block
+			position absolute
+			
 		

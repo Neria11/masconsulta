@@ -1,3 +1,21 @@
+/*
+===============================================================
+Función para el parallax del fondo principal (DESACTIVADA POR AHORA)
+===============================================================
+*/
+/*$(function(){
+	$(window).scroll(function(){
+		var barra = $(window).scrollTop();
+		var posicion =  (barra * 0.50);
+		
+		$("#presentation-image").css({
+			"background-position": "0 -" + posicion + "px"
+		});
+		
+	});
+});*/
+
+
 /*=========================================================================*/
 /*Uploader imagenes al momento*/
 /*=========================================================================*/
