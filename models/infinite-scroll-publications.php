@@ -10,10 +10,10 @@ $query = "SELECT * FROM publicaciones_negocios pub
 	INNER JOIN logotipos_negocios logs
 	INNER JOIN negocios_registrados neg 
 	INNER JOIN categorias_negocios cat
-	WHERE pub.id_negocio = logs.id_negocio 
-	AND pub.id_negocio = neg.id_negocio
+	WHERE pub.id_negocio = neg.id_negocio
 	AND neg.id_categoria = cat.id_categoria 
-	order by pub.id_publicacion desc limit ".$_SESSION["cantidadcargadas"].", 5";
+	group by pub.id_publicacion
+	order by pub.id_publicacion  desc limit ".$_SESSION["cantidadcargadas"].", 5";
 
 $result = mysql_query($query);
 
@@ -26,9 +26,14 @@ while ($row = mysql_fetch_array($result)){
 	<div class='col-xs-12 col-sm-6 col-md-12 col-lg-12'>
 		<div class='publication'>
 			<div class='publication-header'>
-				<figure class='logo'>
-					<img src='$row[path_logotipo]' alt=''>
-				</figure>
+				<figure class='logo'>";
+					if($row['path_logotipo'] != ""){
+	            		echo "<img src='".$row['path_logotipo']."' alt='Logo ".$row['nombre']."'>";
+	            	}else{
+	            		echo "<img src='img/nologo.png' alt='Logo ".$row['nombre']."'>";
+	            	}
+					
+				echo "</figure>
 				<h3 class='p-title'> 
 					<a href='negocio.php'>$row[nombre]</a>
 				</h3>
@@ -58,7 +63,7 @@ while ($row = mysql_fetch_array($result)){
 				<div class='actions' id='action_publication'>
 					<span id='puntos_acumulados' data-count='$row[puntos_acumulados]'>$row[puntos_acumulados]</span>
 					<p class='like pull-right'>
-						<span class='counter '> $row[id_publicacion] </span>
+						<span class='counter '> +1 </span>
 					</p>
 				</div>
 			</div>

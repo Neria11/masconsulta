@@ -6,7 +6,7 @@ $sql = mysql_query("SELECT neg.nombre, neg.pseudonimo, log.path_logotipo, cat.ca
 					INNER JOIN categorias_negocios cat 
 					ON neg.id_categoria = cat.id_categoria 
 					INNER JOIN logotipos_negocios log 
-					ON neg.id_negocio = log.id_negocio
+					ON neg.id_logotipo = log.id_logotipo
 					WHERE neg.status = 1 
 					order by rand() desc limit 9");
 

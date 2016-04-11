@@ -190,16 +190,14 @@ unset($_SESSION["cantidadcargadas"]);
       </div>
       <!--NEGOCIOS EN PANTLLA PRINCIPAL-->
     </div> 
-    <div class="container" >
-      <div class="u-wrapper">
+   
         <div id="resultPublications">
          <div class="row" id="itemsPublications">
          </div>
          <!-- <p class="mc-button mc-button-md mc-button-warning center" data-att="infinite_scroll"> Cargar más</p>-->
          <div class="scrollExtend-loading" id="gif-loading"></div>
        </div>
-     </div>
-   </div>   
+      
  </div>
 
  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">

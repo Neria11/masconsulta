@@ -63,14 +63,14 @@ $(function(){
 /*=========================================================================*/
 /*Función para detectar si se está haciendo scroll y mostrar el gif loading*/
 /*=========================================================================*/
-$(window).scroll(function() {
+/*$(window).scroll(function() {
 	$("#gif-loading").show(200);
 	clearTimeout( $.data( this, "TestScroll" ) );
 	$.data( this, "TestScroll", setTimeout(function() {
 		/*$("#gif-loading").hide(200);*/
-		$("#gif-loading").append("<span class='badge green block mc-button mc-button-block yellow center'>No hay más publicaciones por ahora.</span>");
+		/*$("#gif-loading").append("<span class='badge green block mc-button mc-button-block yellow center'>No hay más publicaciones por ahora.</span>");
 	}, 250) );
-});
+});*/
 
 /*=========================================================================*/
 /*Función para aparecer o desparecer el menú de navegacvion*/

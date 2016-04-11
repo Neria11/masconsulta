@@ -6,7 +6,7 @@ $sql = mysql_query("SELECT *
 					INNER JOIN categorias_negocios cat 
 					ON neg.id_categoria = cat.id_categoria 
 					INNER JOIN logotipos_negocios log 
-					ON neg.id_negocio = log.id_negocio
+					ON neg.id_logotipo = log.id_logotipo
 					WHERE neg.status = 1 
 					order by rand() desc limit 0,9");
 
@@ -22,7 +22,6 @@ while($row = mysql_fetch_array($sql)){
 	            	}else{
 	            		echo "<img src='img/nologo.png' alt='Logo ".$row['nombre']."'>";
 	            	}
-	              
 	           echo "</figure>
 	            <div class='business-data'>
 	              <h4 class='name'>".$row['nombre']."</h4>
