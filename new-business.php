@@ -208,7 +208,7 @@
       <input type="tel" required="" class="control control-block">
     </div>
     <div class="form-group">
-      <input type="submit" class="mc-button mc-button-sm mc-button-info" value="Guardar cambios">
+      <input type="submit" class="mc-button mc-button-md mc-button-info" value="Guardar cambios">
     </div>
   </form>
 </div>  

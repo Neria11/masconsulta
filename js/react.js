@@ -194,6 +194,26 @@ $(function(){
 
 
 /*=========================================================================*/
+/*Carga los negocios buscados en el buscador*/
+/*=========================================================================*/
+$(function(){
+	$("#start-search").click(function(){
+		$("#welcome-section").slideUp(300);
+		var busqueda = $("#buscador").val(); 
+
+		$.ajax({
+			type: "POST",
+			url: "models/search-business.php",
+			data: busqueda
+		}).done(function(info){
+			$("#listaNegocios").empty();
+			$("#listaNegocios").html(info);
+		})
+	});
+});
+
+
+/*=========================================================================*/
 /*Carga las categorias aleatoriamente*/
 /*=========================================================================*/
 $(function(){

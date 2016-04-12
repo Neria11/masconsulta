@@ -7,13 +7,13 @@ include("ago.php");
 if (!isset($_SESSION["cantidadcargadas"])) $_SESSION["cantidadcargadas"] = 5;
 
 $query = "SELECT * FROM publicaciones_negocios pub  
-	INNER JOIN logotipos_negocios logs
-	INNER JOIN negocios_registrados neg 
-	INNER JOIN categorias_negocios cat
-	WHERE pub.id_negocio = neg.id_negocio
-	AND neg.id_categoria = cat.id_categoria 
-	group by pub.id_publicacion
-	order by pub.id_publicacion  desc limit ".$_SESSION["cantidadcargadas"].", 5";
+		 INNER JOIN negocios_registrados neg 
+		 INNER JOIN categorias_negocios cat
+		 INNER JOIN logotipos_negocios logs
+		 WHERE pub.id_negocio = neg.id_negocio
+		 AND neg.id_categoria = cat.id_categoria 
+		 and neg.id_logotipo = logs.id_logotipo
+		 order by pub.id_publicacion desc limit ".$_SESSION["cantidadcargadas"].", 5";
 
 $result = mysql_query($query);
 
@@ -63,7 +63,7 @@ while ($row = mysql_fetch_array($result)){
 				<div class='actions' id='action_publication'>
 					<span id='puntos_acumulados' data-count='$row[puntos_acumulados]'>$row[puntos_acumulados]</span>
 					<p class='like pull-right'>
-						<span class='counter '> +1 </span>
+						<span class='counter '> +1 </span> $row[id_publicacion]
 					</p>
 				</div>
 			</div>

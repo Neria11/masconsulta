@@ -204,176 +204,173 @@
 <div class="publications">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <div class="container" >
-        <div class="u-wrapper">
-         <!-- <h2 class="title">Publicaciones</h2> -->
-         <!--PUBLICACIONES-->
-         <div class="row">
 
-          <!--Start Publication-->
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <div class="publication">
-              <div class="publication-header">
-                <figure class="logo">
-                  <img src="img/noavatar.png" alt="">
-                </figure>
-                <h3 class="p-title"> 
-                 Lonchería Bon Friends
-               </h3>
-               <span class="p-nick">@masconsulta</span>
-             </div>
-             <div class="publication-body">
-              <div class="image">
-                <a target="" href="img/back.jpg" data-fancybox-group="gallery" class="fancybox">
-                  <img src="img/back.jpg" alt="">
-                </a>
-              </div>
-            </div>
-            <div class="publication-footer">
-              <span class="date">25/01/2016 20:52 pm</span>
-              <div class="actions">
-                <p class="like">
-                  <span class="counter"> +1 </span>
-                </p>
-              </div>
-            </div>
+     <!-- <h2 class="title">Publicaciones</h2> -->
+     <!--PUBLICACIONES-->
+     <div class="row">
+
+      <!--Start Publication-->
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="publication">
+          <div class="publication-header">
+            <figure class="logo">
+              <img src="img/noavatar.png" alt="">
+            </figure>
+            <h3 class="p-title"> 
+             Lonchería Bon Friends
+           </h3>
+           <span class="p-nick">@masconsulta</span>
+         </div>
+         <div class="publication-body">
+          <div class="image">
+            <a target="" href="img/cabania.jpg" data-fancybox-group="gallery" class="fancybox">
+              <img src="img/cabania.jpg" alt="">
+            </a>
           </div>
         </div>
-        <!--End Publication-->
-
-        <!--Start Publication-->
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <div class="publication">
-              <div class="publication-header">
-                <figure class="logo">
-                  <img src="img/noavatar.png" alt="">
-                </figure>
-                <h3 class="p-title"> 
-                 Lonchería Bon Friends
-               </h3>
-               <span class="p-nick">@masconsulta</span>
-             </div>
-             <div class="publication-body">
-              <div class="image">
-                <a target="" href="img/back.jpg" data-fancybox-group="gallery" class="fancybox">
-                  <img src="img/back.jpg" alt="">
-                </a>
-              </div>
-            </div>
-            <div class="publication-footer">
-              <span class="date">25/01/2016 20:52 pm</span>
-              <div class="actions">
-                <p class="like">
-                  <span class="counter"> +1 </span>
-                </p>
-              </div>
-            </div>
+        <div class="publication-footer">
+          <span class="date">25/01/2016 20:52 pm</span>
+          <div class="actions">
+            <p class="like">
+              <span class="counter"> +1 </span>
+            </p>
           </div>
         </div>
-        <!--End Publication-->
+      </div>
+    </div>
+    <!--End Publication-->
 
-        <!--Start Publication-->
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <div class="publication">
-              <div class="publication-header">
-                <figure class="logo">
-                  <img src="img/noavatar.png" alt="">
-                </figure>
-                <h3 class="p-title"> 
-                 Lonchería Bon Friends
-               </h3>
-               <span class="p-nick">@masconsulta</span>
-             </div>
-             <div class="publication-body">
-              <div class="image">
-                <a target="" href="img/back.jpg" data-fancybox-group="gallery" class="fancybox">
-                  <img src="img/back.jpg" alt="">
-                </a>
-              </div>
-            </div>
-            <div class="publication-footer">
-              <span class="date">25/01/2016 20:52 pm</span>
-              <div class="actions">
-                <p class="like">
-                  <span class="counter"> +1 </span>
-                </p>
-              </div>
-            </div>
-          </div>
+    <!--Start Publication-->
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <div class="publication">
+        <div class="publication-header">
+          <figure class="logo">
+            <img src="img/noavatar.png" alt="">
+          </figure>
+          <h3 class="p-title"> 
+           Lonchería Bon Friends
+         </h3>
+         <span class="p-nick">@masconsulta</span>
+       </div>
+       <div class="publication-body">
+        <div class="image">
+          <a target="" href="img/cabania.jpg" data-fancybox-group="gallery" class="fancybox">
+            <img src="img/cabania.jpg" alt="">
+          </a>
         </div>
-        <!--End Publication-->
-
-        <!--Start Publication-->
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <div class="publication">
-              <div class="publication-header">
-                <figure class="logo">
-                  <img src="img/noavatar.png" alt="">
-                </figure>
-                <h3 class="p-title"> 
-                 Lonchería Bon Friends
-               </h3>
-               <span class="p-nick">@masconsulta</span>
-             </div>
-             <div class="publication-body">
-              <div class="image">
-                <a target="" href="img/back.jpg" data-fancybox-group="gallery" class="fancybox">
-                  <img src="img/back.jpg" alt="">
-                </a>
-              </div>
-            </div>
-            <div class="publication-footer">
-              <span class="date">25/01/2016 20:52 pm</span>
-              <div class="actions">
-                <p class="like">
-                  <span class="counter"> +1 </span>
-                </p>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div class="publication-footer">
+        <span class="date">25/01/2016 20:52 pm</span>
+        <div class="actions">
+          <p class="like">
+            <span class="counter"> +1 </span>
+          </p>
         </div>
-        <!--End Publication-->
+      </div>
+    </div>
+  </div>
+  <!--End Publication-->
 
-        <!--Start Publication-->
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <div class="publication">
-              <div class="publication-header">
-                <figure class="logo">
-                  <img src="img/noavatar.png" alt="">
-                </figure>
-                <h3 class="p-title"> 
-                 Lonchería Bon Friends
-               </h3>
-               <span class="p-nick">@masconsulta</span>
-             </div>
-             <div class="publication-body">
-              <div class="image">
-                <a target="" href="img/back.jpg" data-fancybox-group="gallery" class="fancybox">
-                  <img src="img/back.jpg" alt="">
-                </a>
-              </div>
-            </div>
-            <div class="publication-footer">
-              <span class="date">25/01/2016 20:52 pm</span>
-              <div class="actions">
-                <p class="like">
-                  <span class="counter"> +1 </span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--End Publication-->
+  <!--Start Publication-->
+  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="publication">
+      <div class="publication-header">
+        <figure class="logo">
+          <img src="img/noavatar.png" alt="">
+        </figure>
+        <h3 class="p-title"> 
+         Lonchería Bon Friends
+       </h3>
+       <span class="p-nick">@masconsulta</span>
+     </div>
+     <div class="publication-body">
+      <div class="image">
+        <a target="" href="img/cabania.jpg" data-fancybox-group="gallery" class="fancybox">
+          <img src="img/cabania.jpg" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="publication-footer">
+      <span class="date">25/01/2016 20:52 pm</span>
+      <div class="actions">
+        <p class="like">
+          <span class="counter"> +1 </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Publication-->
 
-            
+<!--Start Publication-->
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+  <div class="publication">
+    <div class="publication-header">
+      <figure class="logo">
+        <img src="img/noavatar.png" alt="">
+      </figure>
+      <h3 class="p-title"> 
+       Lonchería Bon Friends
+     </h3>
+     <span class="p-nick">@masconsulta</span>
+   </div>
+   <div class="publication-body">
+    <div class="image">
+      <a target="" href="img/cabania.jpg" data-fancybox-group="gallery" class="fancybox">
+        <img src="img/cabania.jpg" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="publication-footer">
+    <span class="date">25/01/2016 20:52 pm</span>
+    <div class="actions">
+      <p class="like">
+        <span class="counter"> +1 </span>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+<!--End Publication-->
+
+<!--Start Publication-->
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+  <div class="publication">
+    <div class="publication-header">
+      <figure class="logo">
+        <img src="img/noavatar.png" alt="">
+      </figure>
+      <h3 class="p-title"> 
+       Lonchería Bon Friends
+     </h3>
+     <span class="p-nick">@masconsulta</span>
+   </div>
+   <div class="publication-body">
+    <div class="image">
+      <a target="" href="img/cabania.jpg" data-fancybox-group="gallery" class="fancybox">
+        <img src="img/cabania.jpg" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="publication-footer">
+    <span class="date">25/01/2016 20:52 pm</span>
+    <div class="actions">
+      <p class="like">
+        <span class="counter"> +1 </span>
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+<!--End Publication-->
+
+
 
 
 
 </div>
 <!--PUBLICACIONES-->
-</div>
 
-</div>
 </div>
 </div>
 </div>

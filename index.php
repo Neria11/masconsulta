@@ -2,6 +2,7 @@
 session_start();
 unset($_SESSION["cantidadcargadas"]); 
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -110,8 +111,8 @@ unset($_SESSION["cantidadcargadas"]);
          <input type="text" class="searcher-input" id="buscador" placeholder="Buscar...">
        </div>
        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-         <button type="button" class="searcher-button" value="Consultar"> 
-          <span class="icon-search">+</span> 
+         <button type="button" class="searcher-button" value="Consultar" id="start-search"> 
+          <span class="icon-search">Buscar</span> 
         </button>
       </div>
     </div>
@@ -130,7 +131,7 @@ unset($_SESSION["cantidadcargadas"]);
       <div class="u-wrapper">
         <h2 class="title">
           Categorías
-          <span class="mc-button mc-button-square bold pull-right" id="randomCategories">R</span>
+          <span class="category badge green cursor" id="randomCategories">Aleatorio</span>
         </h2>
       </div>
       <ul class="categories" id="itemsCategories">
@@ -140,7 +141,7 @@ unset($_SESSION["cantidadcargadas"]);
 
 
   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-    <div class="container">
+    <div class="container" id="welcome-section">
       <div class="u-wrapper no-background">
         <h2 class="title uppercase">
           Bienvenido
@@ -155,11 +156,11 @@ unset($_SESSION["cantidadcargadas"]);
         </div>-->
         <!--CAROUSEL BXSLIDER-->
         <ul class="bxslider" id="bxslider-2">
-          <li><img src="http://placehold.it/640x200"></li>
-          <li><img src="http://placehold.it/640x200"></li>
-          <li><img src="http://placehold.it/640x200"></li>
-          <li><img src="http://placehold.it/640x200"></li>
-          <li><img src="http://placehold.it/640x200"></li>
+          <li><img src="img/tol.jpg"></li>
+          <li><img src="img/tol.jpg"></li>
+          <li><img src="img/tol.jpg"></li>
+          <li><img src="img/tol.jpg"></li>
+          <li><img src="img/tol.jpg"></li>
         </ul>
         <!--CAROUSEL BXSLIDER-->
       </div>
@@ -168,7 +169,7 @@ unset($_SESSION["cantidadcargadas"]);
       <div class="u-wrapper no-background">
         <h2 class="title">
           Negocios recientes 
-          <span class="mc-button mc-button-square pull-right" id="randomBusiness">R</span>
+          <span class="category badge green cursor" id="randomBusiness">Aleatorios</span>
         </h2>
       </div>
 
