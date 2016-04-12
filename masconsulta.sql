@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-03-2016 a las 23:11:01
+-- Tiempo de generación: 12-04-2016 a las 23:58:48
 -- Versión del servidor: 5.6.16
 -- Versión de PHP: 5.5.11
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `masconsulta`
 --
-CREATE DATABASE IF NOT EXISTS `masconsulta` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `masconsulta`;
 
 -- --------------------------------------------------------
 
@@ -28,7 +26,6 @@ USE `masconsulta`;
 -- Estructura de tabla para la tabla `avatars_usuarios`
 --
 
-DROP TABLE IF EXISTS `avatars_usuarios`;
 CREATE TABLE IF NOT EXISTS `avatars_usuarios` (
   `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
   `path_avatar` int(11) DEFAULT NULL,
@@ -44,7 +41,6 @@ CREATE TABLE IF NOT EXISTS `avatars_usuarios` (
 -- Estructura de tabla para la tabla `categorias_negocios`
 --
 
-DROP TABLE IF EXISTS `categorias_negocios`;
 CREATE TABLE IF NOT EXISTS `categorias_negocios` (
   `id_categoria` int(11) NOT NULL AUTO_INCREMENT,
   `categoria` varchar(100) DEFAULT NULL,
@@ -130,7 +126,6 @@ INSERT INTO `categorias_negocios` (`id_categoria`, `categoria`, `descripcion`, `
 -- Estructura de tabla para la tabla `cuentas_acceso_usuarios`
 --
 
-DROP TABLE IF EXISTS `cuentas_acceso_usuarios`;
 CREATE TABLE IF NOT EXISTS `cuentas_acceso_usuarios` (
   `username` varchar(100) NOT NULL,
   `password` varchar(150) DEFAULT NULL,
@@ -155,7 +150,6 @@ INSERT INTO `cuentas_acceso_usuarios` (`username`, `password`, `nivel_acceso`, `
 -- Estructura de tabla para la tabla `entidades_federativas`
 --
 
-DROP TABLE IF EXISTS `entidades_federativas`;
 CREATE TABLE IF NOT EXISTS `entidades_federativas` (
   `id_estado` int(11) NOT NULL AUTO_INCREMENT,
   `estado` varchar(100) DEFAULT NULL,
@@ -209,7 +203,6 @@ INSERT INTO `entidades_federativas` (`id_estado`, `estado`, `abbr_estado`, `id_p
 -- Estructura de tabla para la tabla `eventos_negocios`
 --
 
-DROP TABLE IF EXISTS `eventos_negocios`;
 CREATE TABLE IF NOT EXISTS `eventos_negocios` (
   `id_evento` int(11) NOT NULL AUTO_INCREMENT,
   `id_negocio` int(11) DEFAULT NULL,
@@ -232,7 +225,6 @@ CREATE TABLE IF NOT EXISTS `eventos_negocios` (
 -- Estructura de tabla para la tabla `galeria_negocios`
 --
 
-DROP TABLE IF EXISTS `galeria_negocios`;
 CREATE TABLE IF NOT EXISTS `galeria_negocios` (
   `id_foto` int(11) NOT NULL AUTO_INCREMENT,
   `path_imagen` text,
@@ -250,7 +242,6 @@ CREATE TABLE IF NOT EXISTS `galeria_negocios` (
 -- Estructura de tabla para la tabla `historial_busquedas`
 --
 
-DROP TABLE IF EXISTS `historial_busquedas`;
 CREATE TABLE IF NOT EXISTS `historial_busquedas` (
   `id_busqueda` int(11) NOT NULL AUTO_INCREMENT,
   `busqueda` text,
@@ -268,7 +259,6 @@ CREATE TABLE IF NOT EXISTS `historial_busquedas` (
 -- Estructura de tabla para la tabla `horarios_negocios`
 --
 
-DROP TABLE IF EXISTS `horarios_negocios`;
 CREATE TABLE IF NOT EXISTS `horarios_negocios` (
   `id_negocio` int(11) DEFAULT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
@@ -291,7 +281,6 @@ INSERT INTO `horarios_negocios` (`id_negocio`, `id_sucursal`, `dia_semana`, `hor
 -- Estructura de tabla para la tabla `informacion_usuarios`
 --
 
-DROP TABLE IF EXISTS `informacion_usuarios`;
 CREATE TABLE IF NOT EXISTS `informacion_usuarios` (
   `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(100) DEFAULT NULL,
@@ -327,10 +316,8 @@ INSERT INTO `informacion_usuarios` (`id_usuario`, `username`, `nombre`, `ape_pa`
 -- Estructura de tabla para la tabla `logotipos_negocios`
 --
 
-DROP TABLE IF EXISTS `logotipos_negocios`;
 CREATE TABLE IF NOT EXISTS `logotipos_negocios` (
   `id_logotipo` int(11) NOT NULL AUTO_INCREMENT,
-  `id_negocio` int(11) NOT NULL,
   `path_logotipo` text,
   `fecha_actualizado` datetime DEFAULT NULL,
   `cantidad_actualizado` int(11) DEFAULT NULL,
@@ -342,10 +329,10 @@ CREATE TABLE IF NOT EXISTS `logotipos_negocios` (
 -- Volcado de datos para la tabla `logotipos_negocios`
 --
 
-INSERT INTO `logotipos_negocios` (`id_logotipo`, `id_negocio`, `path_logotipo`, `fecha_actualizado`, `cantidad_actualizado`, `status`) VALUES
-(1, 1, 'negocios/logos/masconsulta/logo.png', '0000-00-00 00:00:00', 1, 1),
-(2, 2, '', '0000-00-00 00:00:00', 1, 1),
-(3, 3, 'negocios/logos/tolantongomx/logo.png', '0000-00-00 00:00:00', 3, 1);
+INSERT INTO `logotipos_negocios` (`id_logotipo`, `path_logotipo`, `fecha_actualizado`, `cantidad_actualizado`, `status`) VALUES
+(1, 'negocios/logos/masconsulta/logo.png', '0000-00-00 00:00:00', 1, 1),
+(2, '', '0000-00-00 00:00:00', 1, 1),
+(3, 'negocios/logos/tolantongomx/logo.png', '0000-00-00 00:00:00', 3, 1);
 
 -- --------------------------------------------------------
 
@@ -353,7 +340,6 @@ INSERT INTO `logotipos_negocios` (`id_logotipo`, `id_negocio`, `path_logotipo`, 
 -- Estructura de tabla para la tabla `mensajes`
 --
 
-DROP TABLE IF EXISTS `mensajes`;
 CREATE TABLE IF NOT EXISTS `mensajes` (
   `id_mensaje` int(11) NOT NULL AUTO_INCREMENT,
   `id_negocio` int(11) DEFAULT NULL,
@@ -370,7 +356,6 @@ CREATE TABLE IF NOT EXISTS `mensajes` (
 -- Estructura de tabla para la tabla `metodos_pago_disponibles`
 --
 
-DROP TABLE IF EXISTS `metodos_pago_disponibles`;
 CREATE TABLE IF NOT EXISTS `metodos_pago_disponibles` (
   `id_metodo_pago` int(11) NOT NULL AUTO_INCREMENT,
   `metodo_pago` text,
@@ -397,7 +382,6 @@ INSERT INTO `metodos_pago_disponibles` (`id_metodo_pago`, `metodo_pago`, `descri
 -- Estructura de tabla para la tabla `metodo_pago_usado`
 --
 
-DROP TABLE IF EXISTS `metodo_pago_usado`;
 CREATE TABLE IF NOT EXISTS `metodo_pago_usado` (
   `id_negocio` int(11) DEFAULT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
@@ -410,7 +394,6 @@ CREATE TABLE IF NOT EXISTS `metodo_pago_usado` (
 -- Estructura de tabla para la tabla `municipios`
 --
 
-DROP TABLE IF EXISTS `municipios`;
 CREATE TABLE IF NOT EXISTS `municipios` (
   `id_municipio` int(11) NOT NULL AUTO_INCREMENT,
   `cve_municipio` varchar(10) DEFAULT NULL,
@@ -2890,7 +2873,6 @@ INSERT INTO `municipios` (`id_municipio`, `cve_municipio`, `municipio`, `id_esta
 -- Estructura de tabla para la tabla `negocios_registrados`
 --
 
-DROP TABLE IF EXISTS `negocios_registrados`;
 CREATE TABLE IF NOT EXISTS `negocios_registrados` (
   `id_negocio` int(11) NOT NULL AUTO_INCREMENT,
   `pseudonimo` varchar(100) DEFAULT NULL,
@@ -2898,6 +2880,7 @@ CREATE TABLE IF NOT EXISTS `negocios_registrados` (
   `id_categoria` int(11) DEFAULT NULL,
   `descripcion` text,
   `eslogan` text,
+  `id_logotipo` int(11) DEFAULT NULL,
   `servicios` text,
   `calle` varchar(100) DEFAULT NULL,
   `num_ext` varchar(5) DEFAULT NULL,
@@ -2910,7 +2893,7 @@ CREATE TABLE IF NOT EXISTS `negocios_registrados` (
   `mision` text,
   `vision` text,
   `valores` text,
-  `fecha_nacimiento_negocio` varchar(100) DEFAULT NULL,
+  `fecha_nacimiento_negocio` datetime DEFAULT NULL,
   `fecha_registro` datetime DEFAULT NULL,
   `ultima_actualizacion` datetime DEFAULT NULL,
   `datos_adicionales` text,
@@ -2918,16 +2901,17 @@ CREATE TABLE IF NOT EXISTS `negocios_registrados` (
   `id_paquete` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_negocio`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `negocios_registrados`
 --
 
-INSERT INTO `negocios_registrados` (`id_negocio`, `pseudonimo`, `nombre`, `id_categoria`, `descripcion`, `eslogan`, `servicios`, `calle`, `num_ext`, `num_int`, `colonia`, `id_municipio`, `cp`, `email`, `sitio_web`, `mision`, `vision`, `valores`, `fecha_nacimiento_negocio`, `fecha_registro`, `ultima_actualizacion`, `datos_adicionales`, `id_rango_precios`, `id_paquete`, `status`) VALUES
-(1, 'masconsulta', 'Masconsulta', 23, 'Empresa de publicidad dedicada al marketing de negocios', 'No somos los únicos, pero si los mejores', 'Marketing digital\r\nMarketing tangible', 'Cecilio Ramírez', '18', '3', 'San Antonio', 56, '42300', 'masconsulta@gmail.com', 'http://www.masconsulta.com', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', NULL, '25/05/2012', NULL, NULL, NULL, 2, 1, 1),
-(2, 'bonfriends', 'Bon Friends', 32, 'Lorem', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2, 1, 1),
-(3, 'tolantongomx', 'Grutas Tolantongo', 32, 'Lugar de atracciones naturales y turísticas', 'Un oasis a su alcance', 'Hospedaje\r\nVigilancia\r\nMédicos\r\nAtractivos\r\nRestaurante', 'San Cristóbal', '1', '1', 'Tolantongo', 3, '42370', 'grutastolantongo@grutastolantongo.com', '//tolantongo.mx', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', '14/08/1976', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 2, 1, 1);
+INSERT INTO `negocios_registrados` (`id_negocio`, `pseudonimo`, `nombre`, `id_categoria`, `descripcion`, `eslogan`, `id_logotipo`, `servicios`, `calle`, `num_ext`, `num_int`, `colonia`, `id_municipio`, `cp`, `email`, `sitio_web`, `mision`, `vision`, `valores`, `fecha_nacimiento_negocio`, `fecha_registro`, `ultima_actualizacion`, `datos_adicionales`, `id_rango_precios`, `id_paquete`, `status`) VALUES
+(1, 'masconsulta', 'Masconsulta', 23, 'Empresa de publicidad dedicada al marketing de negocios', 'No somos los únicos, pero si los mejores', 1, 'Marketing digital\r\nMarketing tangible', 'Cecilio Ramírez', '18', '3', 'San Antonio', 56, '42300', 'masconsulta@gmail.com', 'http://www.masconsulta.com', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', NULL, '0000-00-00 00:00:00', NULL, NULL, NULL, 2, 1, 1),
+(2, 'bonfriends', 'Bon Friends', 32, 'Lorem', NULL, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2016-04-05 00:00:00', NULL, NULL, NULL, 2, 1, 1),
+(3, 'tolantongomx', 'Grutas Tolantongo', 32, 'Lugar de atracciones naturales y turísticas', 'Un oasis a su alcance', 2, 'Hospedaje\r\nVigilancia\r\nMédicos\r\nAtractivos\r\nRestaurante', 'San Cristóbal', '1', '1', 'Tolantongo', 3, '42370', 'grutastolantongo@grutastolantongo.com', '//tolantongo.mx', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', '1899-11-30 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 2, 1, 1),
+(4, 'utvm', 'Universidad Tecnológica del Valle del Mezquital', 4, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 2, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariat', '3', '1', 'El Nith', 30, '42300', 'utvm@utvm.edu.mx', 'http://utvm.edu.mx/', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2015-12-11 00:00:00', '2016-04-11 00:00:00', '2016-04-11 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 2, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -2935,7 +2919,6 @@ INSERT INTO `negocios_registrados` (`id_negocio`, `pseudonimo`, `nombre`, `id_ca
 -- Estructura de tabla para la tabla `paises`
 --
 
-DROP TABLE IF EXISTS `paises`;
 CREATE TABLE IF NOT EXISTS `paises` (
   `id_pais` int(11) NOT NULL AUTO_INCREMENT,
   `cve_pais` varchar(10) DEFAULT NULL,
@@ -3200,7 +3183,6 @@ INSERT INTO `paises` (`id_pais`, `cve_pais`, `pais`, `status`) VALUES
 -- Estructura de tabla para la tabla `paquetes_contratados`
 --
 
-DROP TABLE IF EXISTS `paquetes_contratados`;
 CREATE TABLE IF NOT EXISTS `paquetes_contratados` (
   `id_negocio` int(11) DEFAULT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
@@ -3213,7 +3195,6 @@ CREATE TABLE IF NOT EXISTS `paquetes_contratados` (
 -- Estructura de tabla para la tabla `paquetes_disponibles`
 --
 
-DROP TABLE IF EXISTS `paquetes_disponibles`;
 CREATE TABLE IF NOT EXISTS `paquetes_disponibles` (
   `id_paquete` int(11) NOT NULL AUTO_INCREMENT,
   `paquete` varchar(50) DEFAULT NULL,
@@ -3238,7 +3219,6 @@ INSERT INTO `paquetes_disponibles` (`id_paquete`, `paquete`, `descripcion`, `sta
 -- Estructura de tabla para la tabla `preguntas`
 --
 
-DROP TABLE IF EXISTS `preguntas`;
 CREATE TABLE IF NOT EXISTS `preguntas` (
   `id_pregunta` int(11) NOT NULL AUTO_INCREMENT,
   `pregunta` text,
@@ -3252,7 +3232,6 @@ CREATE TABLE IF NOT EXISTS `preguntas` (
 -- Estructura de tabla para la tabla `promociones_negocios`
 --
 
-DROP TABLE IF EXISTS `promociones_negocios`;
 CREATE TABLE IF NOT EXISTS `promociones_negocios` (
   `id_promocion` int(11) NOT NULL AUTO_INCREMENT,
   `id_negocio` int(11) DEFAULT NULL,
@@ -3281,11 +3260,11 @@ INSERT INTO `promociones_negocios` (`id_promocion`, `id_negocio`, `id_sucursal`,
 -- Estructura de tabla para la tabla `publicaciones_negocios`
 --
 
-DROP TABLE IF EXISTS `publicaciones_negocios`;
 CREATE TABLE IF NOT EXISTS `publicaciones_negocios` (
   `id_publicacion` int(11) NOT NULL AUTO_INCREMENT,
   `id_negocio` int(11) DEFAULT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
+  `titulo_publicacion` varchar(255) DEFAULT NULL,
   `tipo_publicacion` varchar(100) DEFAULT NULL,
   `contenido_publicacion` text,
   `id_usuario` int(11) DEFAULT NULL,
@@ -3302,21 +3281,21 @@ CREATE TABLE IF NOT EXISTS `publicaciones_negocios` (
 -- Volcado de datos para la tabla `publicaciones_negocios`
 --
 
-INSERT INTO `publicaciones_negocios` (`id_publicacion`, `id_negocio`, `id_sucursal`, `tipo_publicacion`, `contenido_publicacion`, `id_usuario`, `direccion_ip_usuario`, `fecha_publicada`, `fecha_vencimiento`, `token_publicacion`, `puntos_acumulados`, `status`) VALUES
-(1, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpj', 123, 1),
-(2, 2, 1, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1),
-(3, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kasdqwf', 123, 1),
-(4, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', '11eaddf', 123, 1),
-(5, 1, 1, 'IMAGEN', 'img/pe.jpg', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszqf1pj', 123, 1),
-(6, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjasd', 123, 1),
-(7, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjqwfq', 123, 1),
-(8, 1, 1, 'IMAGEN', 'img/bills.gif', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfwf', 123, 1),
-(9, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjqwr1', 123, 1),
-(10, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
-(11, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
-(12, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
-(13, 1, 1, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
-(14, 2, 1, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1);
+INSERT INTO `publicaciones_negocios` (`id_publicacion`, `id_negocio`, `id_sucursal`, `titulo_publicacion`, `tipo_publicacion`, `contenido_publicacion`, `id_usuario`, `direccion_ip_usuario`, `fecha_publicada`, `fecha_vencimiento`, `token_publicacion`, `puntos_acumulados`, `status`) VALUES
+(1, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpj', 123, 1),
+(2, 2, 1, NULL, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1),
+(3, 1, 1, NULL, 'VIDEO', 'https://www.youtube.com/embed/P29oO3piQjc', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kasdqwf', 123, 1),
+(4, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', '11eaddf', 123, 1),
+(5, 1, 1, NULL, 'IMAGEN', 'img/cabania.jpg', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszqf1pj', 123, 1),
+(6, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjasd', 123, 1),
+(7, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjqwfq', 123, 1),
+(8, 1, 1, NULL, 'IMAGEN', 'img/bills.gif', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfwf', 123, 1),
+(9, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjqwr1', 123, 1),
+(10, 1, 1, NULL, 'IMAGEN', 'img/cabania.jpg', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(11, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(12, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(13, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(14, 2, 1, NULL, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1);
 
 -- --------------------------------------------------------
 
@@ -3324,7 +3303,6 @@ INSERT INTO `publicaciones_negocios` (`id_publicacion`, `id_negocio`, `id_sucurs
 -- Estructura de tabla para la tabla `rango_precios`
 --
 
-DROP TABLE IF EXISTS `rango_precios`;
 CREATE TABLE IF NOT EXISTS `rango_precios` (
   `id_rango_precios` int(11) NOT NULL AUTO_INCREMENT,
   `rango_precios` varchar(50) DEFAULT NULL,
@@ -3350,7 +3328,6 @@ INSERT INTO `rango_precios` (`id_rango_precios`, `rango_precios`, `descripcion`)
 -- Estructura de tabla para la tabla `redes_sociales_negocios`
 --
 
-DROP TABLE IF EXISTS `redes_sociales_negocios`;
 CREATE TABLE IF NOT EXISTS `redes_sociales_negocios` (
   `id_red_social` int(11) NOT NULL AUTO_INCREMENT,
   `id_negocio` int(11) DEFAULT NULL,
@@ -3371,7 +3348,6 @@ CREATE TABLE IF NOT EXISTS `redes_sociales_negocios` (
 -- Estructura de tabla para la tabla `resenias_negocios`
 --
 
-DROP TABLE IF EXISTS `resenias_negocios`;
 CREATE TABLE IF NOT EXISTS `resenias_negocios` (
   `id_resenia` int(11) NOT NULL AUTO_INCREMENT,
   `id_negocio` int(11) DEFAULT NULL,
@@ -3391,7 +3367,6 @@ CREATE TABLE IF NOT EXISTS `resenias_negocios` (
 -- Estructura de tabla para la tabla `respuestas`
 --
 
-DROP TABLE IF EXISTS `respuestas`;
 CREATE TABLE IF NOT EXISTS `respuestas` (
   `id_respuesta` int(11) NOT NULL AUTO_INCREMENT,
   `respuesta` text,
@@ -3405,7 +3380,6 @@ CREATE TABLE IF NOT EXISTS `respuestas` (
 -- Estructura de tabla para la tabla `solicitudes_usuarios`
 --
 
-DROP TABLE IF EXISTS `solicitudes_usuarios`;
 CREATE TABLE IF NOT EXISTS `solicitudes_usuarios` (
   `id_solicitud` int(11) NOT NULL AUTO_INCREMENT,
   `tipo_solicitud` varchar(100) DEFAULT NULL,
@@ -3424,7 +3398,6 @@ CREATE TABLE IF NOT EXISTS `solicitudes_usuarios` (
 -- Estructura de tabla para la tabla `sucursales_negocios`
 --
 
-DROP TABLE IF EXISTS `sucursales_negocios`;
 CREATE TABLE IF NOT EXISTS `sucursales_negocios` (
   `id_negocio` int(11) DEFAULT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
@@ -3439,7 +3412,6 @@ CREATE TABLE IF NOT EXISTS `sucursales_negocios` (
 -- Estructura de tabla para la tabla `telefonos_negocios`
 --
 
-DROP TABLE IF EXISTS `telefonos_negocios`;
 CREATE TABLE IF NOT EXISTS `telefonos_negocios` (
   `id_negocio` int(11) NOT NULL,
   `id_sucursal` int(11) NOT NULL,
@@ -3453,7 +3425,6 @@ CREATE TABLE IF NOT EXISTS `telefonos_negocios` (
 -- Estructura de tabla para la tabla `ubicaciones_mapa`
 --
 
-DROP TABLE IF EXISTS `ubicaciones_mapa`;
 CREATE TABLE IF NOT EXISTS `ubicaciones_mapa` (
   `id_negocio` int(11) DEFAULT NULL,
   `id_sucursal` int(11) DEFAULT NULL,
@@ -3467,7 +3438,6 @@ CREATE TABLE IF NOT EXISTS `ubicaciones_mapa` (
 -- Estructura de tabla para la tabla `unidades_medida`
 --
 
-DROP TABLE IF EXISTS `unidades_medida`;
 CREATE TABLE IF NOT EXISTS `unidades_medida` (
   `id_unidad_medida` int(11) NOT NULL AUTO_INCREMENT,
   `unidad` varchar(50) DEFAULT NULL,
@@ -3482,20 +3452,18 @@ CREATE TABLE IF NOT EXISTS `unidades_medida` (
 -- Estructura de tabla para la tabla `usuarios_en_linea`
 --
 
-DROP TABLE IF EXISTS `usuarios_en_linea`;
 CREATE TABLE IF NOT EXISTS `usuarios_en_linea` (
-  `id_sesion` int(11) NOT NULL AUTO_INCREMENT,
   `duracion_sesion` varchar(100) DEFAULT NULL,
-  `direccion_ip_visitante` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id_sesion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+  `direccion_ip_visitante` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuarios_en_linea`
 --
 
-INSERT INTO `usuarios_en_linea` (`id_sesion`, `duracion_sesion`, `direccion_ip_visitante`) VALUES
-(7, '1457993385', '::1');
+INSERT INTO `usuarios_en_linea` (`duracion_sesion`, `direccion_ip_visitante`) VALUES
+('1460498172', '::1'),
+('1460498172', '::1');
 
 -- --------------------------------------------------------
 
@@ -3503,7 +3471,6 @@ INSERT INTO `usuarios_en_linea` (`id_sesion`, `duracion_sesion`, `direccion_ip_v
 -- Estructura de tabla para la tabla `visitas_generales`
 --
 
-DROP TABLE IF EXISTS `visitas_generales`;
 CREATE TABLE IF NOT EXISTS `visitas_generales` (
   `id_visita` int(11) NOT NULL AUTO_INCREMENT,
   `direcccion_ip_visitante` varchar(64) DEFAULT NULL,
@@ -3512,14 +3479,17 @@ CREATE TABLE IF NOT EXISTS `visitas_generales` (
   `navegador_usado` varchar(100) DEFAULT NULL,
   `duracion_sesion` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_visita`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `visitas_generales`
 --
 
 INSERT INTO `visitas_generales` (`id_visita`, `direcccion_ip_visitante`, `cantidad_visitas`, `fecha_visitado`, `navegador_usado`, `duracion_sesion`) VALUES
-(1, '::1', 1, '2016-03-14 16:06:33', NULL, '00:03:12');
+(1, '::1', 10, '2016-04-12 11:15:18', NULL, '05:40:54'),
+(2, '127.0.0.1', 4, '2016-04-12 16:32:44', NULL, '00:00:24'),
+(3, '10.100.96.36', 1, '2016-03-18 12:17:18', NULL, '00:25:33'),
+(4, '10.100.108.18', 1, '2016-04-11 14:45:53', NULL, '02:09:46');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
