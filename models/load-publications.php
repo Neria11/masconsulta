@@ -60,7 +60,7 @@ while ($row = mysql_fetch_array($result)) {
 				<div class='actions'  id='action_publication'>
 					<span id='token_publicacion' token_publicacion='$row[token_publicacion]' data-count='$row[puntos_acumulados]'>$row[puntos_acumulados]</span>
 					<p class='like pull-right'>
-						<span class='counter'> +1 </span> $row[id_publicacion]
+						<span class='counter'> +1 </span>
 					</p>
 				</div>
 			</div>

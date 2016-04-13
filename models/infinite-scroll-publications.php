@@ -6,7 +6,7 @@ include("ago.php");
 
 if (!isset($_SESSION["cantidadcargadas"])) $_SESSION["cantidadcargadas"] = 5;
 
-$query = "SELECT * FROM publicaciones_negocios pub  
+$query ="SELECT * FROM publicaciones_negocios pub  
 		 INNER JOIN negocios_registrados neg 
 		 INNER JOIN categorias_negocios cat
 		 INNER JOIN logotipos_negocios logs
@@ -63,7 +63,7 @@ while ($row = mysql_fetch_array($result)){
 				<div class='actions' id='action_publication'>
 					<span id='puntos_acumulados' data-count='$row[puntos_acumulados]'>$row[puntos_acumulados]</span>
 					<p class='like pull-right'>
-						<span class='counter '> +1 </span> $row[id_publicacion]
+						<span class='counter '> +1 </span>
 					</p>
 				</div>
 			</div>

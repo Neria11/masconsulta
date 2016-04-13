@@ -1,3 +1,24 @@
+/*
+=================================================
+FUNCION PARA IR ARRIBA
+=================================================
+*/
+
+$(function() {
+	$("#go-up").click(function() {
+		$('body, html').animate({
+			scrollTop: '0px'
+		}, 300);
+	});
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 0) {
+			$("#go-up").css({"visibility":"visible"});
+		} else {
+			$("#go-up").css({"visibility":"hidden"});
+		}
+	});
+});
 
 
 

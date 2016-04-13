@@ -198,17 +198,23 @@ $(function(){
 /*=========================================================================*/
 $(function(){
 	$("#start-search").click(function(){
-		$("#welcome-section").slideUp(300);
 		var busqueda = $("#buscador").val(); 
 
-		$.ajax({
-			type: "POST",
-			url: "models/search-business.php",
-			data: busqueda
-		}).done(function(info){
-			$("#listaNegocios").empty();
-			$("#listaNegocios").html(info);
-		})
+		if(buscador == ""){
+			$("#buscador").val("Escribe algo para buscar.");
+		}else{
+			$("#welcome-section").slideUp(300);
+			$("#resultPublications").slideUp(300);
+
+			$.ajax({
+				type:"POST",
+				url: "models/search-business.php",
+				data: busqueda
+			}).done(function(info){
+				$("#listaNegocios").empty();
+				$("#listaNegocios").html(info);
+			})
+		}
 	});
 });
 

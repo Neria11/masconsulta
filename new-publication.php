@@ -22,7 +22,7 @@
   <!--Start Header Navigation -->
   <header class="header" data-rol="header">
     <div class="toggle-float-panel pull-left" id="toggle-float-panel" >
-      <span>*</span>
+      <span>+</span>
     </div>
     <figure class="header-logo">
       <a href="index.php" class="max-link"></a>
@@ -44,7 +44,7 @@
           <a href="login.php">  <span></span> Login </a>
         </li>
         <li>
-          <a href="dashboard.php" id="selected">  <span></span> Dashboard </a>
+          <a href="dashboard.php" id="selected"> <span></span> Dashboard </a>
         </li>
       </ul>
     </nav>
@@ -55,7 +55,7 @@
   <!--Sub-Header-->
   <div class="router">
     <span class="icon-home"></span> <a href="index.php">Inicio</a> / Nueva publicación
-  </div>u
+  </div>
   <!--Sub-Header-->
 
 
@@ -89,7 +89,19 @@
       <form action="" class="form" enctype="multipart/form-data">
        <div class="form-group">
         <label for="" class="tag">Título de la publicación:</label>
-        <input type="password" required="" id="clave_uno" class="control control-block" value="">
+        <input type="text" required="" id="clave_uno" class="control control-block" value="">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">id_negocio:</label>
+        <input type="number" required="" id="clave_uno" class="control control-block" value="">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">id_usuario:</label>
+        <input type="number" required="" id="clave_uno" class="control control-block" value="">
+      </div>
+      <div class="form-group">
+        <label for="" class="tag">id_sucursal:</label>
+        <input type="number" required="" id="clave_uno" class="control control-block" value="">
       </div>
       <!--SECTION TABS-->
       <div class="tabs">
@@ -111,7 +123,10 @@
         <div id="tab-content1" class="tab-content">
          <div class="form-group">
           <label for="" class="tag">Link del video:</label>
-          <input type="password" required="" id="clave_uno" class="control control-block" value="">
+          <input type="text" required="" id="clave_uno" class="control control-block" value="">
+        </div>
+        <div class="video">
+          <iframe allowfullscreen src="https://www.youtube.com/embed/-24yPFATrtU"></iframe>
         </div>
       </div> <!-- #tab-content1 -->
       <div id="tab-content2" class="tab-content">

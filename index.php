@@ -21,7 +21,7 @@ unset($_SESSION["cantidadcargadas"]);
   <script type="text/javascript" src="js/bxslider.js"></script>
   <script type="text/javascript" src="js/fancybox.js"></script>
   <script type="text/javascript" src="js/jquery-ui.js"></script>
-  <link href="css/jquery-ui.css" type="text/css" rel="stylesheet"/> 
+  
 
   <script type="text/javascript">
   $(function(){
@@ -75,7 +75,7 @@ unset($_SESSION["cantidadcargadas"]);
     });
 
   });
-  </script>
+</script>
 
 </head>
 <body>
@@ -191,14 +191,14 @@ unset($_SESSION["cantidadcargadas"]);
       </div>
       <!--NEGOCIOS EN PANTLLA PRINCIPAL-->
     </div> 
-   
-        <div id="resultPublications">
-         <div class="row" id="itemsPublications">
-         </div>
-         <!-- <p class="mc-button mc-button-md mc-button-warning center" data-att="infinite_scroll"> Cargar más</p>-->
-         <div class="scrollExtend-loading" id="gif-loading"></div>
-       </div>
-      
+
+    <div id="resultPublications">
+     <div class="row" id="itemsPublications">
+     </div>
+     <!-- <p class="mc-button mc-button-md mc-button-warning center" data-att="infinite_scroll"> Cargar más</p>-->
+     <div class="scrollExtend-loading" id="gif-loading"></div>
+   </div>
+
  </div>
 
  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
@@ -278,6 +278,12 @@ unset($_SESSION["cantidadcargadas"]);
 
 </main>
 <!--CIERRA ETIQUETA MAIN-->
+
+<!--Ir arriba-->
+<div class="go-up" id="go-up">
+  <span class="icon-*">^</span>
+</div>
+<!--Ir arriba-->
 
 <!--Pié de página-->
 <footer data-rol="footer">

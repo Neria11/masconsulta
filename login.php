@@ -14,7 +14,6 @@
 </head>
 <body>
 
-
 	<!--Start Header Navigation -->
 	<header class="header">
 		<figure class="header-logo">
@@ -34,9 +33,6 @@
 				</li>
 				<li>
 					<a href="login.php" id="selected">  <span></span> Login </a>
-				</li>
-				<li>
-					<a href="dashboard.php">  <span></span> Dashboard </a>
 				</li>
 			</ul>
 		</nav>

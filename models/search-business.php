@@ -2,17 +2,16 @@
 include("connection.php");
 
 if(count($_POST) > 0){
-	$busqueda = addslashes($_POST["busqueda"]);
+	$busqueda = $_POST["busqueda"];
 
 	$sql = mysql_query("SELECT *
 						FROM negocios_registrados neg
 						INNER JOIN categorias_negocios cat 
-						ON neg.id_categoria = cat.id_categoria 
 						INNER JOIN logotipos_negocios log 
-						ON neg.id_logotipo = log.id_logotipo
-						WHERE neg.status = 1 
-						and nombre like '%".$busqueda."%'
-						order by rand() desc limit 0,8");
+						WHERE neg.id_categoria = cat.id_categoria 
+						AND neg.id_logotipo = log.id_logotipo
+						AND neg.status = 1 
+						AND neg.nombre like '$busqueda%'");
 
 
 	while($row = mysql_fetch_array($sql)){
@@ -26,7 +25,7 @@ if(count($_POST) > 0){
 		            	}else{
 		            		echo "<img src='img/nologo.png' alt='Logo ".$row['nombre']."'>";
 		            	}
-		           echo "</figure>
+		      echo "</figure>
 		            <div class='business-data'>
 		              <h4 class='name'>".$row['nombre']."</h4>
 		              <span class='nick'>@".$row['pseudonimo']."</span>
