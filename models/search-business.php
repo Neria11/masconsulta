@@ -1,23 +1,18 @@
 <?php  
 include("connection.php");
 
-if(count($_POST) > 0){
 	$busqueda = $_POST["busqueda"];
 
 	$sql = mysql_query("SELECT *
 						FROM negocios_registrados neg
 						INNER JOIN categorias_negocios cat 
-						INNER JOIN logotipos_negocios log 
 						WHERE neg.id_categoria = cat.id_categoria 
-						AND neg.id_logotipo = log.id_logotipo
 						AND neg.status = 1 
-						AND neg.nombre like '$busqueda%'");
-
+						AND neg.nombre like %$busqueda%");
 
 	while($row = mysql_fetch_array($sql)){
-		echo "
-				<div class='col-xs-12 col-sm-6 col-md-12 col-lg-6'>
-		          <div class='business'>
+	  echo "<div class='col-xs-12 col-sm-6 col-md-12 col-lg-6'>
+		        <div class='business'>
 		            <a href='business.php' title='".$row['categoria']."".$row['nombre']."' class='max-link'></a>
 		            <figure class='business-logo'>";
 		            	if($row['path_logotipo'] != ""){
@@ -31,11 +26,7 @@ if(count($_POST) > 0){
 		              <span class='nick'>@".$row['pseudonimo']."</span>
 		              <p class='category'>".$row['categoria']."</p>
 		            </div>
-		          </div>
 		        </div>
-	        ";
-	     
+		    </div>";	     
 	}
-}
-
 ?>

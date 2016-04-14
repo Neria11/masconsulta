@@ -15,11 +15,29 @@ Función para el parallax del fondo principal (DESACTIVADA POR AHORA)
 	});
 });*/
 
+/*=========================================================================*/
+/*Adtualizar foto de perfil*/
+/*=========================================================================*/
+$(function(){
+	$("#actualiza_avatar").click(function(){
+		var avatar = $("#input-avatar").val();
+		
+		$.ajax({
+			url: "models/upload-avatar.php", 
+			type: "POST",             
+			data: avatar     
+		}).done(function(info){
+			alert("perfil actulizado");
+		})
+	});
+
+});
+
 
 /*=========================================================================*/
 /*Uploader imagenes al momento*/
 /*=========================================================================*/
-$(function(){
+/*$(function(){
 	$("#uploadimage").on('submit',(function(e) {
 		$("#message").empty();
 		$('#loading').show();
@@ -38,10 +56,10 @@ $(function(){
 				$("#message").html(data);
 			}
 		});
-	}));
+}));*/
 
 // Function to preview image after validation
-$(function() {
+/*$(function() {
 	$("#avatar_usuario").change(function() {
 		$("#message").empty(); 
 		var file = this.files[0];
@@ -66,7 +84,7 @@ function imageIsLoaded(e) {
 	$('#previewing').attr('width', '220px');
 	$('#previewing').attr('height', '220px');
 };
-});
+});*/
 
 
 /*=========================================================================*/
@@ -197,11 +215,11 @@ $(function(){
 /*Carga los negocios buscados en el buscador*/
 /*=========================================================================*/
 $(function(){
-	$("#start-search").click(function(){
+	$("#buscador").keyup(function(){
 		var busqueda = $("#buscador").val(); 
 
-		if(buscador == ""){
-			$("#buscador").val("Escribe algo para buscar.");
+		if(busqueda == ""){
+			$("#buscador").attr("placeholder", "Escribe algo a buscar.");
 		}else{
 			$("#welcome-section").slideUp(300);
 			$("#resultPublications").slideUp(300);
@@ -213,6 +231,7 @@ $(function(){
 			}).done(function(info){
 				$("#listaNegocios").empty();
 				$("#listaNegocios").html(info);
+				alert(info);
 			})
 		}
 	});

@@ -104,13 +104,15 @@
                <h2 class="modal-title">Selecciona una imagen</h2>
              </div>
              <div class="pop-up-body">
-               <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
-                <figure class="responsive-image" id="image_preview"><img id="previewing" src="img/noavatar.png" /></figure>
+               <form action="models/upload-avatar.php" method="post" enctype="multipart/form-data">
+                <figure class="responsive-image" id="image-preview">
+                    <img id="current-avatar" src="img/noavatar.png" />
+                </figure>
                 <div class="form-group">
-                 <input type="file" name="file" id="avatar_usuario" required class="form-control">
+                 <input type="file" name="avatar" id="input-avatar" required="" class="form-control">
                </div>
                <div class="form-group">
-                 <input type="submit" class="mc-button mc-button-sm mc-button-info" id="actualiza_avatar" value="Actualizar">
+                 <input type="submit" class="mc-button mc-button-sm mc-button-info"  value="Actualizar">
                </div>
              </form>
            </div>

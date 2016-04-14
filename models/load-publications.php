@@ -5,10 +5,10 @@ include("ago.php");
 $sql = "SELECT * FROM publicaciones_negocios pub  
 		INNER JOIN negocios_registrados neg 
 		INNER JOIN categorias_negocios cat
-		INNER JOIN logotipos_negocios logs
+		
 		WHERE pub.id_negocio = neg.id_negocio
 		AND neg.id_categoria = cat.id_categoria 
-		and neg.id_logotipo = logs.id_logotipo
+		
 		order by pub.id_publicacion desc limit 0, 5";
 
 $result = mysql_query($sql);

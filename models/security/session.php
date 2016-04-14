@@ -47,14 +47,14 @@ if(count($_POST) > 0) {
 					//COntamoss cuantos logueos ha hecho en total y le incrementamos uno
 					$cantidad_login = "SELECT cantidad_login from cuentas_usuarios";
 					$last_login= mysql_fetch_row(mysql_query($cantidad_login));
-					if($result[0] > 0){
+					if($last_login[0] > 0){
 						$current_login  = $last_login[0] + 1;
 						//Actualizamos las variables del ultimo logueo, incrementamos un login mas
 						mysql_query("UPDATE cuentas_usuarios 
 							SET lastLogin = now(), 
 							numLogin = '".$current_login."'
 							WHERE username ='".$username."'");
-					}elseif($result[0] == 0 ){
+					}elseif($last_login[0] == 0 ){
 							$first = "INSERT INTO cuentas_usuarios (numLogin) 
 							VALUES ('".$first_visit."')";
 					}
