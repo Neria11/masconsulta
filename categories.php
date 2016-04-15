@@ -26,7 +26,6 @@
 
     $(".fancybox").fancybox();
 
-
     $.ajaxSetup({"cache":false});
 
     $("#infinite_scroll").scrollExtend({

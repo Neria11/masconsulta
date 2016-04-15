@@ -1,4 +1,11 @@
 /*
+* Verrsión 1.0
+* Autor
+* Fecha
+* Clase para enviar datos
+*/
+
+/*
 ===============================================================
 Función para el parallax del fondo principal (DESACTIVADA POR AHORA)
 ===============================================================

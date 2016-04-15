@@ -8,7 +8,7 @@ include("connection.php");
 						INNER JOIN categorias_negocios cat 
 						WHERE neg.id_categoria = cat.id_categoria 
 						AND neg.status = 1 
-						AND neg.nombre like %$busqueda%");
+						AND neg.nombre like '%.$busqueda.%'");
 
 	while($row = mysql_fetch_array($sql)){
 	  echo "<div class='col-xs-12 col-sm-6 col-md-12 col-lg-6'>
