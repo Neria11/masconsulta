@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-04-2016 a las 23:58:48
+-- Tiempo de generación: 15-04-2016 a las 23:25:35
 -- Versión del servidor: 5.6.16
 -- Versión de PHP: 5.5.11
 
@@ -19,21 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `masconsulta`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `avatars_usuarios`
---
-
-CREATE TABLE IF NOT EXISTS `avatars_usuarios` (
-  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
-  `path_avatar` int(11) DEFAULT NULL,
-  `fecha_actualizado` datetime DEFAULT NULL,
-  `cantidad_actualizado` int(11) DEFAULT NULL,
-  `status` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -297,6 +282,11 @@ CREATE TABLE IF NOT EXISTS `informacion_usuarios` (
   `telefono` varchar(50) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `eslogan` text,
+  `path_avatar` text,
+  `ultima_actualizacion` datetime DEFAULT NULL,
+  `cantidad_actualizaciones` int(11) DEFAULT NULL,
+  `direccion_ultima_actualizacion` varchar(256) DEFAULT NULL,
+  `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
@@ -304,35 +294,11 @@ CREATE TABLE IF NOT EXISTS `informacion_usuarios` (
 -- Volcado de datos para la tabla `informacion_usuarios`
 --
 
-INSERT INTO `informacion_usuarios` (`id_usuario`, `username`, `nombre`, `ape_pa`, `ape_ma`, `calle`, `num_ext`, `num_int`, `colonia`, `id_municipio`, `sexo`, `fecha_nacimiento`, `telefono`, `email`, `eslogan`) VALUES
-(1, 'sneria', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'n_eria_11@hotmail.com', NULL),
-(2, 'oso', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'n_eria_11@hotmail.com', NULL),
-(3, 'ana', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'andari@hotmail.com', NULL),
-(4, 'sony', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'sony@sony.com', NULL);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `logotipos_negocios`
---
-
-CREATE TABLE IF NOT EXISTS `logotipos_negocios` (
-  `id_logotipo` int(11) NOT NULL AUTO_INCREMENT,
-  `path_logotipo` text,
-  `fecha_actualizado` datetime DEFAULT NULL,
-  `cantidad_actualizado` int(11) DEFAULT NULL,
-  `status` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id_logotipo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Volcado de datos para la tabla `logotipos_negocios`
---
-
-INSERT INTO `logotipos_negocios` (`id_logotipo`, `path_logotipo`, `fecha_actualizado`, `cantidad_actualizado`, `status`) VALUES
-(1, 'negocios/logos/masconsulta/logo.png', '0000-00-00 00:00:00', 1, 1),
-(2, '', '0000-00-00 00:00:00', 1, 1),
-(3, 'negocios/logos/tolantongomx/logo.png', '0000-00-00 00:00:00', 3, 1);
+INSERT INTO `informacion_usuarios` (`id_usuario`, `username`, `nombre`, `ape_pa`, `ape_ma`, `calle`, `num_ext`, `num_int`, `colonia`, `id_municipio`, `sexo`, `fecha_nacimiento`, `telefono`, `email`, `eslogan`, `path_avatar`, `ultima_actualizacion`, `cantidad_actualizaciones`, `direccion_ultima_actualizacion`, `status`) VALUES
+(1, 'sneria', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'n_eria_11@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 'oso', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'n_eria_11@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
+(3, 'ana', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'andari@hotmail.com', NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 'sony', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'sony@sony.com', NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2880,7 +2846,6 @@ CREATE TABLE IF NOT EXISTS `negocios_registrados` (
   `id_categoria` int(11) DEFAULT NULL,
   `descripcion` text,
   `eslogan` text,
-  `id_logotipo` int(11) DEFAULT NULL,
   `servicios` text,
   `calle` varchar(100) DEFAULT NULL,
   `num_ext` varchar(5) DEFAULT NULL,
@@ -2897,8 +2862,12 @@ CREATE TABLE IF NOT EXISTS `negocios_registrados` (
   `fecha_registro` datetime DEFAULT NULL,
   `ultima_actualizacion` datetime DEFAULT NULL,
   `datos_adicionales` text,
-  `id_rango_precios` int(11) NOT NULL,
+  `id_rango_precios` int(11) DEFAULT NULL,
   `id_paquete` int(11) DEFAULT NULL,
+  `path_logotipo` text,
+  `ultima_actualización` datetime DEFAULT NULL,
+  `cantidad_actualizaciones` int(11) DEFAULT NULL,
+  `direccion_ultima_actualizacion` varchar(256) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_negocio`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
@@ -2907,11 +2876,11 @@ CREATE TABLE IF NOT EXISTS `negocios_registrados` (
 -- Volcado de datos para la tabla `negocios_registrados`
 --
 
-INSERT INTO `negocios_registrados` (`id_negocio`, `pseudonimo`, `nombre`, `id_categoria`, `descripcion`, `eslogan`, `id_logotipo`, `servicios`, `calle`, `num_ext`, `num_int`, `colonia`, `id_municipio`, `cp`, `email`, `sitio_web`, `mision`, `vision`, `valores`, `fecha_nacimiento_negocio`, `fecha_registro`, `ultima_actualizacion`, `datos_adicionales`, `id_rango_precios`, `id_paquete`, `status`) VALUES
-(1, 'masconsulta', 'Masconsulta', 23, 'Empresa de publicidad dedicada al marketing de negocios', 'No somos los únicos, pero si los mejores', 1, 'Marketing digital\r\nMarketing tangible', 'Cecilio Ramírez', '18', '3', 'San Antonio', 56, '42300', 'masconsulta@gmail.com', 'http://www.masconsulta.com', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', NULL, '0000-00-00 00:00:00', NULL, NULL, NULL, 2, 1, 1),
-(2, 'bonfriends', 'Bon Friends', 32, 'Lorem', NULL, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2016-04-05 00:00:00', NULL, NULL, NULL, 2, 1, 1),
-(3, 'tolantongomx', 'Grutas Tolantongo', 32, 'Lugar de atracciones naturales y turísticas', 'Un oasis a su alcance', 2, 'Hospedaje\r\nVigilancia\r\nMédicos\r\nAtractivos\r\nRestaurante', 'San Cristóbal', '1', '1', 'Tolantongo', 3, '42370', 'grutastolantongo@grutastolantongo.com', '//tolantongo.mx', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', '1899-11-30 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 2, 1, 1),
-(4, 'utvm', 'Universidad Tecnológica del Valle del Mezquital', 4, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 2, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariat', '3', '1', 'El Nith', 30, '42300', 'utvm@utvm.edu.mx', 'http://utvm.edu.mx/', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2015-12-11 00:00:00', '2016-04-11 00:00:00', '2016-04-11 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 2, 1, 1);
+INSERT INTO `negocios_registrados` (`id_negocio`, `pseudonimo`, `nombre`, `id_categoria`, `descripcion`, `eslogan`, `servicios`, `calle`, `num_ext`, `num_int`, `colonia`, `id_municipio`, `cp`, `email`, `sitio_web`, `mision`, `vision`, `valores`, `fecha_nacimiento_negocio`, `fecha_registro`, `ultima_actualizacion`, `datos_adicionales`, `id_rango_precios`, `id_paquete`, `path_logotipo`, `ultima_actualización`, `cantidad_actualizaciones`, `direccion_ultima_actualizacion`, `status`) VALUES
+(1, 'masconsulta', 'Masconsulta', 23, 'Empresa de publicidad dedicada al marketing de negocios', 'No somos los únicos, pero si los mejores', 'Marketing digital\r\nMarketing tangible', 'Cecilio Ramírez', '18', '3', 'San Antonio', 56, '42300', 'masconsulta@gmail.com', 'http://www.masconsulta.com', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, obcaecati quaerat perspiciatis, sed ipsam magni vel quasi aliquam nisi quod minima dolorem, assumenda explicabo odit numquam vitae quibusdam fugiat laboriosam.', NULL, '0000-00-00 00:00:00', NULL, NULL, NULL, 2, 1, NULL, NULL, NULL, NULL, 1),
+(2, 'bonfriends', 'Bon Friends', 32, 'Lorem', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2016-04-05 00:00:00', NULL, NULL, NULL, 2, 1, NULL, NULL, NULL, NULL, 1),
+(3, 'tolantongomx', 'Grutas Tolantongo', 32, 'Lugar de atracciones naturales y turísticas', 'Un oasis a su alcance', 'Hospedaje\r\nVigilancia\r\nMédicos\r\nAtractivos\r\nRestaurante', 'San Cristóbal', '1', '1', 'Tolantongo', 3, '42370', 'grutastolantongo@grutastolantongo.com', '//tolantongo.mx', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', '1899-11-30 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore nemo sunt distinctio doloremque sed repudiandae at, voluptate fugit asperiores eius explicabo pariatur assumenda, sapiente quaerat.', 2, 1, NULL, NULL, NULL, NULL, 1),
+(4, 'utvm', 'Universidad Tecnológica del Valle del Mezquital', 4, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariat', '3', '1', 'El Nith', 30, '42300', 'utvm@utvm.edu.mx', 'http://utvm.edu.mx/', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2015-12-11 00:00:00', '2016-04-11 00:00:00', '2016-04-11 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 2, 1, NULL, NULL, NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -3462,8 +3431,7 @@ CREATE TABLE IF NOT EXISTS `usuarios_en_linea` (
 --
 
 INSERT INTO `usuarios_en_linea` (`duracion_sesion`, `direccion_ip_visitante`) VALUES
-('1460498172', '::1'),
-('1460498172', '::1');
+('1460733491', '::1');
 
 -- --------------------------------------------------------
 
@@ -3479,17 +3447,14 @@ CREATE TABLE IF NOT EXISTS `visitas_generales` (
   `navegador_usado` varchar(100) DEFAULT NULL,
   `duracion_sesion` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_visita`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Volcado de datos para la tabla `visitas_generales`
 --
 
 INSERT INTO `visitas_generales` (`id_visita`, `direcccion_ip_visitante`, `cantidad_visitas`, `fecha_visitado`, `navegador_usado`, `duracion_sesion`) VALUES
-(1, '::1', 10, '2016-04-12 11:15:18', NULL, '05:40:54'),
-(2, '127.0.0.1', 4, '2016-04-12 16:32:44', NULL, '00:00:24'),
-(3, '10.100.96.36', 1, '2016-03-18 12:17:18', NULL, '00:25:33'),
-(4, '10.100.108.18', 1, '2016-04-11 14:45:53', NULL, '02:09:46');
+(1, '::1', 3, '2016-04-15 08:01:08', NULL, '02:17:03');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
