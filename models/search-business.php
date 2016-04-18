@@ -1,7 +1,7 @@
 <?php  
 include("connection.php");
 
-	$busqueda = $_POST["busqueda"];
+	$busqueda = "m";
 
 	$sql = mysql_query("SELECT *
 						FROM negocios_registrados neg

@@ -228,9 +228,6 @@ $(function(){
 		if(busqueda == ""){
 			$("#buscador").attr("placeholder", "Escribe algo a buscar.");
 		}else{
-			$("#welcome-section").slideUp(300);
-			$("#resultPublications").slideUp(300);
-
 			$.ajax({
 				type:"POST",
 				url: "models/search-business.php",
@@ -238,7 +235,6 @@ $(function(){
 			}).done(function(info){
 				$("#listaNegocios").empty();
 				$("#listaNegocios").html(info);
-				alert(info);
 			})
 		}
 	});

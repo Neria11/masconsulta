@@ -36,9 +36,6 @@
 				<li>
 					<a href="login.php">  <span></span> Login </a>
 				</li>
-				<li>
-					<a href="dashboard.php">  <span></span> Dashboard </a>
-				</li>
 			</ul>
 		</nav>
 	</header>

@@ -102,77 +102,56 @@ unset($_SESSION["cantidadcargadas"]);
 </header>
 <!--End Header Navigation -->
 
-<!--BUSCADOR CODE-->
-<div class="search-container" data-rol="search-container">
-  <form action="">
-    <div class="searcher">
-      <div class="row">
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-         <input type="text" class="searcher-input" id="buscador" placeholder="Buscar...">
-       </div>
-       <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-         <button type="button" class="searcher-button" value="Consultar" id="start-search"> 
-          <span class="icon-search">Buscar</span> 
-        </button>
-      </div>
-    </div>
-  </div>
-</form>
-</div>
-<!--BUSCADOR CODE-->
 
 <!--ABRE ETIQUETA MAIN-->
 <main>
 
   <!--Contenedor de datos-->
   <div class="row">
-   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    <div class="container" >
-      <div class="u-wrapper">
-        <h2 class="title">
-          Categorías
-          <span class="category badge green cursor" id="randomCategories">Aleatorio</span>
-        </h2>
-      </div>
-      <ul class="categories" id="itemsCategories">
-      </ul>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="container" id="welcome-section">
+        <div class="u-wrapper">
+          <h2 class="title uppercase">
+            BIENVENIDO
+            <span class="badge badge-underline pull-right " id="usuarios-online"></span>
+            <span class="badge light-gray pull-right" id="total-visitas"></span> 
+          </h2> 
+          <!--CAROUSEL BXSLIDER-->
+        <!--<ul class="bxslider" id="bxslider-2">
+          <li><img src="img/tol.jpg"></li>
+          <li><img src="img/tol.jpg"></li>
+          <li><img src="img/tol.jpg"></li>
+          <li><img src="img/tol.jpg"></li>
+          <li><img src="img/tol.jpg"></li>
+        </ul>-->
+        <!--CAROUSEL BXSLIDER-->
+        <!--BUSCADOR CODE-->
+        <form action="">
+          <div class="searcher">
+            <div class="row">
+              <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+               <input type="text" class="searcher-input" id="buscador" placeholder="Buscar...">
+             </div>
+             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+               <button type="button" class="searcher-button" value="Consultar" id="start-search"> 
+                <span class="icon-search">Buscar</span> 
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!--BUSCADOR CODE-->
     </div>
   </div>
+</div>
 
-
-  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-    <div class="container" id="welcome-section">
-      <div class="u-wrapper no-background">
-        <h2 class="title uppercase">
-          Bienvenido
-          <span class="badge badge-underline pull-right " id="usuarios-online"></span>
-          <span class="badge light-gray pull-right" id="total-visitas"></span> 
-        </h2> 
-
-     <!-- <input type="submit" class="mc-button mc-button-sm mc-button-info pull-left uppercase bold" value="Registrate">
-     <input type="submit" class="mc-button mc-button-sm mc-button-success pull-right uppercase bold" value="Comienza a buscar">-->
-        <!--<div class="responsive-image">
-          <img src="img/sas.png" alt="">
-        </div>-->
-        <!--CAROUSEL BXSLIDER-->
-        <ul class="bxslider" id="bxslider-2">
-          <li><img src="img/tol.jpg"></li>
-          <li><img src="img/tol.jpg"></li>
-          <li><img src="img/tol.jpg"></li>
-          <li><img src="img/tol.jpg"></li>
-          <li><img src="img/tol.jpg"></li>
-        </ul>
-        <!--CAROUSEL BXSLIDER-->
-      </div>
-    </div>
-    <div class="container">
-      <div class="u-wrapper no-background">
-        <h2 class="title">
-          Negocios recientes 
-          <span class="category badge green cursor" id="randomBusiness">Aleatorios</span>
-        </h2>
-      </div>
-
+<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+  <div class="container" >
+    <div class="u-wrapper">
+      <h2 class="title">
+        Negocios 
+        <span class="category badge green cursor" id="randomBusiness">Aleatorios</span>
+      </h2>
       <!--NEGOCIOS EN PANTLLA PRINCIPAL-->
       <div class="row" id="listaNegocios">
         <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">
@@ -190,60 +169,119 @@ unset($_SESSION["cantidadcargadas"]);
         </div>
       </div>
       <!--NEGOCIOS EN PANTLLA PRINCIPAL-->
-    </div> 
-
-    <div id="resultPublications">
-     <div class="row" id="itemsPublications">
-     </div>
-     <!-- <p class="mc-button mc-button-md mc-button-warning center" data-att="infinite_scroll"> Cargar más</p>-->
-     <div class="scrollExtend-loading" id="gif-loading"></div>
-   </div>
-
- </div>
-
- <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-  <div class="accordion">
-    <div class="accordion-header green">
-      <p class="title uppercase"><span class="toggle-icon"><span class="icon-plus">+</span></span> Próximos Eventos </p>
     </div>
-    <div class="accordion-content">
-      <!--CAROUSEL BXSLIDER EVENTOS-->
-      <ul class="bxslider" id="bxslider-1">
-        <li>
-         <div class="event">
-          <a href="#" class="max-link"></a>
-          <figure class="event-wallpaper">
-            <img src="http://placehold.it/480x230" alt="Imagen evento">
-          </figure>
-          <span href="" class="event-title">Presentación de candidates en Ixmiyork</span>
-          <p class="event-description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, enim nostrum ad tempore eius, quo odio velit cumque perspiciatis quisquam laboriosam eligendi consectetur? Inventore laborum alias omnis ut, atque neque.
-          </p>
-        </div>
-      </li>
-      <li>
-        <div class="event">
-          <a href="#" class="max-link"></a>
-          <figure class="event-wallpaper">
-            <img src="http://placehold.it/480x230" alt="Imagen evento">
-          </figure>
-          <span href="" class="event-title">Presentación de candidates en Ixmiyork</span>
-          <p class="event-description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, enim nostrum ad tempore eius, quo odio velit cumque perspiciatis quisquam laboriosam eligendi consectetur? Inventore laborum alias omnis ut, atque neque.
-          </p>
-        </div>
-      </li>
-    </ul>
-    <!--CAROUSEL BXSLIDER EVENTOS-->
   </div>
 </div>
 
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+  <div class="container" >
+    <div class="u-wrapper no-background">
+      <h2 class="title">
+        Nueva publicación
+      </h2> 
+      <!--NUEVA PUBLICACION VIDEO FOTO O TEXTO-->
+      <!--SECTION TABS-->
+      <div class="tabs">
+        <input type="radio" name="tabs" id="tab1" checked >
+        <label for="tab1" class="tab">
+          <i class="fa fa-html5"></i><span>VIDEO</span>
+        </label>
+        <input type="radio" name="tabs" id="tab2">
+        <label for="tab2" class="tab">
+          <i class="fa fa-css3"></i><span>IMAGEN</span>
+        </label>
+        <input type="radio" name="tabs" id="tab3">
+        <label for="tab3" class="tab">
+          <i class="fa fa-code"></i><span>TEXTO</span>
+        </label>
+
+
+        <div id="tab-content1" class="tab-content">
+          <form action="models/post-publication.php" class="form" enctype="multipart/form-data">
+            <div class="form-group">
+              <input type="text" required="" id="" class="control control-block" value="" placeholder="Título de la publicación">
+            </div>
+            <div class="form-group">
+              <input type="text" required="" id="" class="control control-block" value="" placeholder="Link del video. Ej: https://www.youtube.com/watch?v=-24yPFATrtU">
+            </div>
+            <div class="form-group">
+              <textarea name="" class="control control-block" id="" required="" placeholder="Descripción"></textarea>
+            </div>
+              <!--<div class="video">
+                <iframe allowfullscreen src="https://www.youtube.com/embed/P29oO3piQjc"></iframe>
+              </div>-->
+              <div class="form-group">
+                <input type="submit" class="mc-button mc-button-sm mc-button-info pull-right" value="Publicar">
+              </div>
+            </form>
+          </div>
+
+
+          <div id="tab-content2" class="tab-content">
+           <form action="" class="form" enctype="multipart/form-data">
+            <div class="form-group">
+              <input type="text" required="" id="" class="control control-block" value="" placeholder="Título de la publicación">
+            </div>
+            <div class="form-group">
+              <input type="file" required="" id="" class="control control-block" value="" placeholder="Selecciones una imagen">
+            </div>
+            <div class="form-group">
+              <textarea name="" class="control control-block" id="" required=""  placeholder="Descripción"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="mc-button mc-button-sm mc-button-info pull-right" value="Publicar">
+            </div>
+          </form>
+        </div>
+
+
+        <div id="tab-content3" class="tab-content">
+          <form action="" class="form" enctype="multipart/form-data">
+            <div class="form-group">
+              <input type="text" required="" id="" class="control control-block" value="" placeholder="Título de la publicación">
+            </div>
+            <div class="form-group">
+              <textarea name="" class="control control-block" id="" required=""  placeholder="Descripción"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="mc-button mc-button-sm mc-button-info pull-right" value="Publicar">
+            </div>
+          </form>
+        </div> 
+      </div>
+      <!--SECTION TABS-->
+
+
+      <!--NUEVA PUBLICACION VIDEO FOTO O TEXTO-->
+    </div>
+  </div>
+  <div id="resultPublications">
+   <div class="row" id="itemsPublications">
+   </div>
+   <!-- <p class="mc-button mc-button-md mc-button-warning center" data-att="infinite_scroll"> Cargar más</p>-->
+   <div class="scrollExtend-loading" id="gif-loading"></div>
+ </div>
+
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+  <div class="container">
+    <div class="u-wrapper">
+     <h2 class="title">
+      Categorías
+      <span class="category badge green cursor" id="randomCategories">Aleatorio</span>
+    </h2>
+    <ul class="categories" id="itemsCategories">
+    </ul>
+  </div>
+</div>
+
+<!--ACORDIONES-->
 <div class="accordion">
   <div class="accordion-header red">
     <p class="title uppercase"><span class="toggle-icon"><span class="icon-plus">+</span></span> Promociones </p>
   </div>
   <div class="accordion-content">
-    <!--CAROUSEL BXSLIDER EVENTOS-->
     <ul class="bxslider" id="bxslider-3">
       <li>
        <div class="event">
@@ -273,11 +311,33 @@ unset($_SESSION["cantidadcargadas"]);
   <!--CAROUSEL BXSLIDER EVENTOS-->
 </div>
 </div>
+<!--ACORDIONES-->
+
+
 </div>
 </div>
 
 </main>
 <!--CIERRA ETIQUETA MAIN-->
+
+<!--REDES SOCIALES-->
+<div class="social" id="social_area">
+  <ul class="networks">
+    <li class="net">
+      <a href=""><span class="icon-*">F</span></a>
+    </li>
+    <li class="net">
+      <a href=""><span class="icon-*">G</span></a>
+    </li>
+    <li class="net">
+      <a href=""><span class="icon-*">T</span></a>
+    </li>
+    <li class="net">
+      <a href=""><span class="icon-*">Y</span></a>
+    </li>
+  </ul>
+</div>
+<!--REDES SOCIALES-->
 
 <!--Ir arriba-->
 <div class="go-up" id="go-up">

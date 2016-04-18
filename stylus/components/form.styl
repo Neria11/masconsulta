@@ -27,7 +27,7 @@
 			box-sizing border-box
 			border-width 1px 1px 2px 1px 
 			border-style solid 
-			border-color gris-oscuro
+			border-color gray
 			font-weight normal
 			border-radius radio
 			background #f1f1f1
@@ -106,7 +106,7 @@
 		input[type="radio"]:checked + label span
 			transition background-color 0.1s ease
 
-.search-container
+/*.search-container
 	background white
 	height  auto
 	margin 0 auto
@@ -116,42 +116,45 @@
 	padding 0.5rem
 	text-align center
 	z-index 10
+	border-radius radio*/
+	
+	
+.searcher
+	width 100%
+	overflow hidden
+	background white
+	height 50px
+	margin 0.5rem auto
 	border-radius radio
 	
-	
-	.searcher
+	&-input
+		padding 0.5rem
+		border 0
 		width 100%
-		overflow hidden
-		background white
+		font-size 1.4rem
 		height 50px
-		margin 0 auto
-		border-radius radio
+		outline none
+		background gris-claro
+		box-sizing border-box
+		border 1px solid color-border
 		
-		&-input
-			padding 0.5rem
-			border 0
-			width 100%
-			font-size 1.4rem
-			height 50px
-			outline none
-			background gris-claro
-			box-sizing border-box
-			border 1px solid color-border
-			
-		&-button
-			background azul
-			border none
-			cursor pointer
-			height 50px
-			outline none
-			padding 0.5rem
-			text-align center
-			width 100%
-			
-			span
-				color white
-				vertical-align middle
-				display block
+		&:focus
+			background #FAFFBD
+		
+	&-button
+		background azul
+		border none
+		cursor pointer
+		height 50px
+		outline none
+		padding 0.5rem
+		text-align center
+		width 100%
+		
+		span
+			color white
+			vertical-align middle
+			display block
 				
 .fixed-on-scroll
 	position fixed
@@ -220,10 +223,10 @@
 				width 40px
 				height 40px
 					
-	.search-container
-		padding 0.5rem 1rem
+	/*.search-container
+		padding 0.5rem 1rem*/
 		
-		.searcher
-			width 50%
-			text-align left
+	.searcher
+		width 50%
+		text-align left
 			

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-04-2016 a las 23:25:35
+-- Tiempo de generación: 18-04-2016 a las 23:24:45
 -- Versión del servidor: 5.6.16
 -- Versión de PHP: 5.5.11
 
@@ -3236,6 +3236,7 @@ CREATE TABLE IF NOT EXISTS `publicaciones_negocios` (
   `titulo_publicacion` varchar(255) DEFAULT NULL,
   `tipo_publicacion` varchar(100) DEFAULT NULL,
   `contenido_publicacion` text,
+  `descripcion_publicacion` text,
   `id_usuario` int(11) DEFAULT NULL,
   `direccion_ip_usuario` varchar(64) DEFAULT NULL,
   `fecha_publicada` datetime DEFAULT NULL,
@@ -3244,27 +3245,28 @@ CREATE TABLE IF NOT EXISTS `publicaciones_negocios` (
   `puntos_acumulados` int(11) DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_publicacion`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Volcado de datos para la tabla `publicaciones_negocios`
 --
 
-INSERT INTO `publicaciones_negocios` (`id_publicacion`, `id_negocio`, `id_sucursal`, `titulo_publicacion`, `tipo_publicacion`, `contenido_publicacion`, `id_usuario`, `direccion_ip_usuario`, `fecha_publicada`, `fecha_vencimiento`, `token_publicacion`, `puntos_acumulados`, `status`) VALUES
-(1, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpj', 123, 1),
-(2, 2, 1, NULL, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1),
-(3, 1, 1, NULL, 'VIDEO', 'https://www.youtube.com/embed/P29oO3piQjc', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kasdqwf', 123, 1),
-(4, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', '11eaddf', 123, 1),
-(5, 1, 1, NULL, 'IMAGEN', 'img/cabania.jpg', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszqf1pj', 123, 1),
-(6, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjasd', 123, 1),
-(7, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjqwfq', 123, 1),
-(8, 1, 1, NULL, 'IMAGEN', 'img/bills.gif', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfwf', 123, 1),
-(9, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjqwr1', 123, 1),
-(10, 1, 1, NULL, 'IMAGEN', 'img/cabania.jpg', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
-(11, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
-(12, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
-(13, 1, 1, NULL, 'IMAGEN', 'img/sas.png', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
-(14, 2, 1, NULL, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1);
+INSERT INTO `publicaciones_negocios` (`id_publicacion`, `id_negocio`, `id_sucursal`, `titulo_publicacion`, `tipo_publicacion`, `contenido_publicacion`, `descripcion_publicacion`, `id_usuario`, `direccion_ip_usuario`, `fecha_publicada`, `fecha_vencimiento`, `token_publicacion`, `puntos_acumulados`, `status`) VALUES
+(1, 1, 1, NULL, 'IMAGEN', 'img/sas.png', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpj', 123, 1),
+(2, 2, 1, NULL, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1),
+(3, 1, 1, NULL, 'VIDEO', 'https://www.youtube.com/embed/P29oO3piQjc', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kasdqwf', 123, 1),
+(4, 1, 1, NULL, 'IMAGEN', 'img/sas.png', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', '11eaddf', 123, 1),
+(5, 1, 1, NULL, 'IMAGEN', 'img/cabania.jpg', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszqf1pj', 123, 1),
+(6, 1, 1, NULL, 'IMAGEN', 'img/sas.png', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjasd', 123, 1),
+(7, 1, 1, NULL, 'IMAGEN', 'img/sas.png', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjqwfq', 123, 1),
+(8, 1, 1, NULL, 'IMAGEN', 'img/bills.gif', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfwf', 123, 1),
+(9, 1, 1, NULL, 'IMAGEN', 'img/sas.png', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjqwr1', 123, 1),
+(10, 1, 1, NULL, 'IMAGEN', 'img/cabania.jpg', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(11, 1, 1, NULL, 'IMAGEN', 'img/sas.png', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(12, 1, 1, NULL, 'IMAGEN', 'img/sas.png', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(13, 1, 1, NULL, 'IMAGEN', 'img/sas.png', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'qwfkjkszpj', 123, 1),
+(14, 2, 1, NULL, 'VIDEO', 'https://www.youtube.com/embed/-uQo3K4vGAE', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1),
+(15, 3, 2, NULL, 'TEXTO', '	<?php \r\n	include("connection.php");\r\n\r\n\r\n	if(count($_POST) > 0){\r\n		$id_negocio = 1;		\r\n		$id_sucursal = 1;	\r\n		$titulo_publicacion = $POST["titulo_publicacion"];	\r\n		$tipo_publicacion = "VIDEO";	\r\n		$descripcion_publicacion = $POST["descripcion_publicacion"];	\r\n		$id_usuario = 1;\r\n		$direccion_ip_usuario = $_SERVER["REMOTE_ADDR"];	\r\n		$fecha_publicada = date("Y-m-d H:i:s"); \r\n		$fecha_vencimiento = date("Y-m-d H:i:s");	\r\n		$token_publicacion = "kjkzapj";\r\n		$puntos_acumulados = 0;	\r\n		$status = 1;\r\n\r\n		if($tipo_publicacion == "VIDEO"){\r\n\r\n			$url_video = personalizeUrlVideo($POST["contenido_publicacion"]);\r\n			$token_publicacion = generateTokenPublication();\r\n\r\n			$sql_image = "INSERT INTO publicaciones_negocios(\r\n				id_negocio, 	\r\n				id_sucursal, 	\r\n				titulo_publicacion,\r\n				tipo_publicacion,\r\n				contenido_publicacion,\r\n				descripcion_publicacion, 	\r\n				id_usuario,	\r\n				direccion_ip_usuario, 	\r\n				fecha_publicada, 	\r\n				fecha_vencimiento, 	\r\n				token_publicacion, 	\r\n				puntos_acumulados, 	\r\n				status\r\n				) VALUES(\r\n				''".$id_negocio."'',\r\n				''".$id_sucursal."'',\r\n				''".$titulo_publicacion."'',\r\n				''".$tipo_publicacion."'',\r\n				''".$contenido_publicacion."'',\r\n				''".$descripcion_publicacion."'',\r\n				''".$id_usuario."'',\r\n				''".$direccion_ip_usuario."'',\r\n				''".$fecha_publicada."'',\r\n				''".$fecha_vencimiento."'',\r\n				''".$token_publicacion."'',\r\n				''".$puntos_acumulados."'',\r\n				''".$status."'',\r\n				)";\r\n\r\n	echo "VARIABLES" . $sql_image;\r\n	echo "HOLA";\r\n	\r\n}\r\n\r\nif($tipo_publicacion == "VIDEO"){\r\n\r\n}\r\n\r\nif($tipo_publicacion == "TEXTO"){\r\n\r\n}\r\n}\r\n\r\n/*header("Location: ../index.php");*/\r\n\r\n?>', NULL, 1, '192.168.0.1', '2016-01-30 10:30:07', '0000-00-00 00:00:00', 'kjkszpjas', 123, 1);
 
 -- --------------------------------------------------------
 
@@ -3431,7 +3433,7 @@ CREATE TABLE IF NOT EXISTS `usuarios_en_linea` (
 --
 
 INSERT INTO `usuarios_en_linea` (`duracion_sesion`, `direccion_ip_visitante`) VALUES
-('1460733491', '::1');
+('1461014686', '::1');
 
 -- --------------------------------------------------------
 
@@ -3447,14 +3449,15 @@ CREATE TABLE IF NOT EXISTS `visitas_generales` (
   `navegador_usado` varchar(100) DEFAULT NULL,
   `duracion_sesion` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_visita`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Volcado de datos para la tabla `visitas_generales`
 --
 
 INSERT INTO `visitas_generales` (`id_visita`, `direcccion_ip_visitante`, `cantidad_visitas`, `fecha_visitado`, `navegador_usado`, `duracion_sesion`) VALUES
-(1, '::1', 3, '2016-04-15 08:01:08', NULL, '02:17:03');
+(1, '::1', 5, '2016-04-18 15:12:33', NULL, '01:12:13'),
+(2, '10.100.108.18', 1, '2016-04-18 13:01:51', NULL, '02:49:35');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
