@@ -24,7 +24,7 @@ function generateTokenPublication($id_publicacion) {
 		$key .= $pattern{mt_rand(0,$max)};
 	}
 	
-	return $key.;
+	return $key;
 }
 
 

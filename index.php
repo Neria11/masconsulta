@@ -126,11 +126,11 @@ unset($_SESSION["cantidadcargadas"]);
         </ul>-->
         <!--CAROUSEL BXSLIDER-->
         <!--BUSCADOR CODE-->
-        <form action="">
+        <form action="" method="POST" name="frm_buscador" id="frm_buscador">
           <div class="searcher">
             <div class="row">
               <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-               <input type="text" class="searcher-input" id="buscador" placeholder="Buscar...">
+               <input type="text" class="searcher-input" name="buscador" id="buscador" placeholder="Buscar...">
              </div>
              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
                <button type="button" class="searcher-button" value="Consultar" id="start-search"> 

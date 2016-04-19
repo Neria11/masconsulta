@@ -1,17 +1,20 @@
 <?php  
 include("connection.php");
 
-	$busqueda = "m";
+$busqueda = $_POST["buscador"];
 
-	$sql = mysql_query("SELECT *
-						FROM negocios_registrados neg
-						INNER JOIN categorias_negocios cat 
-						WHERE neg.id_categoria = cat.id_categoria 
-						AND neg.status = 1 
-						AND neg.nombre like '%.$busqueda.%'");
+$sql = mysql_query("SELECT *
+					FROM negocios_registrados neg
+					INNER JOIN categorias_negocios cat 
+					WHERE neg.id_categoria = cat.id_categoria 
+					AND neg.status = 1 
+					AND neg.nombre like '%".$busqueda."%'");
+
+
+if(mysql_num_rows($sql) >= 1){
 
 	while($row = mysql_fetch_array($sql)){
-	  echo "<div class='col-xs-12 col-sm-6 col-md-12 col-lg-6'>
+	  echo "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
 		        <div class='business'>
 		            <a href='business.php' title='".$row['categoria']."".$row['nombre']."' class='max-link'></a>
 		            <figure class='business-logo'>";
@@ -29,4 +32,8 @@ include("connection.php");
 		        </div>
 		    </div>";	     
 	}
+
+}else{
+	echo "<p class='alert yellow'>No hay resultados. Intenta una nueva búsqueda.</p>";
+}
 ?>

@@ -217,13 +217,32 @@ $(function(){
 	});
 });
 
+/*
+=================================================================
+Función para actualizar los puntos de las publicaciones
+=================================================================
+*/
+$(function(){
+	$("#points_counter").on("click", ".counter", function(){
+		var token_publicacion = $(this).attr("data-react");
+		alert(token_publicacion);
+		$.ajax({
+			type: "POST",
+			url: "models/update-likes-count.php",
+			data: "token_publicacion="+ token_publicacion
+		}).done(function(info){
+			alert("RETORNO= " + token_publicacion);
+		})
+	});
+});
+
 
 /*=========================================================================*/
 /*Carga los negocios buscados en el buscador*/
 /*=========================================================================*/
 $(function(){
 	$("#buscador").keyup(function(){
-		var busqueda = $("#buscador").val(); 
+		var busqueda = $("#frm_buscador").serialize(); 
 
 		if(busqueda == ""){
 			$("#buscador").attr("placeholder", "Escribe algo a buscar.");
