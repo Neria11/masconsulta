@@ -16,7 +16,7 @@
 
 		$("#drop-area").on('dragover', function (e){
 			e.preventDefault();
-		});
+		});*/
 
 		$("#drop-area").on('drop', function (e){
 			$(this).css('background', '#D8F9D3');
