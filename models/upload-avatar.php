@@ -1,97 +1,106 @@
-<?php 
-include("connection.php");
-if(count($_POST)>0){
-//Variable para asignar en la primera ves que actualiza perfil
-$first_update = 1;
+<?php
+include("functions.php");
 
-//Direccion ip del equipo donde actualizo
-$direccion_ip_usuario = $_SERVER["REMOTE_ADDR"];
+if(is_array($_FILES)) {
+	/*NOMBRE DEL USUARIO*/
+	$username = "alex";
 
-//Fecha actual
-$fecha_actual = date("Y-m-d H:i:s"); 
+	/*RESCATO INFORMACION DE LA IMAGEN Y EXTRAIGO LA EXTENSIÓN*/
+	$image_name = $_FILES["userImage"]["name"];
+	$info_avatar = pathinfo($image_name);
+	$image_type = $_FILES["userImage"]["type"];
+	$final_image_name = $username.".".$info_avatar["extension"];
+	$image_size = $_FILES["userImage"]["size"];
 
-//carpeta
-$route = "../users";
+	/*Fecha actual*/
+	$current_date = date("Y-m-d H:i:s"); 
 
-//Recibir variables por POST
-$username = "oso";
+	/*Variable para asignar en la primera ves que actualiza perfil*/
+	$first_update = 1;
 
-// Recibo los datos de la imagen
-$nombre_avatar = $_FILES["avatar"]["name"];;
-$tipo_avatar = $_FILES["avatar"]["type"];
-$tamano_avatar = $_FILES["avatar"]["size"];
+	/*Direccion ip del equipo donde actualizo*/
+	$host_user = $_SERVER["REMOTE_ADDR"];
 
-$info_avatar = pathinfo($_FILES["avatar"]["name"]);
-$nombre_imagen_final = $username.".".$info_avatar["extension"];
+	/*RUTA o CARPEETA DONDE SE GUARDARÁN LOS ARCHIVOS*/
+	$path = "images";
 
-//Formatos de imagen permitidos
-$permitidos = array("image/jpg", "image/jpeg", "image/gif", "image/png", "application/pdf");
-$limite_kb = 700000; 
-$wasMoved  = false;
+	/*URL o PATH QUE SERÁ GUARDADA EN LA BD PARA CONSULTAR DESPUES*/
+	$url_save = $path."/".$username."/".$final_image_name;
 
-//Ruta donde se introducira el archivo
-$directorio = $route."/".$username;
-$final_path = $route."/".$username."/".$nombre_imagen_final;
-$url_save = "users/".$username."/".$nombre_imagen_final;
+	/*RUTA FINAL DONDE SE DEPOSITARAN LOS ARCHIVOS CLASIFICADO POR USERNAME*/
+	$my_dir = $path."/".$username;
 
+	/*Formatos de imagen permitidos*/
+	$allowed_formats = array("image/jpg", "image/jpeg", "image/gif", "image/png", "application/pdf");
 
-if ($_FILES["avatar"]["error"] > 0){
-	echo "ha ocurrido un error";
-} else {
-//Verifico el tipo/formato de imagen correcto
-	if(in_array($tipo_avatar, $permitidos)){
+	/*Máximo tamaño permito en kb*/
+	$max_size= 700000; 
 
-//Verifico que el tamaño no supere los límites
-		if($tamano_avatar <= $limite_kb * 1024){
+	/*ESTE ES EL ARCHIVO TEMPORAL A MOVER*/
+	$sourcePath = $_FILES['userImage']['tmp_name'];
 
-		//Verifico si existe el directorio
-			if (!file_exists($directorio)){
-			//Sino creo la ruta a donde debe introducirse
-				mkdir($directorio, 0777, true);
+	/*Variable para saber si todo salió bien*/
+	$ready_to_move  = false;
+
+	/*Verifico que el formato de la imagen sea el correco y este dentro de los permitidos*/
+	if(in_array($image_type, $allowed_formats)){
+		/*Verifico que el tamaño de la imagen sea el correcto*/
+		if($image_size <= $max_size * 1024){
+
+			/*Verifico si existe el directorio, Sino creo la ruta a donde debe introducirse*/
+			if (!file_exists($my_dir)){
+				mkdir($my_dir, 0777, true);
 			}
 
-		//Si ya existe el archivo lo elimino
-			unlink($final_path);
+			/*Si ya existe el archivo lo elimino*/
+			if (file_exists($my_dir)){
+				unlink($url_save);
+			}
 
-		//Muevo el archivo
-			@move_uploaded_file($_FILES["avatar"]["tmp_name"], $final_path);
-			$wasMoved = true;
+			/*Aqui indicamos que todo va bien...Procedemos a mover*/
+			$ready_to_move = true;
 
-			if ($wasMoved){
-				/*Verificamos la cantidad de actualziaciones*/
-				/*$cantidad_actualizaciones = "SELECT cantidad_actualizaciones from informacion_usuario";
-				$ultima_actualizacion = mysql_fetch_row(mysql_query($cantidad_actualizaciones));
-				
-				if($ultima_actualizacion[0] > 0){
-					$final_count  = $ultima_actualizacion[0] + 1;
-					mysql_query("UPDATE informacion_usuario 
-						SET cantidad_actualizaciones = '".$final_count."'
-						WHERE username ='".$username."'");
-				}elseif($ultima_actualizacion[0] == 0 ){
-					$first_update = "INSERT INTO informacion_usuario (cantidad_actualizaciones) 
-					VALUES ('".$first_update."')";
-				}*/
+			/*Si todo funcionó correcto se hace la operación*/
+			if($ready_to_move){
+				if(is_uploaded_file($_FILES['userImage']['tmp_name'])) {
 
-				$actualiza_perfil = "UPDATE informacion_usuario
-				SET	path_avatar = '".$url_save."',
-				ultima_actualizacion = '".$fecha_actual."',
-				direccion_ultima_actualizacion = '".$direccion_ip_usuario."'
-				WHERE username = '".$username."' ";
+					if(move_uploaded_file($sourcePath,$url_save)) {
+						?>
+						<img src="<?php echo $url_save; ?>" width="100px" height="100px"/>
+						<h1><?php echo $final_image_name; ?></h1>
+						<?php
 
-				mysql_query($actualiza_perfil);
+					/*Verificamos la cantidad de actualziaciones
+					$cantidad_actualizaciones = "SELECT cantidad_actualizaciones from informacion_usuario";
+					$ultima_actualizacion = mysql_fetch_row(mysql_query($cantidad_actualizaciones));
 
-				echo $url_save;
-			}else{
-				echo "Ocurrió un  errror:";
-			}		
+					if($ultima_actualizacion[0] > 0){
+						$final_count  = $ultima_actualizacion[0] + 1;
+						mysql_query("UPDATE informacion_usuario 
+							SET cantidad_actualizaciones = '".$final_count."'
+							WHERE username ='".$username."'");
+					}elseif($ultima_actualizacion[0] == 0 ){
+						$first_update = "INSERT INTO informacion_usuario (cantidad_actualizaciones) 
+						VALUES ('".$first_update."')";
+					}*/
+
+					/*GUARDAMOS EN LA BASE DE DATOS*/
+					/*$update_avatar = "UPDATE informacion_usuario
+					SET	path_avatar = '".$url_save."'
+					WHERE username = '".$username."' ";
+
+					mysql_query($actualiza_perfil);*/
+				}
+			}
 		}else{
-			echo "El tamaño no está permitido";
+			echo "Ocurrió un error. Intente de nuevo.";
 		}
+
 	}else{
-		echo "El tipo no está permitido";
+		echo "El archivo no tiene el tamaño indicado";
 	}
-
+}else{
+	echo "El archivo no es del tipo permitido";
 }
 }
-
 ?>
