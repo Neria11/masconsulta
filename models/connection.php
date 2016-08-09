@@ -1,7 +1,7 @@
 <?php 
 	$server = "localhost";
 	$username = "root";
-	$password = "";
+	$password = "admin";
 	$dataBase = "masconsulta";
 
 	$link = mysql_connect($server, $username, $password)
